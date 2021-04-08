@@ -1,4 +1,4 @@
-import { Text } from "widgets";
+import { Text } from "../Text/Text";
 import "./LabeledText.scss";
 
 /**
