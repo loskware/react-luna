@@ -1,0 +1,29 @@
+//
+// Created by Andrea Montorio
+// Project Crucible
+// Copyright © 2020
+//
+
+
+$accent-color: #1976d2;
+$accent-color-dark5: darken($accent-color, 5%);
+$accent-color-dark10: darken($accent-color, 10%);
+$accent-color-dark15: darken($accent-color, 15%);
+$accent-color-dark20: darken($accent-color, 20%);
+$accent-color-dark25: darken($accent-color, 25%);
+$accent-color-light5: lighten($accent-color, 5%);
+$accent-color-light10: lighten($accent-color, 10%);
+$accent-color-light15: lighten($accent-color, 15%);
+$accent-color-light20: lighten($accent-color, 20%);
+$accent-color-light25: lighten($accent-color, 25%);
+
+$grey-color: hsl(216, 8%, 12%);
+$grey-color-dark3: darken($grey-color, 3%);
+$grey-color-dark4: darken($grey-color, 4%);
+$grey-color-dark5: darken($grey-color, 5%);
+$grey-color-dark7: darken($grey-color, 7%);
+$grey-color-dark10: darken($grey-color, 10%);
+$grey-color-light3: lighten($grey-color, 3%);
+$grey-color-light5: lighten($grey-color, 5%);
+$grey-color-light7: lighten($grey-color, 7%);
+$grey-color-light10: lighten($grey-color, 10%);

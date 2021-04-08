@@ -1,0 +1,49 @@
+//
+// Created by Andrea Montorio
+// Project Crucible
+// Copyright © 2020
+//
+
+.Text {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.Text--color-accent {
+  color: var(--text-color-accent);
+}
+.Text--color-primary {
+  color: var(--text-color);
+}
+.Text--color-secondary {
+  color: var(--text-color-secondary);
+}
+.Text--color-tertiary {
+  color: var(--text-color-tertiary);
+}
+
+.Text--size-title {
+  font-size: 1.125rem;
+}
+.Text--size-body {
+  font-size: 0.875rem;
+}
+.Text--size-subtitle {
+  font-size: 0.75rem;
+}
+.Text--size-label {
+  font-size: 0.625rem;
+}
+
+.Text--weight-300 {
+  font-weight: 300;
+}
+.Text--weight-400 {
+  font-weight: 400;
+}
+.Text--weight-600 {
+  font-weight: 600;
+}
+.Text--weight-700 {
+  font-weight: 700;
+}
