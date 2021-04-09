@@ -1,31 +1,26 @@
 import "./SegmentedControl.scss";
 
-type SegmentedControlChild = {
-  icon?: any;
-  title?: string;
-};
+/**
+ * @typedef {Object} SegmentedControlChild
+ * @property {any} [icon]
+ * @property {string} [title]
+ */
 
-type SegmentedControlChangeEventHandler = (
-  selected: number,
-  prevSelected: number,
-  event: React.ChangeEvent<HTMLInputElement>
-) => boolean | undefined;
-
-interface SegmentedControlProps {
-  classNames?: string;
-  children: Array<SegmentedControlChild>;
-  name: string;
-  selected: number;
-  onChange?: SegmentedControlChangeEventHandler;
-}
-
+/**
+ * @param {object} props
+ * @param {string} [props.classNames]
+ * @param {SegmentedControlChild[]} props.children
+ * @param {string} props.name
+ * @param {number} props.selected
+ * @param {function} props.onChange
+ */
 export const SegmentedControl = ({
   classNames,
   children,
   name,
   selected,
   onChange,
-}: SegmentedControlProps) => {
+}) => {
   return (
     <div className={`SegmentedControl ${classNames ?? ""}`}>
       {children.map(({ icon, title }, index) => (

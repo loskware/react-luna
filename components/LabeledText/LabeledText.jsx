@@ -1,17 +1,17 @@
 import { Text } from "../Text/Text";
 import "./LabeledText.scss";
 
-interface LabeledTextProps {
-  classNames?: string;
-  align?: "left" | "center" | "right";
-  label: string;
-  labelColor?: "accent" | "primary" | "secondary" | "tertiary";
-  labelSize?: "body" | "title" | "subtitle" | "label";
-  text: string;
-  textColor?: "accent" | "primary" | "secondary" | "tertiary";
-  textSize?: "body" | "title" | "subtitle" | "label";
-}
-
+/**
+ * @param {object} props
+ * @param {string} [props.classNames]
+ * @param {"left"|"center"|"right"} [props.align]
+ * @param {string} props.label
+ * @param {"accent"|"primary"|"secondary"|"tertiary"} [props.labelColor]
+ * @param {"body"|"title"|"subtitle"|"label"} [props.labelSize]
+ * @param {string} props.text
+ * @param {"accent"|"primary"|"secondary"|"tertiary"} [props.textColor]
+ * @param {"body"|"title"|"subtitle"|"label"} [props.textSize]
+ */
 const LabeledText = ({
   classNames,
   align = "left",
@@ -21,7 +21,7 @@ const LabeledText = ({
   text,
   textColor = "primary",
   textSize = "body",
-}: LabeledTextProps) => {
+}) => {
   return (
     <div
       className={`LabeledText LabeledText--align-${align} ${classNames ?? ""}`}

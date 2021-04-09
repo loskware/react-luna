@@ -1,15 +1,6 @@
 import React from "react";
 import "./Buttons.scss";
 
-interface ButtonProps {
-  classNames?: string;
-  size?: "default" | "compact" | "large";
-  icon?: any;
-  disabled?: boolean;
-  children?: any;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-}
-
 const Button = ({
   classNames,
   size = "default",
@@ -17,7 +8,7 @@ const Button = ({
   disabled = false,
   children = "",
   onClick,
-}: ButtonProps) => {
+}) => {
   return (
     <button
       className={`Button Button--${size} ${classNames ?? ""}`}
@@ -30,6 +21,15 @@ const Button = ({
   );
 };
 
+/**
+ * @param {object} props
+ * @param {string} [props.classNames]
+ * @param {"default"|"compact"|"large"} [props.size]
+ * @param {any} [props.icon]
+ * @param {boolean} [props.disabled]
+ * @param {any} [props.children]
+ * @param {function} [props.onClick]
+ */
 const SolidButton = ({
   classNames,
   size = "default",
@@ -37,7 +37,7 @@ const SolidButton = ({
   disabled = false,
   children = "",
   onClick,
-}: ButtonProps) => {
+}) => {
   return (
     <Button
       classNames={`SolidButton ${classNames ?? ""}`}
@@ -51,17 +51,30 @@ const SolidButton = ({
   );
 };
 
-const FloatingActionButton = ({
+/**
+ * @param {object} props
+ * @param {string} [props.classNames]
+ * @param {"default"|"compact"|"large"} [props.size]
+ * @param {any} [props.icon]
+ * @param {boolean} [props.disabled]
+ * @param {boolean} [props.outlined]
+ * @param {any} [props.children]
+ * @param {function} [props.onClick]
+ */
+const FlatButton = ({
   classNames,
   size = "default",
-  icon = false,
+  icon,
   disabled = false,
+  outlined = false,
   children = "",
   onClick,
-}: ButtonProps) => {
+}) => {
   return (
     <Button
-      classNames={`FloatingActionButton ${classNames ?? ""}`}
+      classNames={`FlatButton ${classNames ?? ""} ${
+        outlined ? "FlatButton--outlined" : ""
+      }`}
       disabled={disabled}
       icon={icon}
       onClick={onClick}
@@ -72,23 +85,26 @@ const FloatingActionButton = ({
   );
 };
 
-interface FlatButtonProps extends ButtonProps {
-  outlined?: boolean;
-}
-const FlatButton = ({
+/**
+ * @param {object} props
+ * @param {string} [props.classNames]
+ * @param {"default"|"compact"|"large"} [props.size]
+ * @param {any} [props.icon]
+ * @param {boolean} [props.disabled]
+ * @param {any} [props.children]
+ * @param {function} [props.onClick]
+ */
+const FloatingActionButton = ({
   classNames,
   size = "default",
-  icon,
+  icon = false,
   disabled = false,
-  outlined = false,
   children = "",
   onClick,
-}: FlatButtonProps) => {
+}) => {
   return (
     <Button
-      classNames={`FlatButton ${classNames ?? ""} ${
-        outlined ? "FlatButton--outlined" : ""
-      }`}
+      classNames={`FloatingActionButton ${classNames ?? ""}`}
       disabled={disabled}
       icon={icon}
       onClick={onClick}
