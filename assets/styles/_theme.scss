@@ -4,7 +4,6 @@
 // Copyright © 2020
 //
 
-@import "colors";
 @import "shadows";
 
 html {
@@ -82,4 +81,13 @@ html {
   --widget-text-color: var(--text-color);
   --widget-text-color-disabled: hsl(216, 8%, 30%);
   --widget-text-color-onaccent: var(--text-color-inverse);
+}
+
+.acrylic {
+  /* Color/tint overlay + Opacity */
+  background: rgba(0, 0, 0, 0.5);
+  /* Parent background + Gaussian blur */
+  backdrop-filter: blur(10px);
+  /* Exclusion blend */
+  background-blend-mode: exclusion;
 }
