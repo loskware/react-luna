@@ -1,18 +1,18 @@
 import "./FlipView.scss";
 
-/**
- * @param {object} props
- * @param {string} [props.classNames]
- * @param {any} props.frontFace
- * @param {any} props.backFace
- * @param {boolean} props.flipped
- */
+interface FlipViewProps {
+  classNames?: string;
+  frontFace: any;
+  backFace: any;
+  flipped: boolean;
+}
+
 const FlipView = ({
   classNames,
   frontFace,
   backFace,
   flipped,
-}) => (
+}: FlipViewProps) => (
   <div
     className={`FlipView ${
       flipped ? "FlipView--flipped" : "FlipView--normal"

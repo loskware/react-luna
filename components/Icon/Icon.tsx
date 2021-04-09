@@ -1,15 +1,10 @@
-/**
- * @param {object} props
- * @param {number} [props.size]
- * @param {any} props.children
- * @param {string} [props.tooltip]
- * @returns 
- */
-export function Icon({
-  size = 24,
-  children,
-  tooltip = "",
-}) {
+interface IconProps {
+  size?: number;
+  children: any;
+  tooltip?: string;
+}
+
+export function Icon({ size = 24, children, tooltip = "" }: IconProps) {
   return (
     <svg
       height={size}

@@ -1,26 +1,28 @@
 import React, { useState } from "react";
 import "./TextField.scss";
 
-/**
- * @param {object} props
- * @param {string} [props.classNames]
- * @param {string} [props.defaultValue]
- * @param {string} [props.placeholder]
- * @param {boolean} [props.large]
- * @param {boolean} [props.transparent]
- * @param {(
- *  value: string,
- *  prevValue: string,
- *  event: React.ChangeEvent<HTMLInputElement>
- * ) => boolean} props.onChange
- */
+type TextFieldChangeEventHandler = (
+  value: string,
+  prevValue: string,
+  event: React.ChangeEvent<HTMLInputElement>
+) => boolean | undefined;
+
+interface TextFieldProps {
+  classNames?: string;
+  defaultValue?: string;
+  placeholder?: string;
+  large?: boolean;
+  transparent?: boolean;
+  onChange?: TextFieldChangeEventHandler;
+}
+
 const TextField = ({
   classNames,
   placeholder = "",
   large = false,
   transparent = false,
-  onChange = () => null,
-}) => {
+  onChange,
+}: TextFieldProps) => {
   const [text, setText] = useState("");
 
   return (
@@ -30,8 +32,8 @@ const TextField = ({
       } ${classNames ?? ""}`}
       onChange={(e) => {
         const value = e.target.value;
-        const willChange = !(onChange(value, text, e) === false);
-        if (willChange) setText(e.target.value);
+        const willChange = !(onChange?.(value, text, e) === false);
+        if (willChange) setText(value);
       }}
       placeholder={placeholder}
       type="text"

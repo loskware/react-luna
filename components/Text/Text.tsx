@@ -1,20 +1,20 @@
 import "./Text.scss";
 
-/**
- * @param {object} props
- * @param {string} [props.classNames]
- * @param {any} props.children
- * @param {"accent"|"primary"|"secondary"|"tertiary"} [props.color]
- * @param {"body"|"title"|"subtitle"|"label"} [props.size]
- * @param {300|400|600|700} [props.weight]
- */
+interface TextProps {
+  classNames?: string;
+  children?: React.ReactNode;
+  color?: "primary" | "secondary" | "tertiary" | "accent" | "onAccent";
+  size?: "body" | "title" | "subtitle" | "label";
+  weight?: 300 | 400 | 600 | 700;
+}
+
 const Text = ({
   classNames,
   children,
   color = "primary",
   size = "body",
   weight = 400,
-}) => {
+}: TextProps) => {
   return (
     <p
       className={`Text Text--color-${color} Text--size-${size}

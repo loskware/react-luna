@@ -1,10 +1,9 @@
 import "./PacmanLoader.scss";
 
-/**
- * @param {object} props
- * @param {string} [props.classNames]
- */
-const PacmanLoader = ({ classNames }) => {
+interface PacmanLoaderProps {
+  classNames?: string;
+}
+const PacmanLoader = ({ classNames }: PacmanLoaderProps) => {
   return (
     <div className={`PacmanLoader ${classNames ?? ""}`}>
       <div></div>

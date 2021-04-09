@@ -1,20 +1,23 @@
+import React from "react";
 import "./Radio.scss";
 
-/**
- * @param {object} props
- * @param {string} [props.classNames]
- * @param {{ label: string }[]} props.children
- * @param {string} props.name
- * @param {number} props.selected
- * @param {function} props.onChange
- */
-export const Radio = ({
+type RadioChangeEventHandler = (selected: number, prevSelected: number, event: React.ChangeEvent<HTMLInputElement>) => boolean | undefined;
+
+interface RadioProps {
+  classNames?: string;
+  children: Array<{ label: string }>;
+  name: string;
+  selected: number;
+  onChange?: RadioChangeEventHandler
+}
+
+const Radio = ({
   classNames,
   children,
   name,
   selected,
   onChange,
-}) => {
+}: RadioProps) => {
   return (
     <div className={`SegmentedControl ${classNames ?? ""}`}>
       {children.map(({ label }, index) => (
@@ -32,3 +35,5 @@ export const Radio = ({
     </div>
   );
 };
+
+export { Radio };

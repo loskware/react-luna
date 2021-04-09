@@ -1,13 +1,18 @@
 import "./CheckBox.scss";
 
-/**
- * @param {object} props
- * @param {string} [props.classNames]
- * @param {string} [props.label]
- * @param {"left"|"right"} [props.labelPosition]
- * @param {React.ChangeEventHandler<HTMLInputElement>} [props.onChange]
- */
-const CheckBox = ({ classNames, label, labelPosition = "right", onChange }) => {
+interface CheckBoxProps {
+  classNames?: string;
+  label?: string;
+  labelPosition?: "left" | "right";
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+}
+
+const CheckBox = ({
+  classNames,
+  label,
+  labelPosition = "right",
+  onChange,
+}: CheckBoxProps) => {
   return (
     <label
       className={`CheckBox CheckBox--${labelPosition}Label ${classNames ?? ""}`}

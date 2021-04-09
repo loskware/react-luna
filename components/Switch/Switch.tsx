@@ -1,20 +1,25 @@
 import "./Switch.scss";
 
-/**
- * @param {object} props
- * @param {string} [props.classNames]
- * @param {boolean} props.checked
- * @param {any} [props.children]
- * @param {"default"|"large"|"xlarge"} [props.size]
- * @param {function} props.onChange
- */
+type SwitchChangeEventHandler = (
+  checked: boolean,
+  event: React.ChangeEvent<HTMLInputElement>
+) => void;
+
+interface SwitchProps {
+  classNames?: string;
+  checked: boolean;
+  children?: any;
+  size?: "default" | "large" | "xlarge";
+  onChange?: SwitchChangeEventHandler;
+}
+
 const Switch = ({
   classNames,
   checked,
   children,
   size = "default",
   onChange,
-}) => {
+}: SwitchProps) => {
   return (
     <label className={`Switch Switch--${size} ${classNames ?? ""}`}>
       <input

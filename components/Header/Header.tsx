@@ -1,13 +1,18 @@
 import "./Header.scss";
 
-/**
- * @param {object} props
- * @param {string} props.classNames
- * @param {any} [props.leadingBar]
- * @param {any} [props.titleBar]
- * @param {any} [props.trailingBar]
- */
-const Header = ({ classNames, leadingBar, titleBar, trailingBar }) => {
+interface HeaderProps {
+  classNames?: string;
+  leadingBar?: any;
+  titleBar?: any;
+  trailingBar?: any;
+}
+
+const Header = ({
+  classNames,
+  leadingBar,
+  titleBar,
+  trailingBar,
+}: HeaderProps) => {
   return (
     <header className={`Header ${classNames ?? ""}`}>
       <div className="Header__leading">{leadingBar}</div>
