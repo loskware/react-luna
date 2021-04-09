@@ -4,7 +4,7 @@ import "./Text.scss";
  * @param {object} props
  * @param {string} [props.classNames]
  * @param {any} props.children
- * @param {"accent"|"primary"|"secondary"|"tertiary"} [props.color]
+ * @param {"accent"|"onAccent"|"primary"|"secondary"|"tertiary"} [props.color]
  * @param {"body"|"title"|"subtitle"|"label"} [props.size]
  * @param {300|400|600|700} [props.weight]
  */
