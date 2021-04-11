@@ -1,3 +1,4 @@
+export * from "./components/Avatar/Avatar";
 export * from "./components/Buttons/Buttons";
 export * from "./components/Card/Card";
 export * from "./components/CheckBox/CheckBox";
