@@ -1,0 +1,17 @@
+//
+// Created by Andrea Montorio
+// Project Crucible
+// Copyright © 2020
+//
+
+.Card {
+  background-color: var(--color-bkg-secondary);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--border-radius-l);
+  overflow: hidden;
+  padding: 1rem;
+
+  &__paddingless {
+    padding: 0;
+  }
+}

@@ -1,0 +1,42 @@
+.RadioButtonGroup {
+  &--vertical {
+    display: block;
+  }
+  &--horizontal {
+    display: inline-block;
+  }
+}
+
+.RadioButton {
+  user-select: none;
+  white-space: nowrap;
+  input {
+    opacity: 0;
+    position: absolute;
+    &:checked ~ span {
+      background-color: var(--color-accent);
+      color: var(--widget-text-color-onaccent);
+    }
+  }
+  > span {
+    align-items: center;
+    border-radius: var(--widget-border-radius-s);
+    color: var(--widget-text-color);
+    display: flex;
+    padding: .375rem .5rem;
+    &:hover {
+      background-color: var(--widget-bkg-color-hover);
+    }
+    span {
+      color: currentColor;
+      font-size: .75rem;
+      line-height: .875rem;
+      margin-left: .25rem;
+    }
+    svg,
+    img {
+      height: .875rem;
+      width: .875rem;
+    }
+  }
+}
