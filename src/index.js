@@ -14,3 +14,4 @@ export * from "./SegmentedControl/SegmentedControl";
 export * from "./Switch/Switch";
 export * from "./Text/Text";
 export * from "./TextField/TextField";
+export * from "./createClassNames";

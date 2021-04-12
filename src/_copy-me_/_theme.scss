@@ -33,7 +33,7 @@ html {
   --text-color-inverse: hsla(0, 0%, 100%, 0.9);
   --text-color-secondary: hsla(0, 0%, 20%, 0.6);
   --text-color-tertiary: hsla(0, 0%, 50%, 0.3);
-  --text-color-accent: hsl(210, 79%, 50%);
+  --text-color-accent: hsl(210, 79%, 56%);
   --text-color-onaccent: var(--text-color-inverse);
 
   // WIDGETS
@@ -75,4 +75,13 @@ html {
   --widget-text-color: var(--text-color);
   --widget-text-color-disabled: hsl(216, 8%, 30%);
   --widget-text-color-onaccent: var(--text-color-inverse);
+}
+
+.acrylic {
+  /* Color/tint overlay + Opacity */
+  background: rgba(0, 0, 0, 0.5);
+  /* Parent background + Gaussian blur */
+  backdrop-filter: blur(10px);
+  /* Exclusion blend */
+  background-blend-mode: exclusion;
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import "./Buttons.scss";
 import { createClassNames } from "../createClassNames";
+import "./Buttons.scss";
 
 const Button = ({
   classNames = [],

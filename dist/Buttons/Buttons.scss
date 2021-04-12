@@ -76,10 +76,10 @@
   &--outlined {
     border: 1px solid var(--widget-border-color);
   }
-  &-accent-text-color {
+  &--accent-text-color {
     color: var(--text-color-accent);
   }
-  &-primary-text-color {
+  &--primary-text-color {
     color: var(--widget-text-color);
   }
 }

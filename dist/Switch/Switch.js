@@ -1,3 +1,4 @@
+import React from "react";
 import { createClassNames } from "../createClassNames";
 import "./Switch.scss";
 /**

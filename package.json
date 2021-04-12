@@ -1,13 +1,23 @@
 {
   "name": "react-luna",
-  "version": "0.0.1",
+  "description": "React UI Kit",
+  "version": "0.0.0-alfa1",
+  "license": "MIT",
   "private": false,
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
+  "keywords": [
+    "react",
+    "react-ui",
+    "luna"
+  ],
+  "author": "Andrea Montorio <andrea.montorio@gmail.com>",
   "scripts": {
-    "build": "babel src -d dist --copy-files"
+    "build": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm run build",
+    "publish": "npm publish"
   },
   "peerDependencies": {
     "react": "^16 || ^17"
@@ -25,5 +35,10 @@
     "extends": [
       "react-app"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loskware/react-luna.git"
+  },
+  "homepage": "https://github.com/loskware/react-luna"
 }

@@ -1,3 +1,4 @@
+import React from "react";
 import { createClassNames } from "../createClassNames";
 import { Text } from "../Text/Text";
 import "./LabeledText.scss";
