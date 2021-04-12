@@ -1,8 +1,9 @@
+import { createClassNames } from "../createClassNames";
 import { Text } from "../Text/Text";
 import "./LabeledText.scss";
 /**
  * @param {object} props
- * @param {string} [props.classNames]
+ * @param {Array<string>} [props.classNames]
  * @param {"left"|"center"|"right"} [props.align]
  * @param {string} props.label
  * @param {"accent"|"primary"|"secondary"|"tertiary"} [props.labelColor]
@@ -13,7 +14,7 @@ import "./LabeledText.scss";
  */
 
 const LabeledText = ({
-  classNames,
+  classNames = [],
   align = "left",
   label,
   labelColor = "secondary",
@@ -22,8 +23,9 @@ const LabeledText = ({
   textColor = "primary",
   textSize = "body"
 }) => {
+  const cn = createClassNames("LabeledText", `LabeledText--align-${align}`, ...classNames);
   return /*#__PURE__*/React.createElement("div", {
-    className: `LabeledText LabeledText--align-${align} ${classNames ?? ""}`
+    className: cn
   }, /*#__PURE__*/React.createElement(Text, {
     size: textSize,
     color: textColor

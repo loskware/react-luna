@@ -1,14 +1,16 @@
+import { createClassNames } from "../createClassNames";
 import "./PacmanLoader.scss";
 /**
  * @param {object} props
- * @param {string} [props.classNames]
+ * @param {Array<string>} [props.classNames]
  */
 
 const PacmanLoader = ({
-  classNames
+  classNames = []
 }) => {
+  const cn = createClassNames("PacmanLoader", ...classNames);
   return /*#__PURE__*/React.createElement("div", {
-    className: `PacmanLoader ${classNames ?? ""}`
+    className: cn
   }, /*#__PURE__*/React.createElement("div", null), /*#__PURE__*/React.createElement("div", null), /*#__PURE__*/React.createElement("div", null), /*#__PURE__*/React.createElement("div", null), /*#__PURE__*/React.createElement("div", null));
 };
 

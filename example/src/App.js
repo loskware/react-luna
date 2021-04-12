@@ -18,11 +18,11 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-      <Avatar
+        <Avatar
         src="https://www.montoriosrl.it/assets/images/avatar-ea.svg"
-        size={50}
+        size={200}
       />
+      </header>
     </div>
   );
 }

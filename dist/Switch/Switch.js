@@ -1,7 +1,8 @@
+import { createClassNames } from "../createClassNames";
 import "./Switch.scss";
 /**
  * @param {object} props
- * @param {string} [props.classNames]
+ * @param {Array<string>} [props.classNames]
  * @param {boolean} props.checked
  * @param {any} [props.children]
  * @param {"default"|"large"|"xlarge"} [props.size]
@@ -9,14 +10,15 @@ import "./Switch.scss";
  */
 
 const Switch = ({
-  classNames,
+  classNames = [],
   checked,
   children,
   size = "default",
   onChange
 }) => {
+  const cn = createClassNames("Switch", `Switch--${size}`, ...classNames);
   return /*#__PURE__*/React.createElement("label", {
-    className: `Switch Switch--${size} ${classNames ?? ""}`
+    className: cn
   }, /*#__PURE__*/React.createElement("input", {
     type: "checkbox",
     checked: checked,

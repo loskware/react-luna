@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { createClassNames } from "../createClassNames";
 import "./TextField.scss";
 
 /**
  * @param {object} props
- * @param {string} [props.classNames]
+ * @param {Array<string>} [props.classNames]
  * @param {string} [props.defaultValue]
  * @param {string} [props.placeholder]
  * @param {boolean} [props.large]
@@ -15,19 +16,22 @@ import "./TextField.scss";
  * ) => boolean} props.onChange
  */
 const TextField = ({
-  classNames,
+  classNames = [],
   placeholder = "",
   large = false,
   transparent = false,
   onChange = () => null,
 }) => {
   const [text, setText] = useState("");
-
+  const cn = createClassNames(
+    "TextField",
+    `${large ? "TextField--large" : ""}`,
+    `${transparent ? "TextField--transparent" : ""}`,
+    ...classNames
+  );
   return (
     <input
-      className={`TextField ${large ? "TextField--large" : ""} ${
-        transparent ? "TextField--transparent" : ""
-      } ${classNames ?? ""}`}
+      className={cn}
       onChange={(e) => {
         const value = e.target.value;
         const willChange = !(onChange(value, text, e) === false);

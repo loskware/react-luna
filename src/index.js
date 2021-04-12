@@ -1,5 +1,5 @@
 export * from "./Avatar/Avatar";
-/* export * from "./Buttons/Buttons";
+export * from "./Buttons/Buttons";
 export * from "./Card/Card";
 export * from "./CheckBox/CheckBox";
 export * from "./FlipView/FlipView";
@@ -13,4 +13,4 @@ export * from "./Radio/Radio";
 export * from "./SegmentedControl/SegmentedControl";
 export * from "./Switch/Switch";
 export * from "./Text/Text";
-export * from "./TextField/TextField"; */
+export * from "./TextField/TextField";

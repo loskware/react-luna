@@ -1,3 +1,4 @@
+import { createClassNames } from "../createClassNames";
 import "./SegmentedControl.scss";
 
 /**
@@ -8,21 +9,22 @@ import "./SegmentedControl.scss";
 
 /**
  * @param {object} props
- * @param {string} [props.classNames]
+ * @param {Array<string>} [props.classNames]
  * @param {SegmentedControlChild[]} props.children
  * @param {string} props.name
  * @param {number} props.selected
  * @param {function} props.onChange
  */
 export const SegmentedControl = ({
-  classNames,
+  classNames = [],
   children,
   name,
   selected,
   onChange,
 }) => {
+  const cn = createClassNames("SegmentedControl", ...classNames);
   return (
-    <div className={`SegmentedControl ${classNames ?? ""}`}>
+    <div className={cn}>
       {children.map(({ icon, title }, index) => (
         <label key={index}>
           <input

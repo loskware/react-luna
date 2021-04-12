@@ -1,18 +1,20 @@
+import { createClassNames } from "../createClassNames";
 import "./Card.scss";
 /**
  * @param {object} props
- * @param {string} [props.classNames]
+ * @param {Array<string>} [props.classNames]
  * @param {any} [props.children]
  * @param {boolean} [props.paddingless]
  */
 
 const Card = ({
-  classNames,
+  classNames = [],
   children,
   paddingless = false
 }) => {
+  const cn = createClassNames("Card", ...classNames, `${paddingless ? "Card__paddingless" : ""}`);
   return /*#__PURE__*/React.createElement("div", {
-    className: `Card ${classNames ?? ""} ${paddingless ? "Card__paddingless" : ""}`
+    className: cn
   }, children);
 };
 

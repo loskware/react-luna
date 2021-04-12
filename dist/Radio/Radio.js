@@ -1,7 +1,8 @@
+import { createClassNames } from "../createClassNames";
 import "./Radio.scss";
 /**
  * @param {object} props
- * @param {string} [props.classNames]
+ * @param {Array<string>} [props.classNames]
  * @param {{ label: string }[]} props.children
  * @param {string} props.name
  * @param {number} props.selected
@@ -9,14 +10,15 @@ import "./Radio.scss";
  */
 
 export const Radio = ({
-  classNames,
+  classNames = [],
   children,
   name,
   selected,
   onChange
 }) => {
+  const cn = createClassNames("SegmentedControl", ...classNames);
   return /*#__PURE__*/React.createElement("div", {
-    className: `SegmentedControl ${classNames ?? ""}`
+    className: cn
   }, children.map(({
     label
   }, index) => /*#__PURE__*/React.createElement("label", {

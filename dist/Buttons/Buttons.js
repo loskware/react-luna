@@ -1,23 +1,25 @@
 import React from "react";
 import "./Buttons.scss";
+import { createClassNames } from "../createClassNames";
 
 const Button = ({
-  classNames,
+  classNames = [],
   size = "default",
   icon,
   disabled = false,
   children = "",
   onClick
 }) => {
+  const cn = createClassNames("Button", `Button--${size}`, ...classNames);
   return /*#__PURE__*/React.createElement("button", {
-    className: `Button Button--${size} ${classNames ?? ""}`,
+    className: cn,
     onClick: onClick,
     disabled: disabled
   }, icon, children && /*#__PURE__*/React.createElement("span", null, children));
 };
 /**
  * @param {object} props
- * @param {string} [props.classNames]
+ * @param {Array<string>} [props.classNames]
  * @param {"default"|"compact"|"large"} [props.size]
  * @param {any} [props.icon]
  * @param {boolean} [props.disabled]
@@ -27,7 +29,7 @@ const Button = ({
 
 
 const SolidButton = ({
-  classNames,
+  classNames = [],
   size = "default",
   icon = false,
   disabled = false,
@@ -35,7 +37,7 @@ const SolidButton = ({
   onClick
 }) => {
   return /*#__PURE__*/React.createElement(Button, {
-    classNames: `SolidButton ${classNames ?? ""}`,
+    classNames: ["SolidButton", ...classNames],
     disabled: disabled,
     icon: icon,
     onClick: onClick,
@@ -44,7 +46,7 @@ const SolidButton = ({
 };
 /**
  * @param {object} props
- * @param {string} [props.classNames]
+ * @param {Array<string>} [props.classNames]
  * @param {"default"|"compact"|"large"} [props.size]
  * @param {"accent"|"primary"} [props.textColor]
  * @param {any} [props.icon]
@@ -56,7 +58,7 @@ const SolidButton = ({
 
 
 const FlatButton = ({
-  classNames,
+  classNames = [],
   size = "default",
   textColor = "accent",
   icon,
@@ -66,7 +68,7 @@ const FlatButton = ({
   onClick
 }) => {
   return /*#__PURE__*/React.createElement(Button, {
-    classNames: `FlatButton ${classNames ?? ""} FlatButton--${textColor}-text-color ${outlined ? "FlatButton--outlined" : ""}`,
+    classNames: ["FlatButton", ...classNames, `FlatButton--${textColor}-text-color`, `${outlined ? "FlatButton--outlined" : ""}`],
     disabled: disabled,
     icon: icon,
     onClick: onClick,
@@ -75,7 +77,7 @@ const FlatButton = ({
 };
 /**
  * @param {object} props
- * @param {string} [props.classNames]
+ * @param {Array<string>} [props.classNames]
  * @param {"default"|"compact"|"large"} [props.size]
  * @param {any} [props.icon]
  * @param {boolean} [props.disabled]
@@ -85,7 +87,7 @@ const FlatButton = ({
 
 
 const FloatingActionButton = ({
-  classNames,
+  classNames = [],
   size = "default",
   icon = false,
   disabled = false,
@@ -93,7 +95,7 @@ const FloatingActionButton = ({
   onClick
 }) => {
   return /*#__PURE__*/React.createElement(Button, {
-    classNames: `FloatingActionButton ${classNames ?? ""}`,
+    classNames: ["FloatingActionButton", ...classNames],
     disabled: disabled,
     icon: icon,
     onClick: onClick,
