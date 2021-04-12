@@ -55,6 +55,7 @@ const SolidButton = ({
  * @param {object} props
  * @param {string} [props.classNames]
  * @param {"default"|"compact"|"large"} [props.size]
+ * @param {"accent"|"primary"} [props.textColor]
  * @param {any} [props.icon]
  * @param {boolean} [props.disabled]
  * @param {boolean} [props.outlined]
@@ -64,6 +65,7 @@ const SolidButton = ({
 const FlatButton = ({
   classNames,
   size = "default",
+  textColor = "accent",
   icon,
   disabled = false,
   outlined = false,
@@ -72,7 +74,9 @@ const FlatButton = ({
 }) => {
   return (
     <Button
-      classNames={`FlatButton ${classNames ?? ""} ${
+      classNames={`FlatButton ${
+        classNames ?? ""
+      } FlatButton--${textColor}-text-color ${
         outlined ? "FlatButton--outlined" : ""
       }`}
       disabled={disabled}
