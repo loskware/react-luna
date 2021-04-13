@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
-import { createClassNames } from "../createClassNames";
 import "./Modal.scss";
 /**
  * @param {object} props

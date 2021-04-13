@@ -11,8 +11,8 @@ import "./Card.scss";
 const Card = ({ classNames = [], children, paddingless = false }) => {
   const cn = createClassNames(
     "Card",
-    ...classNames,
-    `${paddingless ? "Card__paddingless" : ""}`
+    `${paddingless ? "Card__paddingless" : ""}`,
+    ...classNames
   );
   return <div className={cn}>{children}</div>;
 };

@@ -4,7 +4,7 @@ import "./Buttons.scss";
 
 const Button = ({
   classNames = [],
-  size = "default",
+  size = "normal",
   icon,
   disabled = false,
   children = "",
@@ -20,7 +20,7 @@ const Button = ({
 /**
  * @param {object} props
  * @param {Array<string>} [props.classNames]
- * @param {"default"|"compact"|"large"} [props.size]
+ * @param {"normal"|"compact"|"large"} [props.size]
  * @param {any} [props.icon]
  * @param {boolean} [props.disabled]
  * @param {any} [props.children]
@@ -30,7 +30,7 @@ const Button = ({
 
 const SolidButton = ({
   classNames = [],
-  size = "default",
+  size = "normal",
   icon = false,
   disabled = false,
   children = "",
@@ -47,7 +47,7 @@ const SolidButton = ({
 /**
  * @param {object} props
  * @param {Array<string>} [props.classNames]
- * @param {"default"|"compact"|"large"} [props.size]
+ * @param {"normal"|"compact"|"large"} [props.size]
  * @param {"accent"|"primary"} [props.textColor]
  * @param {any} [props.icon]
  * @param {boolean} [props.disabled]
@@ -59,7 +59,7 @@ const SolidButton = ({
 
 const FlatButton = ({
   classNames = [],
-  size = "default",
+  size = "normal",
   textColor = "accent",
   icon,
   disabled = false,
@@ -68,7 +68,7 @@ const FlatButton = ({
   onClick
 }) => {
   return /*#__PURE__*/React.createElement(Button, {
-    classNames: ["FlatButton", ...classNames, `FlatButton--${textColor}-text-color`, `${outlined ? "FlatButton--outlined" : ""}`],
+    classNames: ["FlatButton", `FlatButton--${textColor}-text-color`, `${outlined ? "FlatButton--outlined" : null}`, ...classNames],
     disabled: disabled,
     icon: icon,
     onClick: onClick,
@@ -78,7 +78,7 @@ const FlatButton = ({
 /**
  * @param {object} props
  * @param {Array<string>} [props.classNames]
- * @param {"default"|"compact"|"large"} [props.size]
+ * @param {"normal"|"compact"|"large"} [props.size]
  * @param {any} [props.icon]
  * @param {boolean} [props.disabled]
  * @param {any} [props.children]
@@ -88,7 +88,7 @@ const FlatButton = ({
 
 const FloatingActionButton = ({
   classNames = [],
-  size = "default",
+  size = "normal",
   icon = false,
   disabled = false,
   children = "",

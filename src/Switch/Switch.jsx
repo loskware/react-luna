@@ -7,14 +7,14 @@ import "./Switch.scss";
  * @param {Array<string>} [props.classNames]
  * @param {boolean} props.checked
  * @param {any} [props.children]
- * @param {"default"|"large"|"xlarge"} [props.size]
+ * @param {"normal"|"large"|"xlarge"} [props.size]
  * @param {function} props.onChange
  */
 const Switch = ({
   classNames = [],
   checked,
   children,
-  size = "default",
+  size = "normal",
   onChange,
 }) => {
   const cn = createClassNames("Switch", `Switch--${size}`, ...classNames);

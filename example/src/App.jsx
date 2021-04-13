@@ -6,7 +6,7 @@ import {
   FlatButton,
   FloatingActionButton,
   LabeledText,
-  SegmentedControl,
+  Selector,
   SolidButton,
   Switch,
   TextField,
@@ -26,7 +26,7 @@ const App = () => {
         </Text>
         <hr />
         <div>
-          <SegmentedControl
+          <Selector
             name="prova1"
             selected={selectedTab}
             onChange={(selected) => setSelectedTab(selected)}
@@ -34,7 +34,7 @@ const App = () => {
             {{ icon: <IconUsers /> }}
             {{ icon: <IconServer /> }}
             {{ icon: <IconSend /> }}
-          </SegmentedControl>
+          </Selector>
         </div>
         <hr />
         <div>
@@ -50,11 +50,11 @@ const App = () => {
         </div>
         <hr />
         <div>
-          <SolidButton icon={<IconLoad />} size="default">
+          <SolidButton icon={<IconLoad />} size="normal">
             Button
           </SolidButton>
-          <FlatButton size="default">Button</FlatButton>
-          <FlatButton icon={<IconSend />} size="default" outlined>
+          <FlatButton size="normal">Button</FlatButton>
+          <FlatButton icon={<IconSend />} size="normal" outlined>
             Button
           </FlatButton>
         </div>
@@ -106,7 +106,7 @@ const App = () => {
             Titolo
           </Text>
           <hr />
-          <SegmentedControl
+          <Selector
             name="prova2"
             selected={selectedTab}
             onChange={(selected) => setSelectedTab(selected)}
@@ -114,7 +114,7 @@ const App = () => {
             {{ icon: <IconUsers /> }}
             {{ icon: <IconServer /> }}
             {{ icon: <IconSend /> }}
-          </SegmentedControl>
+          </Selector>
           <hr />
           <div>
             <SolidButton icon={<IconLoad />} size="compact" disabled>
@@ -129,11 +129,11 @@ const App = () => {
           </div>
           <hr />
           <div>
-            <SolidButton icon={<IconLoad />} size="default">
+            <SolidButton icon={<IconLoad />} size="normal">
               Button
             </SolidButton>
-            <FlatButton size="default">Button</FlatButton>
-            <FlatButton icon={<IconSend />} size="default" outlined>
+            <FlatButton size="normal">Button</FlatButton>
+            <FlatButton icon={<IconSend />} size="normal" outlined>
               Button
             </FlatButton>
           </div>
@@ -196,7 +196,7 @@ const App = () => {
         </Text>
         <hr />
         <div>
-          <SegmentedControl
+          <Selector
             name="prova3"
             selected={selectedTab}
             onChange={(selected) => setSelectedTab(selected)}
@@ -204,7 +204,7 @@ const App = () => {
             {{ icon: <IconUsers /> }}
             {{ icon: <IconServer /> }}
             {{ icon: <IconSend /> }}
-          </SegmentedControl>
+          </Selector>
         </div>
         <hr />
         <div>
@@ -220,11 +220,11 @@ const App = () => {
         </div>
         <hr />
         <div>
-          <SolidButton icon={<IconLoad />} size="default">
+          <SolidButton icon={<IconLoad />} size="normal">
             Button
           </SolidButton>
-          <FlatButton size="default">Button</FlatButton>
-          <FlatButton icon={<IconSend />} size="default" outlined>
+          <FlatButton size="normal">Button</FlatButton>
+          <FlatButton icon={<IconSend />} size="normal" outlined>
             Button
           </FlatButton>
         </div>
@@ -265,7 +265,7 @@ const App = () => {
             Titolo
           </Text>
           <hr />
-          <SegmentedControl
+          <Selector
             name="prova4"
             selected={selectedTab}
             onChange={(selected) => setSelectedTab(selected)}
@@ -273,7 +273,7 @@ const App = () => {
             {{ icon: <IconUsers /> }}
             {{ icon: <IconServer /> }}
             {{ icon: <IconSend /> }}
-          </SegmentedControl>
+          </Selector>
           <hr />
           <div>
             <SolidButton icon={<IconLoad />} size="compact" disabled>
@@ -288,11 +288,11 @@ const App = () => {
           </div>
           <hr />
           <div>
-            <SolidButton icon={<IconLoad />} size="default">
+            <SolidButton icon={<IconLoad />} size="normal">
               Button
             </SolidButton>
-            <FlatButton size="default">Button</FlatButton>
-            <FlatButton icon={<IconSend />} size="default" outlined>
+            <FlatButton size="normal">Button</FlatButton>
+            <FlatButton icon={<IconSend />} size="normal" outlined>
               Button
             </FlatButton>
           </div>

@@ -13,7 +13,7 @@ const Card = ({
   children,
   paddingless = false
 }) => {
-  const cn = createClassNames("Card", ...classNames, `${paddingless ? "Card__paddingless" : ""}`);
+  const cn = createClassNames("Card", `${paddingless ? "Card__paddingless" : ""}`, ...classNames);
   return /*#__PURE__*/React.createElement("div", {
     className: cn
   }, children);

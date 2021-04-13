@@ -1,12 +1,13 @@
 {
   "name": "react-luna",
   "description": "React UI Kit",
-  "version": "0.0.0-alfa1",
+  "version": "0.0.1-alfa.4",
   "license": "MIT",
   "private": false,
   "main": "dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "styles"
   ],
   "keywords": [
     "react",
@@ -16,8 +17,7 @@
   "author": "Andrea Montorio <andrea.montorio@gmail.com>",
   "scripts": {
     "build": "babel src -d dist --copy-files",
-    "prepublishOnly": "npm run build",
-    "publish": "npm publish"
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "react": "^16 || ^17"

@@ -10,7 +10,7 @@ export * from "./LabeledText/LabeledText";
 export * from "./Modal/Modal";
 export * from "./PacmanLoader/PacmanLoader";
 export * from "./Radio/Radio";
-export * from "./SegmentedControl/SegmentedControl";
+export * from "./Selector/Selector";
 export * from "./Switch/Switch";
 export * from "./Text/Text";
 export * from "./TextField/TextField";

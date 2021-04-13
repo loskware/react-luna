@@ -1,4 +1,4 @@
-.SegmentedControl {
+.Selector {
   display: inline-flex;
   border: 1px solid var(--widget-border-color);
   border-radius: var(--widget-border-radius-m);
@@ -7,7 +7,7 @@
   overflow: hidden;
   padding: .125rem;
   label {
-    flex: 1;
+    flex: 1 1 0;
     user-select: none;
     white-space: nowrap;
     input {

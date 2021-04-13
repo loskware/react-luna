@@ -1,6 +1,6 @@
 import React from "react";
 import { createClassNames } from "../createClassNames";
-import "./SegmentedControl.scss";
+import "./Selector.scss";
 
 /**
  * @typedef {Object} SegmentedControlChild
@@ -16,14 +16,14 @@ import "./SegmentedControl.scss";
  * @param {number} props.selected
  * @param {function} props.onChange
  */
-export const SegmentedControl = ({
+export const Selector = ({
   classNames = [],
   children,
   name,
   selected,
   onChange,
 }) => {
-  const cn = createClassNames("SegmentedControl", ...classNames);
+  const cn = createClassNames("Selector", ...classNames);
   return (
     <div className={cn}>
       {children.map(({ icon, title }, index) => (

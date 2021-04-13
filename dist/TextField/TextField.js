@@ -12,7 +12,7 @@ import "./TextField.scss";
  *  value: string,
  *  prevValue: string,
  *  event: React.ChangeEvent<HTMLInputElement>
- * ) => boolean} props.onChange
+ * ) => boolean} [props.onChange]
  */
 
 const TextField = ({
@@ -20,15 +20,15 @@ const TextField = ({
   placeholder = "",
   large = false,
   transparent = false,
-  onChange = () => null
+  onChange
 }) => {
   const [text, setText] = useState("");
-  const cn = createClassNames("TextField", `${large ? "TextField--large" : ""}`, `${transparent ? "TextField--transparent" : ""}`, ...classNames);
+  const cn = createClassNames("TextField", `${large ? "TextField--large" : null}`, `${transparent ? "TextField--transparent" : null}`, ...classNames);
   return /*#__PURE__*/React.createElement("input", {
     className: cn,
     onChange: e => {
       const value = e.target.value;
-      const willChange = !(onChange(value, text, e) === false);
+      const willChange = !(onChange?.(value, text, e) === false);
       if (willChange) setText(e.target.value);
     },
     placeholder: placeholder,
