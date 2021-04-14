@@ -1,0 +1,109 @@
+//
+// Created by Andrea Montorio
+// Project Crucible
+// Copyright © 2020
+//
+
+.Button {
+  align-items: center;
+  display: inline-flex;
+  border-width: 0;
+  border-radius: var(--widget-border-radius-m);
+  cursor: pointer;
+  fill: currentColor;
+  font-family: inherit;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 1em;
+  outline: none;
+  transition-duration: var(--animation-fast);
+  transition-timing-function: linear;
+  user-select: none;
+  white-space: nowrap;
+  &:enabled:active {
+    opacity: .7;
+  }
+  &:disabled {
+    cursor: default;
+  }
+  > svg, > img {
+    height: 1em;
+    width: 1em;
+  }
+  span:not(:first-child) {
+    margin-left: .375rem;
+  }
+  &--compact {
+    font-size: .75rem;
+    padding: .25rem .5rem;
+  }
+  
+  &--normal {
+    font-size: .875rem;
+    padding: .375rem .75rem;
+  }
+  
+  &--large {
+    font-size: .875rem;
+    padding: .5rem 1rem;
+  }
+}
+
+.SolidButton {
+  color: var(--widget-text-color-onaccent);
+  background-color: var(--widget-frg-color-accent);
+  box-shadow: var(--widget-shadow);
+  transition-property: background-color, border-color, opacity;
+  will-change: background-color, border-color, opacity;
+  &:enabled:hover {
+    background-color: var(--widget-frg-color-accent-hover);
+  }
+  &:disabled {
+    background-color: var(--widget-bkg-color-disabled);
+  }
+}
+
+.FlatButton {
+  background-color: transparent;
+  transition-property: background-color, border-color, color, opacity;
+  will-change: background-color, border-color, color, opacity;
+  &:enabled:hover {
+    background-color: var(--widget-bkg-color-hover);
+  }
+  &:disabled {
+    color: var(--widget-text-color-disabled);
+  }
+  &--outlined {
+    border: 1px solid var(--widget-border-color);
+  }
+  &--accent-text-color {
+    color: var(--text-color-accent);
+  }
+  &--primary-text-color {
+    color: var(--widget-text-color);
+  }
+}
+
+.FloatingActionButton {
+  color: var(--widget-text-color-onaccent);
+  background-color: var(--widget-frg-color-accent);
+  box-shadow: var(--shadow-fab);
+  border-radius: 50vh;
+  padding: .75rem;
+  transition-property: background-color, border-color, opacity;
+  will-change: background-color, border-color, opacity;
+  &:enabled:hover {
+    background-color: var(--widget-frg-color-accent-hover);
+  }
+  &:disabled {
+    background-color: var(--widget-bkg-color-disabled);
+  }
+  > svg, > img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  > span {
+    margin-left: .75rem;
+    margin-right: .5rem;
+  }
+}

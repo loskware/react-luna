@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "react-luna": {
+      "signature": "9cf0137f96d8978a17b3fefb10e53f4e",
+      "file": true
+    }
+  }
+}
