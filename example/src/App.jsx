@@ -31,7 +31,7 @@ const App = () => {
             selected={selectedTab}
             onChange={(selected) => setSelectedTab(selected)}
           >
-            {{ icon: <IconUsers /> }}
+            {{ title: "Users", icon: <IconUsers /> }}
             {{ icon: <IconServer /> }}
             {{ icon: <IconSend /> }}
           </Selector>
@@ -153,21 +153,21 @@ const App = () => {
               checked={switchChecked}
               onChange={(checked) => setSwitchChecked(checked)}
             >
-              <IconLoad />
+              <IconSend />
             </Switch>
             <Switch
               checked={switchChecked}
               onChange={(checked) => setSwitchChecked(checked)}
               size="large"
             >
-              <IconLoad />
+              <IconSend />
             </Switch>
             <Switch
               checked={switchChecked}
               onChange={(checked) => setSwitchChecked(checked)}
               size="xlarge"
             >
-              <IconLoad />
+              <IconSend />
             </Switch>
           </div>
           <hr />
@@ -312,21 +312,21 @@ const App = () => {
               checked={switchChecked}
               onChange={(checked) => setSwitchChecked(checked)}
             >
-              <IconLoad />
+              <IconSend />
             </Switch>
             <Switch
               checked={switchChecked}
               onChange={(checked) => setSwitchChecked(checked)}
               size="large"
             >
-              <IconLoad />
+              <IconSend />
             </Switch>
             <Switch
               checked={switchChecked}
               onChange={(checked) => setSwitchChecked(checked)}
               size="xlarge"
             >
-              <IconLoad />
+              <IconSend />
             </Switch>
           </div>
           <hr />

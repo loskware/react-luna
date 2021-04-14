@@ -1,7 +1,7 @@
 {
   "name": "react-luna",
   "description": "React UI Kit",
-  "version": "0.0.1-alfa.4+9cf0137f",
+  "version": "0.0.1-alfa.4+dd5efa43",
   "license": "MIT",
   "private": false,
   "main": "dist/index.js",
@@ -32,5 +32,5 @@
     "url": "https://github.com/loskware/react-luna.git"
   },
   "homepage": "https://github.com/loskware/react-luna",
-  "yalcSig": "9cf0137f96d8978a17b3fefb10e53f4e"
+  "yalcSig": "dd5efa43566165c36c7c826c2d2b2400"
 }
