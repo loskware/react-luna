@@ -1,35 +1,18 @@
-@import "dark-theme";
-@import "light-theme";
-@import "shadows";
+@use "shadows";
+@use "globals";
+@use "dark-theme";
+@use "light-theme";
 
-:root {
-  --animation-time-unit: 0.1s;
-  --animation-fast: 0.1s;
-  --animation-normal: 0.2s;
-  --animation-slow: 0.4s;
+@use "components/button";
 
-  --border-radius-s: 2px;
-  --border-radius-m: 4px;
-  --border-radius-l: 8px;
-  --border-radius-xl: 16px;
-  --border-radius-max: 50%;
-  --widget-border-radius-s: var(--border-radius-s);
-  --widget-border-radius-m: var(--border-radius-m);
+.light-theme {
+  @include light-theme.vars;
 
-  --shadow-avatar: #{$elevation-4};
-  --shadow-card: #{$elevation-1};
-  --shadow-content: #{$elevation-8};
-  --shadow-fab: #{$elevation-6};
-  --shadow-modal: #{$elevation-8};
-  --widget-shadow: #{$elevation-1};
-  --widget-shadow-hover: #{$elevation-2};
+  @include button.light;
 }
 
-.acrylic {
-  /* Color/tint overlay + Opacity */
-  background: rgba(0, 0, 0, 0.5);
-  /* Parent background + Gaussian blur */
-  backdrop-filter: blur(10px);
-  /* Exclusion blend */
-  background-blend-mode: exclusion;
+.dark-theme {
+  @include dark-theme.vars;
+
+  @include button.dark;
 }

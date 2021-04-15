@@ -12,7 +12,7 @@
   cursor: pointer;
   fill: currentColor;
   font-family: inherit;
-  font-weight: 600;
+  font-weight: 500;
   justify-content: center;
   line-height: 1em;
   outline: none;
@@ -50,16 +50,16 @@
 }
 
 .SolidButton {
-  color: var(--widget-text-color-onaccent);
-  background-color: var(--widget-frg-color-accent);
+  color: var(--solid-button-text-color);
+  background-color: var(--solid-button-bkg-color);
   box-shadow: var(--widget-shadow);
   transition-property: background-color, border-color, opacity;
   will-change: background-color, border-color, opacity;
   &:enabled:hover {
-    background-color: var(--widget-frg-color-accent-hover);
+    background-color: var(--solid-button-bkg-color-hover);
   }
   &:disabled {
-    background-color: var(--widget-bkg-color-disabled);
+    background-color: var(--solid-button-bkg-color-disabled);
   }
 }
 
@@ -68,35 +68,35 @@
   transition-property: background-color, border-color, color, opacity;
   will-change: background-color, border-color, color, opacity;
   &:enabled:hover {
-    background-color: var(--widget-bkg-color-hover);
+    background-color: var(--flat-button-bkg-color-hover);
   }
   &:disabled {
-    color: var(--widget-text-color-disabled);
+    color: var(--flat-button-bkg-color-disabled);
   }
   &--outlined {
-    border: 1px solid var(--widget-border-color);
+    border: 1px solid var(--flat-button-border-color);
   }
   &--accent-text-color {
-    color: var(--text-color-accent);
+    color: var(--flat-button-text-color-accent);
   }
   &--primary-text-color {
-    color: var(--widget-text-color);
+    color: var(--flat-button-text-color-primary);
   }
 }
 
 .FloatingActionButton {
-  color: var(--widget-text-color-onaccent);
-  background-color: var(--widget-frg-color-accent);
+  color: var(--fab-button-text-color);
+  background-color: var(--fab-button-bkg-color);
   box-shadow: var(--shadow-fab);
   border-radius: 50vh;
   padding: .75rem;
   transition-property: background-color, border-color, opacity;
   will-change: background-color, border-color, opacity;
   &:enabled:hover {
-    background-color: var(--widget-frg-color-accent-hover);
+    background-color: var(--fab-button-bkg-color-hover);
   }
   &:disabled {
-    background-color: var(--widget-bkg-color-disabled);
+    background-color: var(--fab-button-bkg-color-disabled);
   }
   > svg, > img {
     height: 1.5rem;
