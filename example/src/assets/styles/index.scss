@@ -1,17 +1,19 @@
 @use "globals";
-@use "theme-dark";
-@use "theme-light";
+@use "theme";
 
 @use "components/button";
+@use "components/card";
 
 .light-theme {
-  @include theme-light.vars;
+  @include theme.light;
 
   @include button.light;
+  @include card.light;
 }
 
 .dark-theme {
-  @include theme-dark.vars;
+  @include theme.dark;
 
   @include button.dark;
+  @include card.dark;
 }

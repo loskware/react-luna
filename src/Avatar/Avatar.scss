@@ -1,4 +1,4 @@
 .Avatar {
-  border-radius: 50%;
-  box-shadow: var(--shadow-avatar);
+  border-radius: var(--avatar-border-radius);
+  box-shadow: var(--avatar-shadow);
 }

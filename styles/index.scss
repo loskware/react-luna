@@ -1,18 +1,22 @@
-@use "shadows";
 @use "globals";
-@use "dark-theme";
-@use "light-theme";
 
-@use "components/button";
+@use "theme/default";
+@use "theme/components/avatar";
+@use "theme/components/button";
+@use "theme/components/card";
 
 .light-theme {
-  @include light-theme.vars;
+  @include default.light;
 
+  @include avatar.light;
   @include button.light;
+  @include card.light;
 }
 
 .dark-theme {
-  @include dark-theme.vars;
+  @include default.dark;
 
+  @include avatar.dark;
   @include button.dark;
+  @include card.dark;
 }

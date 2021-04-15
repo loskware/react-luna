@@ -1,0 +1,7 @@
+@mixin light {
+  --card-bkg-color: var(--color-bkg-secondary);
+}
+
+@mixin dark {
+  --card-bkg-color: var(--color-bkg-secondary);
+}

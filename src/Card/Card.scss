@@ -5,9 +5,9 @@
 //
 
 .Card {
-  background-color: var(--color-bkg-secondary);
-  box-shadow: var(--shadow-card);
-  border-radius: var(--border-radius-l);
+  background-color: var(--card-bkg-color);
+  box-shadow: var(--car-shadow);
+  border-radius: var(--card-border-radius);
   overflow: hidden;
   padding: 1rem;
 

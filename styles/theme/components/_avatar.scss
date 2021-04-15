@@ -1,0 +1,9 @@
+@mixin light {
+  --avatar-border-radius: 50%;
+  --avatar-shadow: var(--elevation-4);
+}
+
+@mixin dark {
+  --avatar-border-radius: 50%;
+  --avatar-shadow: var(--elevation-4);  
+}

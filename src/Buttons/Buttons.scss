@@ -8,7 +8,7 @@
   align-items: center;
   display: inline-flex;
   border-width: 0;
-  border-radius: var(--widget-border-radius-m);
+  border-radius: var(--button-border-radius);
   cursor: pointer;
   fill: currentColor;
   font-family: inherit;
@@ -16,7 +16,7 @@
   justify-content: center;
   line-height: 1em;
   outline: none;
-  transition-duration: var(--animation-fast);
+  transition-duration: var(--button-animation-duration);
   transition-timing-function: linear;
   user-select: none;
   white-space: nowrap;
@@ -52,7 +52,7 @@
 .SolidButton {
   color: var(--solid-button-text-color);
   background-color: var(--solid-button-bkg-color);
-  box-shadow: var(--widget-shadow);
+  box-shadow: var(--solid-button-shadow);
   transition-property: background-color, border-color, opacity;
   will-change: background-color, border-color, opacity;
   &:enabled:hover {
@@ -87,7 +87,7 @@
 .FloatingActionButton {
   color: var(--fab-button-text-color);
   background-color: var(--fab-button-bkg-color);
-  box-shadow: var(--shadow-fab);
+  box-shadow: var(--fab-button-shadow);
   border-radius: 50vh;
   padding: .75rem;
   transition-property: background-color, border-color, opacity;

@@ -4,9 +4,9 @@
   "version": "0.0.1-alfa.4",
   "license": "MIT",
   "private": false,
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "files": [
-    "dist",
+    "build",
     "styles"
   ],
   "keywords": [
@@ -16,7 +16,7 @@
   ],
   "author": "Andrea Montorio <andrea.montorio@gmail.com>",
   "scripts": {
-    "build": "babel src -d dist --copy-files",
+    "build": "babel src -d build --copy-files",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
