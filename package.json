@@ -16,7 +16,9 @@
   ],
   "author": "Andrea Montorio <andrea.montorio@gmail.com>",
   "scripts": {
-    "build": "babel src -d build --copy-files",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "babel-build": "babel src/lib -d build --copy-files",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
@@ -29,7 +31,9 @@
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "sass": "^1.32.8"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +44,17 @@
     "type": "git",
     "url": "https://github.com/loskware/react-luna.git"
   },
-  "homepage": "https://github.com/loskware/react-luna"
+  "homepage": "https://github.com/loskware/react-luna",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
