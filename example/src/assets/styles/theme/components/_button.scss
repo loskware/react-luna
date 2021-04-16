@@ -1,4 +1,5 @@
 @mixin light {
+  // COLORS
   --solid-button-bkg-color: var(--widget-frg-color-accent);
   --solid-button-bkg-color-disabled: var(--widget-bkg-color-disabled);
   --solid-button-bkg-color-hover: var(--widget-frg-color-accent-hover);
@@ -14,9 +15,20 @@
   --fab-button-bkg-color-disabled: var(--widget-bkg-color-disabled);
   --fab-button-bkg-color-hover: var(--widget-frg-color-accent-hover);
   --fab-button-text-color: var(--widget-text-color-onaccent);
+
+  // BORDER RADIUS
+  --button-border-radius: var(--border-radius-m);
+
+  // SHADOWS
+  --solid-button-shadow: var(--elevation-1);
+  --fab-button-shadow: var(--elevation-6);
+
+  // TRANSITIONS
+  --button-transition-duration: var(--transition-duration-fast);
 }
 
 @mixin dark {
+  // COLORS
   --solid-button-bkg-color: var(--widget-frg-color-accent);
   --solid-button-bkg-color-disabled: var(--widget-bkg-color-disabled);
   --solid-button-bkg-color-hover: var(--widget-frg-color-accent-hover);
@@ -32,4 +44,14 @@
   --fab-button-bkg-color-disabled: var(--widget-bkg-color-disabled);
   --fab-button-bkg-color-hover: var(--widget-frg-color-accent-hover);
   --fab-button-text-color: var(--widget-text-color-onaccent);
+
+  // BORDER RADIUS
+  --button-border-radius: var(--border-radius-m);
+
+  // SHADOWS
+  --solid-button-shadow: var(--elevation-1);
+  --fab-button-shadow: var(--elevation-6);
+
+  // TRANSITIONS
+  --button-transition-duration: var(--transition-duration-fast);
 }

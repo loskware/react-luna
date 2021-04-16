@@ -22,6 +22,9 @@
   // SHADOWS
   --solid-button-shadow: var(--elevation-1);
   --fab-button-shadow: var(--elevation-6);
+
+  // TRANSITIONS
+  --button-transition-duration: var(--transition-duration-fast);
 }
 
 @mixin dark {
@@ -48,4 +51,7 @@
   // SHADOWS
   --solid-button-shadow: var(--elevation-1);
   --fab-button-shadow: var(--elevation-6);
+
+  // TRANSITIONS
+  --button-transition-duration: var(--transition-duration-fast);
 }

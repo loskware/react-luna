@@ -4,7 +4,7 @@
   &__wrapper {
     position: relative;
     transform-style: preserve-3d;
-    transition: transform var(--animation-normal) ease-in-out;
+    transition: transform var(--fv-transition-duration) ease-in-out;
     will-change: transform;
   }
 

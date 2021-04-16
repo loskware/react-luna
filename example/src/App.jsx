@@ -20,6 +20,7 @@ const App = () => {
 
   return (
     <div className="App">
+
       <div className="light-theme">
         <Text color="accent" size="title" weight={700}>
           Titolo
@@ -255,8 +256,8 @@ const App = () => {
             size="xlarge"
           />
         </div>
-        <TextField placeholder="Prova" onChange={() => null} />
         <hr />
+        <TextField placeholder="Prova" onChange={() => null} />
         <hr />
         <CheckBox label="Test" />
         <hr />

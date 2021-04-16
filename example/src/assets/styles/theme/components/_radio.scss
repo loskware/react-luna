@@ -1,0 +1,23 @@
+@mixin light {
+  // COLORS
+  --radio-bkg-color: transparent;
+  --radio-bkg-color-checked: var(--color-accent);
+  --radio-bkg-color-hover: var(--widget-bkg-color-hover);
+  --radio-frg-color: var(--widget-text-color);
+  --radio-frg-color-checked: var(--widget-text-color-onaccent);
+
+  // BORDER RADIUS
+  --radio-border-radius: var(--border-radius-s);
+}
+
+@mixin dark {
+  // COLORS
+  --radio-bkg-color: transparent;
+  --radio-bkg-color-checked: var(--color-accent);
+  --radio-bkg-color-hover: var(--widget-bkg-color-hover);
+  --radio-frg-color: var(--widget-text-color);
+  --radio-frg-color-checked: var(--widget-text-color-onaccent);
+
+  // BORDER RADIUS
+  --radio-border-radius: var(--border-radius-s);
+}

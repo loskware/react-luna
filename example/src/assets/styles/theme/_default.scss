@@ -3,6 +3,7 @@ $accent-color-light: hsl(210, 100%, 56%);
 
 @mixin dark {
   --color-accent: #{$accent-color-dark};
+  --color-accent-secondary: #{darken($accent-color-dark, 15%)};
 
   --color-bkg-primary: hsl(216, 8%, 12%);
   --color-bkg-secondary: hsl(216, 8%, 15%);
@@ -34,6 +35,7 @@ $accent-color-light: hsl(210, 100%, 56%);
 
 @mixin light {
   --color-accent: #{$accent-color-light};
+  --color-accent-secondary: #{lighten($accent-color-light, 15%)};
 
   --color-bkg-primary: white;
   --color-bkg-secondary: hsl(216, 8%, 97%);

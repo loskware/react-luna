@@ -1,0 +1,9 @@
+@mixin light {
+  --pacman-color: var(--color-accent-secondary);
+  --pacman-ball-color: var(--color-accent-secondary);
+}
+
+@mixin dark {
+  --pacman-color: var(--color-accent-secondary);
+  --pacman-ball-color: var(--color-accent-secondary);
+}

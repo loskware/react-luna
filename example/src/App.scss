@@ -1,7 +1,7 @@
 .App {
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 100px 1fr;
+  grid-template-columns: 1fr 0px 1fr;
   grid-auto-flow: row;
 
   div:nth-child(2) {
@@ -16,7 +16,7 @@
   > div {
     background-color: var(--color-bkg-primary);
     position: relative;
-    padding: 1rem;
+    padding: 3rem;
     & > div > *:not(:first-child) {
       margin-left: .5rem;
     }

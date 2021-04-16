@@ -4,6 +4,12 @@
 @use "theme/components/avatar";
 @use "theme/components/button";
 @use "theme/components/card";
+@use "theme/components/checkbox";
+@use "theme/components/flipview";
+@use "theme/components/pacman-loader";
+@use "theme/components/radio";
+@use "theme/components/selector";
+@use "theme/components/switch";
 
 .light-theme {
   @include default.light;
@@ -11,6 +17,12 @@
   @include avatar.light;
   @include button.light;
   @include card.light;
+  @include checkbox.light;
+  @include flipview.light;
+  @include pacman.light;
+  @include radio.light;
+  @include selector.light;
+  @include switch.light;
 }
 
 .dark-theme {
@@ -19,4 +31,10 @@
   @include avatar.dark;
   @include button.dark;
   @include card.dark;
+  @include checkbox.dark;
+  @include flipview.dark;
+  @include pacman.dark;
+  @include radio.dark;
+  @include selector.dark;
+  @include switch.dark;
 }

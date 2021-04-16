@@ -14,7 +14,7 @@
   line-height: 1em;
   outline: none;
   padding: .25rem .5rem;
-  transition: border-color var(--animation-fast) ease-out;
+  transition: border-color var(--transition-duration-fast) ease-out;
   will-change: border-color;
 
   &:focus {

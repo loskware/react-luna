@@ -13,9 +13,9 @@ const Header = ({ classNames = [], leadingBar, titleBar, trailingBar }) => {
   const cn = createClassNames("Header", ...classNames)
   return (
     <header className={cn}>
-      <div className="Header__leading">{leadingBar}</div>
-      <div className="Header__title">{titleBar}</div>
-      <div className="Header__trailing">{trailingBar}</div>
+      <div>{leadingBar}</div>
+      <div>{titleBar}</div>
+      <div>{trailingBar}</div>
     </header>
   );
 };
