@@ -23,9 +23,7 @@ const CheckBox = ({
   return (
     <label className={cn}>
       <input type="checkbox" onChange={onChange} />
-      <span className="CheckBox__mark">
-        <span></span>
-      </span>
+      <span className="CheckBox__-mark"></span>
       {label && <span className="CheckBox__label">{label}</span>}
     </label>
   );
