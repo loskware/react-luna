@@ -75,7 +75,7 @@ const FlatButton = ({
       classNames={[
         "FlatButton",
         `FlatButton--${textColor}-text-color`,
-        `${outlined ? "FlatButton--outlined" : null}`,
+        outlined ? "FlatButton--outlined" : null,
         ...classNames,
       ]}
       disabled={disabled}

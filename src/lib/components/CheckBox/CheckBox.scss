@@ -3,15 +3,15 @@
   cursor: pointer;
   display: inline-flex;
 
-  > input {
+  input {
     height: 0;
     opacity: 0;
     position: absolute;
     width: 0;
   }
-  > input:checked ~ span {
+  input:checked + span {
     border-color: var(--cb-border-color-checked);
-    > span {
+    &::after {
       background-color: var(--cb-bkg-color-checked);
     }
   }
@@ -23,16 +23,18 @@
     display: block;
     height: 1rem;
     position: relative;
-    transition: border-color ease-out var(--cb-transition-duration);
+    transition: border-color ease-in-out var(--cb-transition-duration);
     will-change: border-color;
     width: 1rem;
-    > span {
+    &::after {
       border-radius: var(--cb-mark-border-radius);
+      content: "";
       height: 0.5rem;
       left: 0.1875rem;
       position: absolute;
       top: 0.1875rem;
-      transition: background-color ease-out var(--cb-transition-duration);
+      transition: background-color ease-in-out var(--cb-transition-duration);
+      will-change: background-color;
       width: 0.5rem;
       will-change: background-color;
     }

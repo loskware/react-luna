@@ -7,7 +7,7 @@
 .Button {
   align-items: center;
   display: inline-flex;
-  border-width: 0;
+  border: 1px solid transparent;
   border-radius: var(--button-border-radius);
   cursor: pointer;
   fill: currentColor;
@@ -52,7 +52,7 @@
 .SolidButton {
   color: var(--solid-button-text-color);
   background-color: var(--solid-button-bkg-color);
-  box-shadow: var(--solid-button-shadow);
+  //box-shadow: var(--solid-button-shadow);
   transition-property: background-color, border-color, opacity;
   will-change: background-color, border-color, opacity;
   &:enabled:hover {

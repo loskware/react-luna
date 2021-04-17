@@ -53,7 +53,7 @@ const App = () => {
           <SolidButton icon={<IconLoad />} size="normal">
             Button
           </SolidButton>
-          <FlatButton size="normal">Button</FlatButton>
+          <FlatButton icon={<IconLoad />} >Button</FlatButton>
           <FlatButton icon={<IconSend />} size="normal" outlined>
             Button
           </FlatButton>
@@ -94,7 +94,6 @@ const App = () => {
         />
         <hr />
         <CheckBox
-          checked={false}
           label="Finche la barca và"
           labelPosition="left"
           onChange={(event) =>
@@ -179,7 +178,6 @@ const App = () => {
           />
           <hr />
           <CheckBox
-            checked={false}
             onChange={(e) => console.log(e.target.checked)}
           />
           <hr />
@@ -262,7 +260,7 @@ const App = () => {
         <hr />
         <TextField placeholder="Prova" onChange={() => null} />
         <hr />
-        <CheckBox checked={false} label="Test" />
+        <CheckBox label="Test" />
         <hr />
         <Card>
           <Text color="accent" size="title" weight={700}>
@@ -336,7 +334,7 @@ const App = () => {
           <hr />
           <TextField onChange={() => null} />
           <hr />
-          <CheckBox checked={false} />
+          <CheckBox />
           <hr />
           <LabeledText label="Prova" text="Qualcosa da scrivere" />
         </Card>

@@ -25,8 +25,8 @@ const TextField = ({
   const [text, setText] = useState("");
   const cn = createClassNames(
     "TextField",
-    `${large ? "TextField--large" : null}`,
-    `${transparent ? "TextField--transparent" : null}`,
+    large ? "TextField--large" : null,
+    transparent ? "TextField--transparent" : null,
     ...classNames
   );
   return (

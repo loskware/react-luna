@@ -6,8 +6,7 @@
   "private": false,
   "main": "build/index.js",
   "files": [
-    "build",
-    "styles"
+    "build"
   ],
   "keywords": [
     "react",
