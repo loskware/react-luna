@@ -17,9 +17,7 @@
     background-color: var(--color-bkg-primary);
     position: relative;
     padding: 3rem;
-    & > div > *:not(:first-child) {
-      margin-left: .5rem;
-    }
+    
   }
 
   &__send-button {

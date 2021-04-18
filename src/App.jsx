@@ -1,4 +1,4 @@
-import { IconSend, IconServer, IconLoad, IconUsers } from "./icons";
+import { IconSend, IconServer, IconLoad, IconUsers, IconSearch } from "./icons";
 import { useState } from "react";
 import {
   Card,
@@ -53,7 +53,7 @@ const App = () => {
           <SolidButton icon={<IconLoad />} size="normal">
             Button
           </SolidButton>
-          <FlatButton icon={<IconLoad />} >Button</FlatButton>
+          <FlatButton icon={<IconLoad />}>Button</FlatButton>
           <FlatButton icon={<IconSend />} size="normal" outlined>
             Button
           </FlatButton>
@@ -91,6 +91,8 @@ const App = () => {
             if (value.includes("a")) return false;
           }}
           placeholder="Prova"
+          leadingIcon={<IconSearch />}
+          trailingIcon={<IconSearch />}
         />
         <hr />
         <CheckBox
@@ -101,7 +103,7 @@ const App = () => {
           }
         />
         <hr />
-        <Card>
+        <Card hasShadow>
           <Text color="accent" size="title" weight={700}>
             Titolo
           </Text>
@@ -172,14 +174,13 @@ const App = () => {
           </div>
           <hr />
           <TextField
+            large
             onChange={(value) => {
               if (value.length === 5) return false;
             }}
           />
           <hr />
-          <CheckBox
-            onChange={(e) => console.log(e.target.checked)}
-          />
+          <CheckBox onChange={(e) => console.log(e.target.checked)} />
           <hr />
           <LabeledText label="Prova" text="Qualcosa da scrivere" />
         </Card>
@@ -332,7 +333,12 @@ const App = () => {
             </Switch>
           </div>
           <hr />
-          <TextField onChange={() => null} />
+          <TextField
+            large
+            onChange={() => null}
+            leadingIcon={<IconSearch />}
+            trailingIcon={<IconSearch />}
+          />
           <hr />
           <CheckBox />
           <hr />

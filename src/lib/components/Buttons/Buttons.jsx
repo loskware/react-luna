@@ -63,7 +63,7 @@ const SolidButton = ({
 const FlatButton = ({
   classNames = [],
   size = "normal",
-  textColor = "accent",
+  textColor = "primary",
   icon,
   disabled = false,
   outlined = false,

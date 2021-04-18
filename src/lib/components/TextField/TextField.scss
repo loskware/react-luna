@@ -1,32 +1,67 @@
-//
-// Created by Andrea Montorio
-// Project Crucible
-// Copyright © 2020
-//
-
 .TextField {
-  width: 100%;
-  background-color: var(--widget-bkg-color);
-  border: 2px solid transparent;
-  border-radius: var(--widget-border-radius-m);
-  color: var(--widget-text-color);
+  align-items: center;
+  background-color: var(--textfield-background-color);
+  border-radius: var(--textfield-border-radius);
+  color: var(--textfield-text-color);
+  display: flex;
   font-size: 0.875rem;
-  line-height: 1em;
-  outline: none;
-  padding: .25rem .5rem;
-  transition: border-color var(--transition-duration-fast) ease-out;
-  will-change: border-color;
-
-  &:focus {
-    border-bottom-color: var(--widget-border-color-accent);
+  overflow: hidden;
+  padding: 0 0.75rem;
+  position: relative;
+  input {
+    background: none;
+    border: none;
+    color: var(--text-field-text-color);
+    flex: 1;
+    font-size: inherit;
+    line-height: 1;
+    outline: none;
+    padding: 0.375rem 0;
   }
-
-  &.TextField--large {
-    padding: 0.5rem;
+  svg,
+  img {
+    height: 1.25em;
+    width: 1.25em;
+    &:first-child {
+      margin-right: 0.5rem;
+    }
+    &:last-child {
+      margin-left: 0.5rem;
+    }
   }
-
-  &.TextField--transparent {
+  &::after {
+    background-color: var(--textfield-border-color);
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: transform var(--textfield-transition-duration)
+      var(--transition-timing-ease-in-out);
+    transform: scale(0, 1);
+    width: 100%;
+    will-change: transform;
+  }
+  &:focus-within::after {
+    transform: scale(1);
+  }
+  &--large {
+    font-size: 1rem;
+    padding: 0 1rem;
+    input {
+      padding: 0.75rem 0;
+    }
+    svg,
+    img {
+      &:first-child {
+        margin-right: 0.75rem;
+      }
+      &:last-child {
+        margin-left: 0.75rem;
+      }
+    }
+  }
+  &--transparent {
     background-color: transparent;
   }
 }
-

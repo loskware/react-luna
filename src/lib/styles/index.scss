@@ -11,6 +11,7 @@
 @use "theme/components/radio";
 @use "theme/components/selector";
 @use "theme/components/switch";
+@use "theme/components/textfield";
 
 .light-theme {
   @include default.light;
@@ -24,6 +25,7 @@
   @include radio.light;
   @include selector.light;
   @include switch.light;
+  @include textfield.light;
 }
 
 .dark-theme {
@@ -38,4 +40,5 @@
   @include radio.dark;
   @include selector.dark;
   @include switch.dark;
+  @include textfield.dark;
 }

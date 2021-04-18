@@ -5,9 +5,10 @@ import "./TextField.scss";
 /**
  * @param {object} props
  * @param {Array<string>} [props.classNames]
- * @param {string} [props.defaultValue]
  * @param {string} [props.placeholder]
  * @param {boolean} [props.large]
+ * @param {any} [props.leadingIcon]
+ * @param {any} [props.trailingIcon]
  * @param {boolean} [props.transparent]
  * @param {(
  *  value: string,
@@ -19,28 +20,33 @@ const TextField = ({
   classNames = [],
   placeholder = "",
   large = false,
+  leadingIcon,
+  trailingIcon,
   transparent = false,
   onChange,
 }) => {
   const [text, setText] = useState("");
   const cn = createClassNames(
     "TextField",
-    large ? "TextField--large" : null,
-    transparent ? "TextField--transparent" : null,
+    large && "TextField--large",
+    transparent && "TextField--transparent",
     ...classNames
   );
   return (
-    <input
-      className={cn}
-      onChange={(e) => {
-        const value = e.target.value;
-        const willChange = !(onChange?.(value, text, e) === false);
-        if (willChange) setText(e.target.value);
-      }}
-      placeholder={placeholder}
-      type="text"
-      value={text}
-    />
+    <div className={cn}>
+      {leadingIcon}
+      <input
+        onChange={(e) => {
+          const value = e.target.value;
+          const willChange = !(onChange?.(value, text, e) === false);
+          if (willChange) setText(e.target.value);
+        }}
+        placeholder={placeholder}
+        type="text"
+        value={text}
+      />
+      {trailingIcon}
+    </div>
   );
 };
 

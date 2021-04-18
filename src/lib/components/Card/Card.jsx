@@ -6,15 +6,25 @@ import "./Card.scss";
  * @param {object} props
  * @param {Array<string>} [props.classNames]
  * @param {any} [props.children]
- * @param {boolean} [props.paddingless]
+ * @param {boolean} [props.hasShadow]
+ * @param {string} [props.padding]
  */
-const Card = ({ classNames = [], children, paddingless = false }) => {
+const Card = ({
+  classNames = [],
+  children,
+  padding = "1rem",
+  hasShadow = false,
+}) => {
   const cn = createClassNames(
     "Card",
-    paddingless ? "Card__paddingless" : "",
+    hasShadow && "Card--hasShadow",
     ...classNames
   );
-  return <div className={cn}>{children}</div>;
+  return (
+    <div className={cn} style={{ padding }}>
+      {children}
+    </div>
+  );
 };
 
 export { Card };

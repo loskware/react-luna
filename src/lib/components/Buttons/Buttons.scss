@@ -10,11 +10,10 @@
   border: 1px solid transparent;
   border-radius: var(--button-border-radius);
   cursor: pointer;
-  fill: currentColor;
   font-family: inherit;
   font-weight: 500;
   justify-content: center;
-  line-height: 1em;
+  line-height: 1;
   outline: none;
   transition-duration: var(--button-transition-duration);
   transition-timing-function: linear;
@@ -52,7 +51,6 @@
 .SolidButton {
   color: var(--solid-button-text-color);
   background-color: var(--solid-button-bkg-color);
-  //box-shadow: var(--solid-button-shadow);
   transition-property: background-color, border-color, opacity;
   will-change: background-color, border-color, opacity;
   &:enabled:hover {
@@ -75,6 +73,9 @@
   }
   &--outlined {
     border: 1px solid var(--flat-button-border-color);
+    &:disabled {
+      border-color: var(--flat-button-border-color-disabled);
+    }
   }
   &--accent-text-color {
     color: var(--flat-button-text-color-accent);

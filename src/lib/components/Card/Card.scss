@@ -6,12 +6,9 @@
 
 .Card {
   background-color: var(--card-bkg-color);
-  box-shadow: var(--card-shadow);
   border-radius: var(--card-border-radius);
   overflow: hidden;
-  padding: 1rem;
-
-  &__paddingless {
-    padding: 0;
+  &--hasShadow {
+    box-shadow: var(--card-shadow);
   }
 }
