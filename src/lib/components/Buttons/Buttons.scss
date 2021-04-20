@@ -10,10 +10,9 @@
   border: 1px solid transparent;
   border-radius: var(--button-border-radius);
   cursor: pointer;
-  font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   justify-content: center;
-  line-height: 1;
+  letter-spacing: 0.25px;
   outline: none;
   transition-duration: var(--button-transition-duration);
   transition-timing-function: linear;
@@ -25,26 +24,34 @@
   &:disabled {
     cursor: default;
   }
-  > svg, > img {
-    height: 1em;
-    width: 1em;
-  }
-  span:not(:first-child) {
-    margin-left: .375rem;
-  }
   &--compact {
-    font-size: .75rem;
-    padding: .25rem .5rem;
+    font-size: 12px;
+    padding: 4px 8px;
+    svg, img {
+      height: 14px;
+      width: 14px;
+      margin-right: 4px;
+    }
   }
   
   &--normal {
-    font-size: .875rem;
-    padding: .375rem .75rem;
+    font-size: 14px;
+    padding: 6px 12px;
+    svg, img {
+      height: 16px;
+      width: 16px;
+      margin-right: 6px;
+    }
   }
   
   &--large {
-    font-size: .875rem;
-    padding: .5rem 1rem;
+    font-size: 16px;
+    padding: 8px 16px;
+    svg, img {
+      height: 18px;
+      width: 18px;
+      margin-right: 8px;
+    }
   }
 }
 

@@ -13,10 +13,12 @@ import {
   Text,
 } from "./lib";
 import "./App.scss";
+import { Draggable } from "./lib/components/Draggable/Draggable";
 
 const App = () => {
   const [switchChecked, setSwitchChecked] = useState(false);
   const [selectedTab, setSelectedTab] = useState(0);
+  const [showDraggable, setShowDraggable] = useState(true);
 
   return (
     <div className="App">
@@ -348,7 +350,13 @@ const App = () => {
           classNames={["App__send-button"]}
           size="large"
           icon={<IconSend />}
+          onClick={() => setShowDraggable(!showDraggable)}
         />
+      </div>
+      <div className="drag-test">
+        {
+          showDraggable && <Draggable></Draggable>
+        }
       </div>
     </div>
   );

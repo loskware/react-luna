@@ -1,7 +1,7 @@
 {
   "name": "react-luna",
   "description": "React UI Kit",
-  "version": "0.0.1-alfa.4",
+  "version": "0.0.1-alfa.5",
   "license": "MIT",
   "private": false,
   "main": "build/index.js",
