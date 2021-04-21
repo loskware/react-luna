@@ -1,4 +1,4 @@
-import "./Avatar.scss";
+import "./Avatar.css";
 import React from "react";
 import { createClassNames } from "../../createClassNames";
 

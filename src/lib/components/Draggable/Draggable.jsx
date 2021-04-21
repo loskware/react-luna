@@ -27,6 +27,8 @@ export function Draggable({ classNames = [], children }) {
 function makeDrabbable(element) {
   let mouseX = 0;
   let mouseY = 0;
+  let translateX = 0;
+  let translateY = 0;
 
   /** @param {MouseEvent} e */
   function mouseDown(e) {
@@ -47,8 +49,9 @@ function makeDrabbable(element) {
     const deltaY = e.clientY - mouseY;
     mouseX = e.clientX;
     mouseY = e.clientY;
-    element.style.left = `${element.offsetLeft + deltaX}px`;
-    element.style.top = `${element.offsetTop + deltaY}px`;
+    translateX += deltaX;
+    translateY += deltaY;
+    element.style.transform = `translate(${translateX}px, ${translateY}px)`;
   }
 
   /** @param {MouseEvent} e */

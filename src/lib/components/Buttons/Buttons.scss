@@ -30,7 +30,9 @@
     svg, img {
       height: 14px;
       width: 14px;
-      margin-right: 4px;
+      & ~ span {
+        margin-left: 4px;
+      }
     }
   }
   
@@ -40,7 +42,9 @@
     svg, img {
       height: 16px;
       width: 16px;
-      margin-right: 6px;
+      & ~ span {
+        margin-left: 6px;
+      }
     }
   }
   
@@ -50,7 +54,9 @@
     svg, img {
       height: 18px;
       width: 18px;
-      margin-right: 8px;
+      & ~ span {
+        margin-left: 8px;
+      }
     }
   }
 }
