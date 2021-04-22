@@ -44,7 +44,7 @@
     "type": "git",
     "url": "https://github.com/loskware/react-luna.git"
   },
-  "homepage": "https://github.com/loskware/react-luna",
+  "homepage": "https://loskware.github.io/react-luna/",
   "browserslist": {
     "production": [
       ">0.2%",
