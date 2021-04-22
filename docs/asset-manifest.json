@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/loskware/react-luna/static/css/main.795cf5ed.chunk.css",
+    "main.js": "/loskware/react-luna/static/js/main.e08d2b60.chunk.js",
+    "main.js.map": "/loskware/react-luna/static/js/main.e08d2b60.chunk.js.map",
+    "runtime-main.js": "/loskware/react-luna/static/js/runtime-main.5acd9ba1.js",
+    "runtime-main.js.map": "/loskware/react-luna/static/js/runtime-main.5acd9ba1.js.map",
+    "static/js/2.ffde59c1.chunk.js": "/loskware/react-luna/static/js/2.ffde59c1.chunk.js",
+    "static/js/2.ffde59c1.chunk.js.map": "/loskware/react-luna/static/js/2.ffde59c1.chunk.js.map",
+    "index.html": "/loskware/react-luna/index.html",
+    "static/css/main.795cf5ed.chunk.css.map": "/loskware/react-luna/static/css/main.795cf5ed.chunk.css.map",
+    "static/js/2.ffde59c1.chunk.js.LICENSE.txt": "/loskware/react-luna/static/js/2.ffde59c1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5acd9ba1.js",
+    "static/js/2.ffde59c1.chunk.js",
+    "static/css/main.795cf5ed.chunk.css",
+    "static/js/main.e08d2b60.chunk.js"
+  ]
+}
