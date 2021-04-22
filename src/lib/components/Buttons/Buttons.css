@@ -75,6 +75,7 @@
 .SolidButton:disabled {
   background-color: var(--disabled-color);
 }
+
 .SolidButton--primary {
   color: var(--primary-text-color-inverse);
   background-color: var(--primary-bkg-color);
@@ -118,6 +119,13 @@
   transition-property: background-color, border-color, color, opacity;
   will-change: background-color, border-color, color, opacity;
 }
+.FlatButton:disabled {
+  color: var(--disabled-color);
+}
+.FlatButton.FlatButton--outlined:disabled {
+  border-color: var(--disabled-color);
+}
+
 .FlatButton--primary:enabled:hover {
   background-color: var(--primary-bkg-color-alfa1);
 }
@@ -147,12 +155,6 @@
 }
 .FlatButton--success.FlatButton--outlined {
   border: 1px solid var(--success-border-color);
-}
-.FlatButton:disabled {
-  color: var(--disabled-color);
-}
-.FlatButton--outlined:disabled {
-  border-color: var(--disabled-border-color);
 }
 
 /* FLOATING ACTION BUTTON */

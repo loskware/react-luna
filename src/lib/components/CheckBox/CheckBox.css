@@ -3,9 +3,6 @@
   cursor: pointer;
   display: inline-flex;
 }
-.CheckBox > .CheckBox__mark {
-  border: 1px solid var(--border-color);
-}
 .CheckBox > .CheckBox__input:checked + span {
   border-color: currentColor;
 }
@@ -14,7 +11,9 @@
 }
 .CheckBox > .CheckBox__input:disabled + span {
   border-color: var(--disabled-color);
-  background-color: var(--disabled-color);
+}
+.CheckBox > .CheckBox__input:disabled ~ .CheckBox__label {
+  color: var(--disabled-text-color);
 }
 .CheckBox:hover > .CheckBox__mark {
   border-color: currentColor;
@@ -28,24 +27,26 @@
 }
 
 .CheckBox__mark {
+  border: 1px solid var(--primary-border-color);
   border-radius: var(--border-radius-m);
+  box-sizing: content-box;
   display: block;
-  height: 1rem;
+  height: 16px;
   position: relative;
-  transition: border-color ease-in-out var(--transition-duration-normal);
+  transition: border-color ease-in-out var(--transition-duration-fast);
   will-change: border-color;
-  width: 1rem;
+  width: 16px;
 }
 .CheckBox__mark::after {
   border-radius: var(--border-radius-s);
   content: "";
-  height: 0.5rem;
-  left: 0.1875rem;
+  height: 8px;
+  left: 4px;
   position: absolute;
-  top: 0.1875rem;
-  transition: background-color ease-in-out var(--transition-duration-normal);
+  top: 4px;
+  transition: background-color ease-in-out var(--transition-duration-fast);
   will-change: background-color;
-  width: 0.5rem;
+  width: 8px;
   will-change: background-color;
 }
 
@@ -54,10 +55,6 @@
   font-size: 0.875rem;
   user-select: none;
   white-space: nowrap;
-}
-
-.CheckBox--primary {
-  color: var(--primary-color);
 }
 
 .CheckBox--accent {

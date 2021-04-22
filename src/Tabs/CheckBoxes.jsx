@@ -15,16 +15,6 @@ export const CheckBoxes = () => {
           disabled
         />
         <hr />
-        <Text size="title">PRIMARY</Text>
-        <CheckBox
-          variant="primary"
-          label="Lorem Ipsum"
-          labelPosition="left"
-          onChange={(event) =>
-            console.log(`checkbox is ${event.target.checked}`)
-          }
-        />
-        <hr />
         <Text size="title">ACCENT</Text>
         <CheckBox
           variant="accent"
@@ -75,16 +65,6 @@ export const CheckBoxes = () => {
             console.log(`checkbox is ${event.target.checked}`)
           }
           disabled
-        />
-        <hr />
-        <Text size="title">PRIMARY</Text>
-        <CheckBox
-          variant="primary"
-          label="Lorem Ipsum"
-          labelPosition="left"
-          onChange={(event) =>
-            console.log(`checkbox is ${event.target.checked}`)
-          }
         />
         <hr />
         <Text size="title">ACCENT</Text>
