@@ -1,0 +1,33 @@
+@mixin light {
+  // COLORS
+  --sel-border-color: var(--widget-border-color);
+  --sel-option-bkg-color: transparent;
+  --sel-option-bkg-color-checked: var(--widget-frg-color-accent);
+  --sel-option-bkg-color-hover: var(--widget-bkg-color-hover);
+  --sel-option-text-color: var(--widget-text-color);
+  --sel-option-text-color-checked: var(--widget-text-color-onaccent);
+
+  // BORDER RADII
+  --sel-container-border-radius: var(--border-radius-m);
+  --sel-option-border-radius: var(--border-radius-s);
+
+  // TRANSITION
+  --sel-transition-duration: var(--transition-fast);
+}
+
+@mixin dark {
+  // COLORS
+  --sel-border-color: var(--widget-border-color);
+  --sel-option-bkg-color: transparent;
+  --sel-option-bkg-color-checked: var(--widget-frg-color-accent);
+  --sel-option-bkg-color-hover: var(--widget-bkg-color-hover);
+  --sel-option-text-color: var(--widget-text-color);
+  --sel-option-text-color-checked: var(--widget-text-color-onaccent);
+
+  // BORDER RADII
+  --sel-container-border-radius: var(--border-radius-m);
+  --sel-option-border-radius: var(--border-radius-s);
+
+  // TRANSITION
+  --sel-transition-duration: var(--transition-fast);
+}

@@ -1,0 +1,7 @@
+@mixin light {
+  --fv-transition-duration: var(--transition-duration-normal);
+}
+
+@mixin dark {
+  --fv-transition-duration: var(--transition-duration-normal);
+}

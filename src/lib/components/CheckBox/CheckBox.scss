@@ -1,0 +1,173 @@
+.CheckBox {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+
+  input {
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+  }
+  input:checked + span {
+    border-color: var(--cb-border-color-checked);
+    &::after {
+      background-color: var(--cb-bkg-color-checked);
+    }
+  }
+
+  .CheckBox__mark {
+    border: 1px solid var(--cb-border-color);
+    border-radius: var(--cb-border-radius);
+    color: var(--cb-text-color);
+    display: block;
+    height: 1rem;
+    position: relative;
+    transition: border-color ease-in-out var(--cb-transition-duration);
+    will-change: border-color;
+    width: 1rem;
+    &::after {
+      border-radius: var(--cb-mark-border-radius);
+      content: "";
+      height: 0.5rem;
+      left: 0.1875rem;
+      position: absolute;
+      top: 0.1875rem;
+      transition: background-color ease-in-out var(--cb-transition-duration);
+      will-change: background-color;
+      width: 0.5rem;
+      will-change: background-color;
+    }
+  }
+
+  .CheckBox__label {
+    color: var(--text-color);
+    font-size: 0.875rem;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    .CheckBox__mark {
+      border-color: var(--cb-border-color-hover);
+    }
+  }
+
+  &--leftLabel {
+    flex-direction: row-reverse;
+    .CheckBox__mark {
+      margin-left: 0.5rem;
+    }
+    .CheckBox__label {
+      margin-right: auto;
+    }
+  }
+  &--rightLabel {
+    flex-direction: row;
+    .CheckBox__mark {
+      margin-right: 0.5rem;
+    }
+    .CheckBox__label {
+      margin-left: auto;
+    }
+  }
+}
+
+/*
+.CheckBox {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+
+  input {
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 21%;
+      display: table;
+      width: 5.71428571px;
+      height: 9.14285714px;
+      border: 2px solid #fff;
+      border-top: 0;
+      border-left: 0;
+      transform: rotate(45deg) scale(0) translate(-50%, -50%);
+      opacity: 0;
+      transition: transform 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6),
+        opacity 0.1s;
+      content: " ";
+    }
+  }
+  input:checked::after {
+    transform: rotate(45deg) scale(1) translate(-50%, -50%);
+    opacity: 1;
+    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    content: " ";
+  }
+  input:checked ~ span {
+    border-color: var(--cb-border-color-checked);
+    &::after {
+      background-color: var(--cb-bkg-color-checked);
+    }
+  }
+
+  .CheckBox__mark {
+    border: 1px solid var(--cb-border-color);
+    border-radius: var(--cb-border-radius);
+    color: var(--cb-text-color);
+    display: block;
+    height: 1rem;
+    position: relative;
+    transition: border-color ease-out var(--cb-transition-duration);
+    will-change: border-color;
+    width: 1rem;
+    &::after {
+      border-radius: var(--cb-mark-border-radius);
+      content: "";
+      height: 0.5rem;
+      left: 0.1875rem;
+      position: absolute;
+      top: 0.1875rem;
+      transition: background-color ease-out var(--cb-transition-duration);
+      width: 0.5rem;
+      will-change: background-color;
+    }
+  }
+
+  .CheckBox__label {
+    color: var(--text-color);
+    font-size: 0.875rem;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    .CheckBox__mark {
+      border-color: var(--cb-border-color-hover);
+    }
+  }
+
+  &--leftLabel {
+    flex-direction: row-reverse;
+    .CheckBox__mark {
+      margin-left: 0.5rem;
+    }
+    .CheckBox__label {
+      margin-right: auto;
+    }
+  }
+  &--rightLabel {
+    flex-direction: row;
+    .CheckBox__mark {
+      margin-right: 0.5rem;
+    }
+    .CheckBox__label {
+      margin-left: auto;
+    }
+  }
+}
+
+*/

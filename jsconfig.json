@@ -3,5 +3,5 @@
     "checkJs": true,
     "jsx": "react-jsx"
   },
-  "include": ["components"]
+  "include": ["src", "index.js"]
 }

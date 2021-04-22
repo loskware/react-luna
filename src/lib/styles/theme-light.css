@@ -1,0 +1,69 @@
+.theme-light {
+  --color-bkg-primary: hsl(216, 8%, 100%);
+  --color-bkg-secondary: hsl(216, 8%, 97%);
+
+  --text-color: hsla(0, 0%, 0%, 0.9);
+  --text-color-inverse: hsla(0, 0%, 100%, 0.9);
+  --text-color-secondary: hsla(0, 0%, 0%, 0.7);
+  --text-color-tertiary: hsla(0, 0%, 0%, 0.3);
+
+  --widget-bkg-color: hsla(216, 8%, 0%, 0.07);
+  --widget-bkg-color-disabled: hsla(216, 8%, 0%, 0.2);
+  --widget-bkg-color-hover: hsla(216, 8%, 0%, 0.07);
+  --widget-frg-color: hsl(216, 8%, 76%);
+
+  /* PRIMARY */
+  --primary-color: hsla(210, 15%, 0%, 0.1);
+  --primary-bkg-color: var(--primary-color);
+  --primary-bkg-color-sec: hsla(210, 15%, 0%, 0.15);
+  --primary-bkg-color-alfa1: hsla(210, 15%, 0%, 0.06);
+  --primary-bkg-color-alfa2: hsla(210, 15%, 0%, 0.1);
+  --primary-border-color: hsla(210, 15%, 0%, 0.3);
+  --primary-text-color: var(--primary-color);
+  --primary-text-color-inverse: var(--text-color-secondary);
+
+  /* ACCENT */
+  --accent-color: hsl(210, 100%, 56%);
+  --accent-bkg-color: var(--accent-color);
+  --accent-bkg-color-sec: hsl(210, 100%, 51%);
+  --accent-bkg-color-alfa1: hsla(210, 100%, 46%, 0.1);
+  --accent-bkg-color-alfa2: hsla(210, 100%, 46%, 0.4);
+  --accent-border-color: var(--accent-color);
+  --accent-text-color: var(--accent-color);
+  --accent-text-color-inverse: var(--text-color-inverse);
+
+  /* DANGER */
+  --danger-color: hsl(12, 100%, 56%);
+  --danger-bkg-color: var(--danger-color);
+  --danger-bkg-color-sec: hsl(12, 100%, 48%);
+  --danger-bkg-color-alfa1: hsla(12, 100%, 46%, 0.1);
+  --danger-bkg-color-alfa2: hsla(12, 100%, 46%, 0.4);
+  --danger-border-color: var(--danger-color);
+  --danger-text-color: var(--danger-color);
+  --danger-text-color-inverse: var(--text-color-inverse);
+
+  /* WARNING */
+  --warning-color: hsl(51, 99%, 48%);
+  --warning-bkg-color: var(--warning-color);
+  --warning-bkg-color-sec: hsl(51, 99%, 44%);
+  --warning-bkg-color-alfa1: hsla(51, 99%, 46%, 0.2);
+  --warning-bkg-color-alfa2: hsla(51, 99%, 46%, 0.4);
+  --warning-border-color: var(--warning-color);
+  --warning-text-color: var(--warning-color);
+  --warning-text-color-inverse: var(--text-color-secondary);
+
+  /* SUCCESS */
+  --success-color: hsl(93, 90%, 40%);
+  --success-bkg-color: var(--success-color);
+  --success-bkg-color-sec: hsl(93, 90%, 35%);
+  --success-bkg-color-alfa1: hsla(93, 90%, 46%, 0.15);
+  --success-bkg-color-alfa2: hsla(93, 90%, 46%, 0.4);
+  --success-border-color: var(--success-color);
+  --success-text-color: var(--success-color);
+  --success-text-color-inverse: var(--text-color-inverse);
+
+  /* DISABLED */
+  --disabled-color: hsla(216, 8%, 0%, 0.2);
+  --disabled-text-color: hsla(216, 8%, 0%, 0.2);
+
+}

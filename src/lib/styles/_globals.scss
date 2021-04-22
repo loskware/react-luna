@@ -1,0 +1,24 @@
+@use "values/radii";
+@use "values/shadows";
+@use "values/transitions";
+
+:root {
+  @include radii.vars;
+  @include shadows.vars;
+  @include transitions.vars;
+
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.acrylic {
+  /* Color/tint overlay + Opacity */
+  background: rgba(0, 0, 0, 0.5);
+  /* Parent background + Gaussian blur */
+  backdrop-filter: blur(10px);
+  /* Exclusion blend */
+  background-blend-mode: exclusion;
+}

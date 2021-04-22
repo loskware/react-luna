@@ -1,0 +1,19 @@
+@mixin light {
+  --textfield-background-color: var(--widget-bkg-color);
+  --textfield-border-color: var(--widget-border-color-accent);
+  --textfield-text-color: var(--widget-text-color);
+
+  --textfield-border-radius: var(--border-radius-m);
+  
+  --textfield-transition-duration: var(--transition-duration-fast);
+}
+
+@mixin dark {
+  --textfield-background-color: var(--widget-bkg-color);
+  --textfield-border-color: var(--widget-border-color-accent);
+  --textfield-text-color: var(--widget-text-color);
+
+  --textfield-border-radius: var(--border-radius-m);
+  
+  --textfield-transition-duration: var(--transition-duration-normal);
+}

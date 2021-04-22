@@ -1,18 +1,60 @@
 {
   "name": "react-luna",
-  "version": "0.0.1",
+  "description": "React UI Kit",
+  "version": "0.0.1-alfa.5",
+  "license": "MIT",
   "private": false,
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "react",
+    "react-ui",
+    "luna"
+  ],
+  "author": "Andrea Montorio <andrea.montorio@gmail.com>",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "babel-build": "babel src/lib -d lib --copy-files",
+    "prepublishOnly": "npm run build"
+  },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^16 || ^17"
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
     "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3"
+    "@types/react-dom": "^17.0.3",
+    "eslint": "^7.24.0",
+    "eslint-plugin-react": "^7.23.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
   },
   "eslintConfig": {
     "extends": [
       "react-app"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loskware/react-luna.git"
+  },
+  "homepage": "https://github.com/loskware/react-luna",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   }
 }

@@ -1,0 +1,172 @@
+/* BASE BUTTON CLASS */
+.Button {
+  align-items: center;
+  display: inline-flex;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-m);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  justify-content: center;
+  letter-spacing: 0.25px;
+  outline: none;
+  transition-duration: var(--transition-duration-fast);
+  transition-timing-function: linear;
+  user-select: none;
+  white-space: nowrap;
+}
+.Button:enabled:active {
+  opacity: 0.7;
+}
+.Button:disabled {
+  cursor: default;
+}
+
+.Button--compact {
+  font-size: 12px;
+  line-height: 14px;
+  padding: 6px 10px;
+}
+.Button--compact > svg,
+.Button--compact > img {
+  height: 14px;
+  width: 14px;
+}
+.Button--compact > svg ~ span,
+.Button--compact > img ~ span {
+  margin-left: 4px;
+}
+
+.Button--normal {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 8px 14px;
+}
+.Button--normal > svg,
+.Button--normal > img {
+  height: 16px;
+  width: 16px;
+}
+.Button--normal > svg ~ span,
+.Button--normal > img ~ span {
+  margin-left: 6px;
+}
+
+.Button--large {
+  font-size: 16px;
+  line-height: 18px;
+  padding: 10px 18px;
+}
+.Button--large > svg,
+.Button--large > img {
+  height: 18px;
+  width: 18px;
+}
+.Button--large > svg ~ span,
+.Button--large > img ~ span {
+  margin-left: 8px;
+}
+
+/* SOLID BUTTON */
+.SolidButton {
+  transition-property: background-color, border-color, opacity;
+  will-change: background-color, border-color, opacity;
+}
+.SolidButton:disabled {
+  background-color: var(--disabled-color);
+}
+.SolidButton--primary {
+  color: var(--primary-text-color-inverse);
+  background-color: var(--primary-bkg-color);
+}
+.SolidButton--primary:enabled:hover {
+  background-color: var(--primary-bkg-color-sec);
+}
+.SolidButton--accent {
+  color: var(--accent-text-color-inverse);
+  background-color: var(--accent-bkg-color);
+}
+.SolidButton--accent:enabled:hover {
+  background-color: var(--accent-bkg-color-sec);
+}
+.SolidButton--danger {
+  color: var(--danger-text-color-inverse);
+  background-color: var(--danger-bkg-color);
+}
+.SolidButton--danger:enabled:hover {
+  background-color: var(--danger-bkg-color-sec);
+}
+.SolidButton--warning {
+  color: var(--warning-text-color-inverse);
+  background-color: var(--warning-bkg-color);
+}
+.SolidButton--warning:enabled:hover {
+  background-color: var(--warning-bkg-color-sec);
+}
+.SolidButton--success {
+  color: var(--success-text-color-inverse);
+  background-color: var(--success-bkg-color);
+}
+.SolidButton--success:enabled:hover {
+  background-color: var(--success-bkg-color-sec);
+}
+
+/* FLATBUTTON */
+.FlatButton {
+  background-color: transparent;
+  color: var(--text-color-secondary);
+  transition-property: background-color, border-color, color, opacity;
+  will-change: background-color, border-color, color, opacity;
+}
+.FlatButton--primary:enabled:hover {
+  background-color: var(--primary-bkg-color-alfa1);
+}
+.FlatButton--primary.FlatButton--outlined {
+  border: 1px solid var(--primary-border-color);
+}
+.FlatButton--accent:enabled:hover {
+  background-color: var(--accent-bkg-color-alfa1);
+}
+.FlatButton--accent.FlatButton--outlined {
+  border: 1px solid var(--accent-border-color);
+}
+.FlatButton--danger:enabled:hover {
+  background-color: var(--danger-bkg-color-alfa1);
+}
+.FlatButton--danger.FlatButton--outlined {
+  border: 1px solid var(--danger-border-color);
+}
+.FlatButton--warning:enabled:hover {
+  background-color: var(--warning-bkg-color-alfa1);
+}
+.FlatButton--warning.FlatButton--outlined {
+  border: 1px solid var(--warning-border-color);
+}
+.FlatButton--success:enabled:hover {
+  background-color: var(--success-bkg-color-alfa1);
+}
+.FlatButton--success.FlatButton--outlined {
+  border: 1px solid var(--success-border-color);
+}
+.FlatButton:disabled {
+  color: var(--disabled-color);
+}
+.FlatButton--outlined:disabled {
+  border-color: var(--disabled-border-color);
+}
+
+/* FLOATING ACTION BUTTON */
+.FloatingActionButton {
+  box-shadow: var(--elevation-4);
+  border-radius: 50vh;
+  padding: 0.75rem;
+}
+.FloatingActionButton > svg,
+.FloatingActionButton > img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.FloatingActionButton > span {
+  margin-left: 0.75rem;
+  margin-right: 0.5rem;
+}
