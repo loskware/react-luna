@@ -1,16 +1,11 @@
 .theme-light {
-  --color-bkg-primary: hsl(216, 8%, 100%);
-  --color-bkg-secondary: hsl(216, 8%, 97%);
+  --bkg-color: hsl(216, 8%, 100%);
+  --bkg-color-sec: hsl(216, 8%, 97%);
 
   --text-color: hsla(0, 0%, 0%, 0.9);
   --text-color-inverse: hsla(0, 0%, 100%, 0.9);
   --text-color-secondary: hsla(0, 0%, 0%, 0.7);
   --text-color-tertiary: hsla(0, 0%, 0%, 0.3);
-
-  --widget-bkg-color: hsla(216, 8%, 0%, 0.07);
-  --widget-bkg-color-disabled: hsla(216, 8%, 0%, 0.2);
-  --widget-bkg-color-hover: hsla(216, 8%, 0%, 0.07);
-  --widget-frg-color: hsl(216, 8%, 76%);
 
   /* PRIMARY */
   --primary-color: hsla(210, 15%, 0%, 0.1);

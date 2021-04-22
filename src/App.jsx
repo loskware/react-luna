@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-import { Buttons } from "./Tabs/Buttons";
+import { CheckBoxes } from "./Tabs";
 
 const App = () => {
 
   return (
     <div className="App">
-      <Buttons />
+      <CheckBoxes />
     </div>
   );
 };

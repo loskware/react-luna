@@ -1,27 +1,27 @@
 import React from "react";
 import { createClassNames } from "../../createClassNames";
-import "./Card.scss";
+import "./Card.css";
 
 /**
  * @param {object} props
  * @param {Array<string>} [props.classNames]
  * @param {any} [props.children]
  * @param {boolean} [props.hasShadow]
- * @param {string} [props.padding]
+ * @param {React.CSSProperties} [props.style]
  */
 const Card = ({
   classNames = [],
   children,
-  padding = "1rem",
   hasShadow = false,
+  style = {}
 }) => {
   const cn = createClassNames(
     "Card",
-    hasShadow && "Card--hasShadow",
+    hasShadow && "Card-shadow",
     ...classNames
   );
   return (
-    <div className={cn} style={{ padding }}>
+    <div className={cn} style={style}>
       {children}
     </div>
   );

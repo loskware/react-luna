@@ -1,0 +1,97 @@
+.CheckBox {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+}
+.CheckBox > .CheckBox__mark {
+  border: 1px solid var(--border-color);
+}
+.CheckBox > .CheckBox__input:checked + span {
+  border-color: currentColor;
+}
+.CheckBox > .CheckBox__input:checked + span::after {
+  background-color: currentColor;
+}
+.CheckBox > .CheckBox__input:disabled + span {
+  border-color: var(--disabled-color);
+  background-color: var(--disabled-color);
+}
+.CheckBox:hover > .CheckBox__mark {
+  border-color: currentColor;
+}
+
+.CheckBox__input {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}
+
+.CheckBox__mark {
+  border-radius: var(--border-radius-m);
+  display: block;
+  height: 1rem;
+  position: relative;
+  transition: border-color ease-in-out var(--transition-duration-normal);
+  will-change: border-color;
+  width: 1rem;
+}
+.CheckBox__mark::after {
+  border-radius: var(--border-radius-s);
+  content: "";
+  height: 0.5rem;
+  left: 0.1875rem;
+  position: absolute;
+  top: 0.1875rem;
+  transition: background-color ease-in-out var(--transition-duration-normal);
+  will-change: background-color;
+  width: 0.5rem;
+  will-change: background-color;
+}
+
+.CheckBox__label {
+  color: var(--text-color);
+  font-size: 0.875rem;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.CheckBox--primary {
+  color: var(--primary-color);
+}
+
+.CheckBox--accent {
+  color: var(--accent-color);
+}
+
+.CheckBox--danger {
+  color: var(--danger-color);
+}
+
+.CheckBox--warning {
+  color: var(--warning-color);
+}
+
+.CheckBox--success {
+  color: var(--success-color);
+}
+
+.CheckBox--leftLabel {
+  flex-direction: row-reverse;
+}
+.CheckBox--leftLabel > .CheckBox__mark {
+  margin-left: 0.5rem;
+}
+.CheckBox--leftLabel > .CheckBox__label {
+  margin-right: auto;
+}
+
+.CheckBox--rightLabel {
+  flex-direction: row;
+}
+.CheckBox--rightLabel > .CheckBox__mark {
+  margin-right: 0.5rem;
+}
+.CheckBox--rightLabel > .CheckBox__label {
+  margin-left: auto;
+}

@@ -1,0 +1,9 @@
+.Card {
+  background-color: var(--bkg-color-sec);
+  border-radius: var(--border-radius-l);
+  overflow: hidden;
+}
+
+.Card-shadow {
+  box-shadow: var(--elevation-2);
+}

@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: var(--color-bkg-primary);
+  background-color: var(--bkg-color);
   color: var(--text-color);
   margin: 0;
   padding: 0;

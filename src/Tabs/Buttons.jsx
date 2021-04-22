@@ -1,7 +1,6 @@
 import { IconSend, IconLoad } from "../icons";
 import React from "react";
 import { FlatButton, FloatingActionButton, SolidButton, Text } from "../lib";
-import "./Buttons.css";
 
 export const Buttons = () => {
   return (

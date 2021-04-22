@@ -1,11 +1,11 @@
 @mixin light {
-  --card-bkg-color: var(--color-bkg-secondary);
+  --card-bkg-color: var(--bkg-color-sec);
   --card-border-radius: var(--border-radius-l);
   --card-shadow: var(--elevation-1);
 }
 
 @mixin dark {
-  --card-bkg-color: var(--color-bkg-secondary);
+  --card-bkg-color: var(--bkg-color-sec);
   --card-border-radius: var(--border-radius-l);
   --card-shadow: var(--elevation-1);
 }
