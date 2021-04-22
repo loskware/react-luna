@@ -1,3 +1,5 @@
+import React from "react";
+
 export function IconSearch({ size = 24, tooltip = "" }) {
   return (
     <svg

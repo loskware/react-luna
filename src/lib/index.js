@@ -2,6 +2,7 @@ export * from "./components/Avatar/Avatar";
 export * from "./components/Buttons/Buttons";
 export * from "./components/Card/Card";
 export * from "./components/CheckBox/CheckBox";
+export * from "./components/Draggable/Draggable";
 export * from "./components/FlipView/FlipView";
 export * from "./components/Header/Header";
 export * from "./components/Icon/Icon";

@@ -1,3 +1,5 @@
+import React from "react";
+
 export function IconServer({
   size = 24,
   tooltip = "",

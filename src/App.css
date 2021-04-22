@@ -1,0 +1,18 @@
+.split-screen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
+}
+
+hr {
+  border: none;
+  height: 1rem;
+}
+
+.theme-light, 
+.theme-dark {
+  background-color: var(--color-bkg-primary);
+  overflow-y: auto;
+  padding: 3rem;
+  position: relative;
+}

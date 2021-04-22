@@ -1,6 +1,6 @@
 import React from "react";
 import { createClassNames } from "../../createClassNames";
-import "./Buttons.scss";
+import "./Buttons.css";
 
 const Button = ({
   classNames = [],
@@ -23,6 +23,7 @@ const Button = ({
  * @param {object} props
  * @param {Array<string>} [props.classNames]
  * @param {"normal"|"compact"|"large"} [props.size]
+ * @param {"primary"|"accent"|"danger"|"warning"|"success"} [props.variant]
  * @param {any} [props.icon]
  * @param {boolean} [props.disabled]
  * @param {any} [props.children]
@@ -31,6 +32,7 @@ const Button = ({
 const SolidButton = ({
   classNames = [],
   size = "normal",
+  variant = "accent",
   icon = false,
   disabled = false,
   children = "",
@@ -38,7 +40,7 @@ const SolidButton = ({
 }) => {
   return (
     <Button
-      classNames={["SolidButton", ...classNames]}
+      classNames={["SolidButton", `SolidButton--${variant}`, ...classNames]}
       disabled={disabled}
       icon={icon}
       onClick={onClick}
@@ -53,7 +55,7 @@ const SolidButton = ({
  * @param {object} props
  * @param {Array<string>} [props.classNames]
  * @param {"normal"|"compact"|"large"} [props.size]
- * @param {"accent"|"primary"} [props.textColor]
+ * @param {"primary"|"accent"|"danger"|"warning"|"success"} [props.variant]
  * @param {any} [props.icon]
  * @param {boolean} [props.disabled]
  * @param {boolean} [props.outlined]
@@ -63,7 +65,7 @@ const SolidButton = ({
 const FlatButton = ({
   classNames = [],
   size = "normal",
-  textColor = "primary",
+  variant = "accent",
   icon,
   disabled = false,
   outlined = false,
@@ -74,8 +76,8 @@ const FlatButton = ({
     <Button
       classNames={[
         "FlatButton",
-        `FlatButton--${textColor}-text-color`,
-        outlined ? "FlatButton--outlined" : null,
+        `FlatButton--${variant}`,
+        outlined && `FlatButton--outlined`,
         ...classNames,
       ]}
       disabled={disabled}
@@ -92,6 +94,7 @@ const FlatButton = ({
  * @param {object} props
  * @param {Array<string>} [props.classNames]
  * @param {"normal"|"compact"|"large"} [props.size]
+ * @param {"primary"|"accent"|"danger"|"warning"|"success"} [props.variant]
  * @param {any} [props.icon]
  * @param {boolean} [props.disabled]
  * @param {any} [props.children]
@@ -100,6 +103,7 @@ const FlatButton = ({
 const FloatingActionButton = ({
   classNames = [],
   size = "normal",
+  variant = "accent",
   icon = false,
   disabled = false,
   children = "",
@@ -107,7 +111,12 @@ const FloatingActionButton = ({
 }) => {
   return (
     <Button
-      classNames={["FloatingActionButton", ...classNames]}
+      classNames={[
+        "FloatingActionButton",
+        "SolidButton",
+        `SolidButton--${variant}`,
+        ...classNames,
+      ]}
       disabled={disabled}
       icon={icon}
       onClick={onClick}

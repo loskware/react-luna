@@ -4,9 +4,9 @@
   "version": "0.0.1-alfa.5",
   "license": "MIT",
   "private": false,
-  "main": "build/index.js",
+  "main": "lib/index.js",
   "files": [
-    "build"
+    "lib"
   ],
   "keywords": [
     "react",
@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "babel-build": "babel src/lib -d build --copy-files",
+    "babel-build": "babel src/lib -d lib --copy-files",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {

@@ -1,3 +1,5 @@
+import React from "react";
+
 export function IconLoad({
   size = 24,
   tooltip = "",

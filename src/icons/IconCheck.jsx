@@ -1,3 +1,5 @@
+import React from "react";
+
 export function IconCheck({
   size = 24,
   tooltip = "",

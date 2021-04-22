@@ -1,3 +1,5 @@
+import React from "react";
+
 export function IconMail({
   size = 24,
   tooltip = "",

@@ -1,3 +1,5 @@
+import React from "react";
+
 export function IconSend({
   size = 24,
   tooltip = "",
