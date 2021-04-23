@@ -25,7 +25,7 @@
   --accent-bkg-color-sec: hsl(210, 100%, 50%);
   --accent-bkg-color-alfa1: hsla(210, 100%, 50%, 0.15);
   --accent-bkg-color-alfa2: hsla(210, 100%, 50%, 0.4);
-  --accent-border-color: var(--accent-color);
+  --accent-border-color: hsl(210, 100%, 35%);
   --accent-text-color: var(--accent-color);
   --accent-text-color-inverse: var(--text-color-inverse);
 
@@ -35,7 +35,7 @@
   --danger-bkg-color-sec: hsl(14, 95%, 47%);
   --danger-bkg-color-alfa1: hsla(14, 95%, 50%, 0.15);
   --danger-bkg-color-alfa2: hsla(14, 95%, 50%, 0.4);
-  --danger-border-color: var(--danger-color);
+  --danger-border-color: hsl(14, 95%, 32%);
   --danger-text-color: var(--danger-color);
   --danger-text-color-inverse: var(--text-color-inverse);
 
@@ -45,7 +45,7 @@
   --warning-bkg-color-sec: hsl(51, 99%, 40%);
   --warning-bkg-color-alfa1: hsla(51, 99%, 50%, 0.15);
   --warning-bkg-color-alfa2: hsla(51, 99%, 50%, 0.4);
-  --warning-border-color: var(--warning-color);
+  --warning-border-color: hsl(51, 99%, 25%);
   --warning-text-color: var(--warning-color);
   --warning-text-color-inverse: var(--text-color-inverse);
 
@@ -55,7 +55,7 @@
   --success-bkg-color-sec: hsl(93, 85%, 40%);
   --success-bkg-color-alfa1: hsla(93, 85%, 50%, 0.15);
   --success-bkg-color-alfa2: hsla(93, 85%, 50%, 0.4);
-  --success-border-color: var(--success-color);
+  --success-border-color: hsl(93, 85%, 25%);
   --success-text-color: var(--success-color);
   --success-text-color-inverse: var(--text-color-inverse);
 

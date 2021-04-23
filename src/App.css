@@ -50,17 +50,19 @@ html {
 .App .title-bar .Text {
   font-size: 2rem;
 }
-.App .Image {
+.App .title-bar .Image {
   height: 128px;
   width: 128px;
 }
-.App .side-bar-option {
+.App .navigator .nav-link {
+  border-radius: var(--border-radius-l);
   color: rgba(245, 245, 245, 0.8);
   cursor: pointer;
-  padding: 16px;
+  margin: 8px 16px;
+  padding: 8px 16px;
   user-select: none;
 }
-.App .side-bar-option:hover {
+.App .navigator .nav-link:hover {
   color: var(--primary-text-color-inverse);
   background-color: var(--primary-bkg-color-alfa1);
 }

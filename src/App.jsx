@@ -15,17 +15,19 @@ const App = () => {
           <Text size="title" weight={700}>
             REACT LUNA
           </Text>
-          <Image src={process.env.PUBLIC_URL + "/android-chrome-512x512.png"} alt="React Luna Logo" />
+          <Image
+            src={process.env.PUBLIC_URL + "/android-chrome-512x512.png"}
+            alt="React Luna Logo"
+          />
         </div>
-        <hr className="divider" />
-        <div className="side-bar-option" onClick={() => setSectionIndex(0)}>
-          BUTTON
+        <div className="navigator">
+          <div className="nav-link" onClick={() => setSectionIndex(0)}>
+            BUTTON
+          </div>
+          <div className="nav-link" onClick={() => setSectionIndex(1)}>
+            CHECKBOX
+          </div>
         </div>
-        <hr className="divider" />
-        <div className="side-bar-option" onClick={() => setSectionIndex(1)}>
-          CHECKBOX
-        </div>
-        <hr className="divider" />
       </div>
       <div className="content">{sections[sectionIndex]}</div>
     </div>
