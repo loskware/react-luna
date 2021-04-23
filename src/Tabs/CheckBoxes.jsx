@@ -3,8 +3,8 @@ import { CheckBox, Text } from "../lib";
 
 export const CheckBoxes = () => {
   return (
-    <div className="split-screen">
-      <div className="theme-light">
+    <div className="CheckBoxes split-screen">
+      <section className="theme-light">
         <Text size="title">DISABLED</Text>
         <CheckBox
           label="Lorem Ipsum"
@@ -54,9 +54,9 @@ export const CheckBoxes = () => {
             console.log(`checkbox is ${event.target.checked}`)
           }
         />
-      </div>
+      </section>
 
-      <div className="theme-dark">
+      <section className="theme-dark">
       <Text size="title">DISABLED</Text>
         <CheckBox
           label="Lorem Ipsum"
@@ -106,7 +106,7 @@ export const CheckBoxes = () => {
             console.log(`checkbox is ${event.target.checked}`)
           }
         />
-      </div>
+      </section>
     </div>
   );
 };

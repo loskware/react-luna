@@ -10,7 +10,7 @@ import { createClassNames } from "../../createClassNames";
  * @param {number} [props.width]
  */
 const Image = ({ classNames = [], src, alt = "", height, width }) => {
-  const cn = createClassNames("image", ...classNames);
+  const cn = createClassNames("Image", ...classNames);
   return (
     <img
       className={cn}

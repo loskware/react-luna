@@ -5,7 +5,7 @@ import { FlatButton, FloatingActionButton, SolidButton, Text } from "../lib";
 export const Buttons = () => {
   return (
     <div className="Buttons split-screen">
-      <div className="theme-light">
+      <section className="theme-light">
         <Text size="title">DISABLED</Text>
         <div>
           <SolidButton icon={<IconLoad />} disabled>
@@ -308,9 +308,9 @@ export const Buttons = () => {
             onClick={() => null}
           />
         </div>
-      </div>
+      </section>
 
-      <div className="theme-dark">
+      <section className="theme-dark">
         <Text size="title">DISABLED</Text>
         <div>
           <SolidButton icon={<IconLoad />} disabled>
@@ -613,7 +613,7 @@ export const Buttons = () => {
             onClick={() => null}
           />
         </div>
-      </div>
+      </section>
     </div>
   );
 };
