@@ -3,30 +3,30 @@
   cursor: pointer;
   display: inline-flex;
 }
-.CheckBox > .CheckBox__input:checked + span {
-  border-color: currentColor;
-}
-.CheckBox > .CheckBox__input:checked + span::after {
-  background-color: currentColor;
-}
-.CheckBox > .CheckBox__input:disabled + span {
-  border-color: var(--disabled-color);
-}
-.CheckBox > .CheckBox__input:disabled ~ .CheckBox__label {
-  color: var(--disabled-text-color);
-}
-.CheckBox:hover > .CheckBox__mark {
+.CheckBox:hover > .CheckBox-mark {
   border-color: currentColor;
 }
 
-.CheckBox__input {
+.CheckBox-input {
   height: 0;
   opacity: 0;
   position: absolute;
   width: 0;
 }
+.CheckBox-input:checked + .CheckBox-mark {
+  border-color: currentColor;
+}
+.CheckBox-input:checked + .CheckBox-mark::after {
+  transform: scale(1);
+}
+.CheckBox-input:disabled + .CheckBox-mark {
+  border-color: var(--disabled-color);
+}
+.CheckBox-input:disabled ~ .CheckBox-label {
+  color: var(--disabled-text-color);
+}
 
-.CheckBox__mark {
+.CheckBox-mark {
   border: 1px solid var(--primary-border-color);
   border-radius: var(--border-radius-m);
   box-sizing: content-box;
@@ -37,58 +37,61 @@
   will-change: border-color;
   width: 16px;
 }
-.CheckBox__mark::after {
+.CheckBox-mark::after {
+  background-color: currentColor;
   border-radius: var(--border-radius-s);
+  bottom: 4px;
   content: "";
-  height: 8px;
   left: 4px;
   position: absolute;
+  right: 4px;
   top: 4px;
-  transition: background-color ease-in-out var(--transition-duration-fast);
-  will-change: background-color;
-  width: 8px;
-  will-change: background-color;
+  transform: scale(0);
+  transition: transform cubic-bezier(0.18, 0.89, 0.32, 1.28) var(--transition-duration-fast);
+  will-change: transform;
 }
 
-.CheckBox__label {
+.CheckBox-label {
   color: var(--text-color);
   font-size: 0.875rem;
   user-select: none;
   white-space: nowrap;
 }
 
-.CheckBox--accent {
+.CheckBox-disabled {
+  cursor: default;
+}
+
+/* VARIANTS */
+.CheckBox-accent {
   color: var(--accent-color);
 }
-
-.CheckBox--danger {
+.CheckBox-danger {
   color: var(--danger-color);
 }
-
-.CheckBox--warning {
+.CheckBox-warning {
   color: var(--warning-color);
 }
-
-.CheckBox--success {
+.CheckBox-success {
   color: var(--success-color);
 }
 
-.CheckBox--leftLabel {
+/* LABELS */
+.CheckBox-leftLabel {
   flex-direction: row-reverse;
 }
-.CheckBox--leftLabel > .CheckBox__mark {
+.CheckBox-leftLabel > .CheckBox-mark {
   margin-left: 0.5rem;
 }
-.CheckBox--leftLabel > .CheckBox__label {
+.CheckBox-leftLabel > .CheckBox-label {
   margin-right: auto;
 }
-
-.CheckBox--rightLabel {
+.CheckBox-rightLabel {
   flex-direction: row;
 }
-.CheckBox--rightLabel > .CheckBox__mark {
+.CheckBox-rightLabel > .CheckBox-mark {
   margin-right: 0.5rem;
 }
-.CheckBox--rightLabel > .CheckBox__label {
+.CheckBox-rightLabel > .CheckBox-label {
   margin-left: auto;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { createClassNames } from "../../createClassNames";
-import "./Text.scss";
+import "./Text.css";
 
 /**
  * @param {object} props

@@ -1,9 +1,31 @@
 .Card {
-  background-color: var(--bkg-color-sec);
   border-radius: var(--border-radius-l);
   overflow: hidden;
 }
-
+.Card-border {
+  border-style: solid;
+  border-width: 1px;
+}
 .Card-shadow {
   box-shadow: var(--elevation-2);
+}
+.Card-primary {
+  background-color: var(--primary-bkg-color-alfa1);
+  border-color: var(--primary-border-color);
+}
+.Card-accent {
+  background-color: var(--accent-bkg-color-alfa1);
+  border-color: var(--accent-border-color);
+}
+.Card-danger {
+  background-color: var(--danger-bkg-color-alfa1);
+  border-color: var(--danger-border-color);
+}
+.Card-warning {
+  background-color: var(--warning-bkg-color-alfa1);
+  border-color: var(--warning-border-color);
+}
+.Card-success {
+  background-color: var(--success-bkg-color-alfa1);
+  border-color: var(--success-border-color);
 }

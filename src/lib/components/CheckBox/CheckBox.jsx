@@ -22,20 +22,21 @@ const CheckBox = ({
 
   const cn = createClassNames(
     "CheckBox",
-    `CheckBox--${variant}`,
-    `CheckBox--${labelPosition}Label`,
+    `CheckBox-${variant}`,
+    `CheckBox-${labelPosition}Label`,
+    disabled && "CheckBox-disabled",
     ...classNames
   );
   return (
     <label className={cn}>
       <input
-        className="CheckBox__input"
+        className="CheckBox-input"
         type="checkbox"
         onChange={onChange}
         disabled={disabled}
       />
-      <span className="CheckBox__mark"></span>
-      {label && <span className="CheckBox__label">{label}</span>}
+      <span className="CheckBox-mark"></span>
+      {label && <span className="CheckBox-label">{label}</span>}
     </label>
   );
 };

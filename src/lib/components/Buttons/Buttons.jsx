@@ -4,18 +4,24 @@ import "./Buttons.css";
 
 const Button = ({
   classNames = [],
+  href,
   size = "normal",
   icon,
   disabled = false,
   children = "",
   onClick,
 }) => {
-  const cn = createClassNames("Button", `Button--${size}`, ...classNames);
-  return (
-    <button className={cn} onClick={onClick} disabled={disabled}>
-      {icon}
-      {children && <span>{children}</span>}
-    </button>
+  const cn = createClassNames("Button", `Button-${size}`, ...classNames);
+  return React.createElement(
+    href ? "a" : "button",
+    {
+      className: cn,
+      onClick,
+      disabled,
+      href,
+    },
+    icon,
+    children && React.createElement("span", null, children)
   );
 };
 
@@ -25,6 +31,7 @@ const Button = ({
  * @param {"normal"|"compact"|"large"} [props.size]
  * @param {"primary"|"accent"|"danger"|"warning"|"success"} [props.variant]
  * @param {any} [props.icon]
+ * @param {string} [props.href]
  * @param {boolean} [props.disabled]
  * @param {any} [props.children]
  * @param {function} [props.onClick]
@@ -34,15 +41,17 @@ const SolidButton = ({
   size = "normal",
   variant = "accent",
   icon = false,
+  href,
   disabled = false,
   children = "",
   onClick,
 }) => {
   return (
     <Button
-      classNames={["SolidButton", `SolidButton--${variant}`, ...classNames]}
+      classNames={["SolidButton", `SolidButton-${variant}`, ...classNames]}
       disabled={disabled}
       icon={icon}
+      href={href}
       onClick={onClick}
       size={size}
     >
@@ -57,6 +66,7 @@ const SolidButton = ({
  * @param {"normal"|"compact"|"large"} [props.size]
  * @param {"primary"|"accent"|"danger"|"warning"|"success"} [props.variant]
  * @param {any} [props.icon]
+ * @param {string} [props.href]
  * @param {boolean} [props.disabled]
  * @param {boolean} [props.outlined]
  * @param {any} [props.children]
@@ -67,6 +77,7 @@ const FlatButton = ({
   size = "normal",
   variant = "accent",
   icon,
+  href,
   disabled = false,
   outlined = false,
   children = "",
@@ -76,12 +87,13 @@ const FlatButton = ({
     <Button
       classNames={[
         "FlatButton",
-        `FlatButton--${variant}`,
-        outlined && `FlatButton--outlined`,
+        `FlatButton-${variant}`,
+        outlined && `FlatButton-outlined`,
         ...classNames,
       ]}
       disabled={disabled}
       icon={icon}
+      href={href}
       onClick={onClick}
       size={size}
     >
@@ -96,6 +108,7 @@ const FlatButton = ({
  * @param {"normal"|"compact"|"large"} [props.size]
  * @param {"primary"|"accent"|"danger"|"warning"|"success"} [props.variant]
  * @param {any} [props.icon]
+ * @param {string} [props.href]
  * @param {boolean} [props.disabled]
  * @param {any} [props.children]
  * @param {function} [props.onClick]
@@ -105,6 +118,7 @@ const FloatingActionButton = ({
   size = "normal",
   variant = "accent",
   icon = false,
+  href,
   disabled = false,
   children = "",
   onClick,
@@ -114,11 +128,12 @@ const FloatingActionButton = ({
       classNames={[
         "FloatingActionButton",
         "SolidButton",
-        `SolidButton--${variant}`,
+        `SolidButton-${variant}`,
         ...classNames,
       ]}
       disabled={disabled}
       icon={icon}
+      href={href}
       onClick={onClick}
       size={size}
     >

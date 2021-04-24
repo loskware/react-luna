@@ -21,49 +21,46 @@
 .Button:disabled {
   cursor: default;
 }
-
-.Button--compact {
+.Button-compact {
   font-size: 12px;
   line-height: 14px;
   padding: 6px 10px;
 }
-.Button--compact > svg,
-.Button--compact > img {
+.Button-compact > svg,
+.Button-compact > img {
   height: 14px;
   width: 14px;
 }
-.Button--compact > svg ~ span,
-.Button--compact > img ~ span {
+.Button-compact > svg ~ span,
+.Button-compact > img ~ span {
   margin-left: 4px;
 }
-
-.Button--normal {
+.Button-normal {
   font-size: 14px;
   line-height: 16px;
   padding: 8px 14px;
 }
-.Button--normal > svg,
-.Button--normal > img {
+.Button-normal > svg,
+.Button-normal > img {
   height: 16px;
   width: 16px;
 }
-.Button--normal > svg ~ span,
-.Button--normal > img ~ span {
+.Button-normal > svg ~ span,
+.Button-normal > img ~ span {
   margin-left: 6px;
 }
-
-.Button--large {
+.Button-large {
   font-size: 16px;
   line-height: 18px;
   padding: 10px 18px;
 }
-.Button--large > svg,
-.Button--large > img {
+.Button-large > svg,
+.Button-large > img {
   height: 18px;
   width: 18px;
 }
-.Button--large > svg ~ span,
-.Button--large > img ~ span {
+.Button-large > svg ~ span,
+.Button-large > img ~ span {
   margin-left: 8px;
 }
 
@@ -75,40 +72,39 @@
 .SolidButton:disabled {
   background-color: var(--disabled-color);
 }
-
-.SolidButton--primary {
+.SolidButton-primary {
   color: var(--primary-text-color-inverse);
   background-color: var(--primary-bkg-color);
 }
-.SolidButton--primary:enabled:hover {
+.SolidButton-primary:enabled:hover {
   background-color: var(--primary-bkg-color-sec);
 }
-.SolidButton--accent {
+.SolidButton-accent {
   color: var(--accent-text-color-inverse);
   background-color: var(--accent-bkg-color);
 }
-.SolidButton--accent:enabled:hover {
+.SolidButton-accent:enabled:hover {
   background-color: var(--accent-bkg-color-sec);
 }
-.SolidButton--danger {
+.SolidButton-danger {
   color: var(--danger-text-color-inverse);
   background-color: var(--danger-bkg-color);
 }
-.SolidButton--danger:enabled:hover {
+.SolidButton-danger:enabled:hover {
   background-color: var(--danger-bkg-color-sec);
 }
-.SolidButton--warning {
+.SolidButton-warning {
   color: var(--warning-text-color-inverse);
   background-color: var(--warning-bkg-color);
 }
-.SolidButton--warning:enabled:hover {
+.SolidButton-warning:enabled:hover {
   background-color: var(--warning-bkg-color-sec);
 }
-.SolidButton--success {
+.SolidButton-success {
   color: var(--success-text-color-inverse);
   background-color: var(--success-bkg-color);
 }
-.SolidButton--success:enabled:hover {
+.SolidButton-success:enabled:hover {
   background-color: var(--success-bkg-color-sec);
 }
 
@@ -122,38 +118,37 @@
 .FlatButton:disabled {
   color: var(--disabled-color);
 }
-.FlatButton.FlatButton--outlined:disabled {
+.FlatButton.FlatButton-outlined:disabled {
   border-color: var(--disabled-color);
 }
-
-.FlatButton--primary:enabled:hover {
+.FlatButton-primary:enabled:hover {
   background-color: var(--primary-bkg-color-alfa1);
 }
-.FlatButton--primary.FlatButton--outlined {
+.FlatButton-primary.FlatButton-outlined {
   border: 1px solid var(--primary-border-color);
 }
-.FlatButton--accent:enabled:hover {
+.FlatButton-accent:enabled:hover {
   background-color: var(--accent-bkg-color-alfa1);
 }
-.FlatButton--accent.FlatButton--outlined {
+.FlatButton-accent.FlatButton-outlined {
   border: 1px solid var(--accent-border-color);
 }
-.FlatButton--danger:enabled:hover {
+.FlatButton-danger:enabled:hover {
   background-color: var(--danger-bkg-color-alfa1);
 }
-.FlatButton--danger.FlatButton--outlined {
+.FlatButton-danger.FlatButton-outlined {
   border: 1px solid var(--danger-border-color);
 }
-.FlatButton--warning:enabled:hover {
+.FlatButton-warning:enabled:hover {
   background-color: var(--warning-bkg-color-alfa1);
 }
-.FlatButton--warning.FlatButton--outlined {
+.FlatButton-warning.FlatButton-outlined {
   border: 1px solid var(--warning-border-color);
 }
-.FlatButton--success:enabled:hover {
+.FlatButton-success:enabled:hover {
   background-color: var(--success-bkg-color-alfa1);
 }
-.FlatButton--success.FlatButton--outlined {
+.FlatButton-success.FlatButton-outlined {
   border: 1px solid var(--success-border-color);
 }
 

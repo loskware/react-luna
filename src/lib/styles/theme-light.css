@@ -13,7 +13,7 @@
   --primary-color: hsla(210, 15%, 0%, 0.1);
   --primary-bkg-color: var(--primary-color);
   --primary-bkg-color-sec: hsla(210, 15%, 0%, 0.15);
-  --primary-bkg-color-alfa1: hsla(210, 15%, 0%, 0.06);
+  --primary-bkg-color-alfa1: hsla(210, 15%, 0%, 0.05);
   --primary-bkg-color-alfa2: hsla(210, 15%, 0%, 0.1);
   --primary-border-color: hsla(210, 15%, 0%, 0.3);
   --primary-text-color: var(--primary-color);
@@ -43,7 +43,7 @@
   --warning-color: hsl(51, 99%, 48%);
   --warning-bkg-color: var(--warning-color);
   --warning-bkg-color-sec: hsl(51, 99%, 44%);
-  --warning-bkg-color-alfa1: hsla(51, 99%, 46%, 0.2);
+  --warning-bkg-color-alfa1: hsla(51, 99%, 46%, 0.15);
   --warning-bkg-color-alfa2: hsla(51, 99%, 46%, 0.4);
   --warning-border-color: var(--warning-color);
   --warning-text-color: var(--warning-color);

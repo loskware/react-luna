@@ -6,13 +6,13 @@
 
   --text-color: hsla(0, 0%, 100%, 0.9);
   --text-color-inverse: hsla(0, 0%, 0%, 0.9);
-  --text-color-secondary: hsla(0, 0%, 100%, 0.6);
+  --text-color-secondary: hsla(0, 0%, 100%, 0.7);
   --text-color-tertiary: hsla(0, 0%, 100%, 0.3);
   
   /* PRIMARY */
   --primary-color: hsla(210, 15%, 100%, 0.1);
   --primary-bkg-color: var(--primary-color);
-  --primary-bkg-color-sec: hsla(210, 15%, 100%, 0.15);
+  --primary-bkg-color-sec: hsla(210, 15%, 100%, 0.12);
   --primary-bkg-color-alfa1: hsla(210, 15%, 100%, 0.06);
   --primary-bkg-color-alfa2: hsla(210, 15%, 100%, 0.1);
   --primary-border-color: hsla(210, 15%, 100%, 0.3);
@@ -23,7 +23,7 @@
   --accent-color: hsl(210, 100%, 45%);
   --accent-bkg-color: var(--accent-color);
   --accent-bkg-color-sec: hsl(210, 100%, 50%);
-  --accent-bkg-color-alfa1: hsla(210, 100%, 50%, 0.15);
+  --accent-bkg-color-alfa1: hsla(210, 100%, 50%, 0.12);
   --accent-bkg-color-alfa2: hsla(210, 100%, 50%, 0.4);
   --accent-border-color: hsl(210, 100%, 35%);
   --accent-text-color: var(--accent-color);
@@ -33,7 +33,7 @@
   --danger-color: hsl(14, 95%, 42%);
   --danger-bkg-color: var(--danger-color);
   --danger-bkg-color-sec: hsl(14, 95%, 47%);
-  --danger-bkg-color-alfa1: hsla(14, 95%, 50%, 0.15);
+  --danger-bkg-color-alfa1: hsla(14, 95%, 50%, 0.1);
   --danger-bkg-color-alfa2: hsla(14, 95%, 50%, 0.4);
   --danger-border-color: hsl(14, 95%, 32%);
   --danger-text-color: var(--danger-color);
@@ -43,7 +43,7 @@
   --warning-color: hsl(51, 99%, 35%);
   --warning-bkg-color: var(--warning-color);
   --warning-bkg-color-sec: hsl(51, 99%, 40%);
-  --warning-bkg-color-alfa1: hsla(51, 99%, 50%, 0.15);
+  --warning-bkg-color-alfa1: hsla(51, 99%, 50%, 0.1);
   --warning-bkg-color-alfa2: hsla(51, 99%, 50%, 0.4);
   --warning-border-color: hsl(51, 99%, 25%);
   --warning-text-color: var(--warning-color);
@@ -53,7 +53,7 @@
   --success-color: hsl(93, 85%, 35%);
   --success-bkg-color: var(--success-color);
   --success-bkg-color-sec: hsl(93, 85%, 40%);
-  --success-bkg-color-alfa1: hsla(93, 85%, 50%, 0.15);
+  --success-bkg-color-alfa1: hsla(93, 85%, 50%, 0.1);
   --success-bkg-color-alfa2: hsla(93, 85%, 50%, 0.4);
   --success-border-color: hsl(93, 85%, 25%);
   --success-text-color: var(--success-color);

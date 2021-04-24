@@ -1,28 +1,13 @@
-//
-// Created by Andrea Montorio
-// Project Crucible
-// Copyright © 2020
-//
-
 .Text {
   font-size: 1em;
   line-height: 1.5em;
 }
 
-.Text--color-accent {
-  color: var(--text-color-accent);
-}
-.Text--color-onAccent {
-  color: var(--text-color-onaccent);
-}
-.Text--color-primary {
+.Text-primary {
   color: var(--text-color);
 }
-.Text--color-secondary {
-  color: var(--text-color-secondary);
-}
-.Text--color-tertiary {
-  color: var(--text-color-tertiary);
+.Text-accent {
+  color: var(--text-color-accent);
 }
 
 .Text--size-title {

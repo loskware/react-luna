@@ -1,0 +1,24 @@
+.FlipView {
+  perspective: 600px;
+}
+.FlipView-wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform var(--transition-duration-normal) ease-in-out;
+  will-change: transform;
+}
+.FlipView-flipped > .FlipView-wrapper {
+  transform: rotateX(180deg);
+}
+.FlipView-frontFace {
+  backface-visibility: hidden;
+}
+.FlipView-backFace {
+  backface-visibility: hidden;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotateX(180deg);
+}

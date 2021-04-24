@@ -26,10 +26,6 @@ section.theme-dark {
   position: relative;
 }
 
-html {
-  background-color: white;
-}
-
 /* APP */
 .App {
   display: flex;

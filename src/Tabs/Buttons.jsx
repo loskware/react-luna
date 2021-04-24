@@ -5,7 +5,7 @@ import { FlatButton, FloatingActionButton, SolidButton, Text } from "../lib";
 export const Buttons = () => {
   return (
     <div className="Buttons split-screen">
-      <section className="theme-light">
+      <section id="secHead" className="theme-light">
         <Text size="title">DISABLED</Text>
         <div>
           <SolidButton icon={<IconLoad />} disabled>
@@ -610,6 +610,7 @@ export const Buttons = () => {
             size="large"
             variant="success"
             icon={<IconSend />}
+            href="#secHead"
             onClick={() => null}
           />
         </div>
