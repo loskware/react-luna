@@ -1,23 +1,23 @@
 import React from "react";
-import { createClassNames } from "../../createClassNames";
+import { classNames } from "../../classNames";
 import "./Switch.scss";
 
 /**
  * @param {object} props
- * @param {Array<string>} [props.classNames]
+ * @param {Array<string>} [props.classes]
  * @param {boolean} props.checked
  * @param {any} [props.children]
  * @param {"normal"|"large"|"xlarge"} [props.size]
  * @param {function} props.onChange
  */
 const Switch = ({
-  classNames = [],
+  classes = [],
   checked,
   children,
   size = "normal",
   onChange,
 }) => {
-  const cn = createClassNames("Switch", `Switch--${size}`, ...classNames);
+  const cn = classNames("Switch", `Switch--${size}`, ...classes);
   return (
     <label className={cn}>
       <input

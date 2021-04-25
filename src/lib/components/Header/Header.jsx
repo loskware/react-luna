@@ -1,21 +1,22 @@
 import React from "react";
-import { createClassNames } from "../../createClassNames";
+import { classNames } from "../../classNames";
 import "./Header.css";
 
 /**
+
  * @param {object} props
- * @param {Array<string>} props.classNames
- * @param {any} [props.leadingBar]
- * @param {any} [props.titleBar]
- * @param {any} [props.trailingBar]
+ * @param {Array<string>} [props.classes] array of CSS classes
+ * @param {React.ReactNode} [props.leading] leading content
+ * @param {React.ReactNode} [props.titleBar] content centered inside the Header, equaly spaced from leading and trailing contents
+ * @param {React.ReactNode} [props.trailing] trailing content
  */
-const Header = ({ classNames = [], leadingBar, titleBar, trailingBar }) => {
-  const cn = createClassNames("Header", ...classNames)
+const Header = ({ classes = [], leading, titleBar, trailing }) => {
+  const cn = classNames("Header", ...classes)
   return (
     <header className={cn}>
-      <div>{leadingBar}</div>
+      <div>{leading}</div>
       <div>{titleBar}</div>
-      <div>{trailingBar}</div>
+      <div>{trailing}</div>
     </header>
   );
 };

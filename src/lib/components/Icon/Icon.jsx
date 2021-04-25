@@ -1,30 +1,32 @@
 import React from "react";
-import { createClassNames } from "../../createClassNames";
+import { classNames } from "../../classNames";
 
 /**
  * @param {object} props
- * @param {Array<string>} [props.classNames]
- * @param {number} [props.size]
- * @param {string} [props.fillColor]
- * @param {string} [props.strokeColor]
  * @param {any} props.children
+ * @param {Array<string>} [props.classes]
+ * @param {string} [props.fillColor]
+ * @param {number} [props.height]
+ * @param {string} [props.strokeColor]
  * @param {string} [props.tooltip]
+ * @param {number} [props.width]
  * @returns
  */
 export function Icon({
-  classNames = [],
-  size = 24,
+  classes = [],
   fillColor = "none",
+  height = 24,
   strokeColor = "currentColor",
   children,
-  tooltip = "",
+  tooltip,
+  width = 24
 }) {
-  const cn = createClassNames("Icon", ...classNames);
+  const cn = classNames("Icon", ...classes);
   return (
     <svg
       className={cn}
-      height={size}
-      width={size}
+      height={height}
+      width={width}
       viewBox="0 0 24 24"
       fill={fillColor}
       stroke={strokeColor}
@@ -33,7 +35,7 @@ export function Icon({
       strokeLinejoin="round"
     >
       {children}
-      <title>{tooltip}</title>
+      {tooltip && <title>{tooltip}</title>}
     </svg>
   );
 }

@@ -71,6 +71,7 @@
 }
 .SolidButton.Button:disabled {
   background-color: var(--disabled-color);
+  color: var(--disabled-text-color-inverse);
 }
 .SolidButton.Button-plain {
   color: var(--plain-text-color-inverse);

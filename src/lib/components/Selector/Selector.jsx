@@ -1,5 +1,5 @@
 import React from "react";
-import { createClassNames } from "../../createClassNames";
+import { classNames } from "../../classNames";
 import "./Selector.scss";
 
 /**
@@ -10,20 +10,20 @@ import "./Selector.scss";
 
 /**
  * @param {object} props
- * @param {Array<string>} [props.classNames]
+ * @param {Array<string>} [props.classes]
  * @param {SegmentedControlChild[]} props.children
  * @param {string} props.name
  * @param {number} props.selected
  * @param {function} props.onChange
  */
 export const Selector = ({
-  classNames = [],
+  classes = [],
   children,
   name,
   selected,
   onChange,
 }) => {
-  const cn = createClassNames("Selector", ...classNames);
+  const cn = classNames("Selector", ...classes);
   return (
     <div className={cn}>
       {children.map(({ icon, title }, index) => (

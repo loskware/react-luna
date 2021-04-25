@@ -1,16 +1,16 @@
 import React from "react";
-import { createClassNames } from "../../createClassNames";
+import { classNames } from "../../classNames";
 
 /**
  * @param {object} props
- * @param {Array<string>} [props.classNames]
+ * @param {Array<string>} [props.classes]
  * @param {string} props.src
  * @param {string} props.alt
  * @param {number} [props.height]
  * @param {number} [props.width]
  */
-const Image = ({ classNames = [], src, alt = "", height, width }) => {
-  const cn = createClassNames("Image", ...classNames);
+const Image = ({ classes = [], src, alt = "", height, width }) => {
+  const cn = classNames("Image", ...classes);
   return (
     <img
       className={cn}

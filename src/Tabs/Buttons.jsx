@@ -1,6 +1,12 @@
 import { IconSend, IconLoad } from "../icons";
 import React from "react";
-import { FlatButton, FloatingActionButton, SolidButton, Text } from "../lib";
+import {
+  Card,
+  FlatButton,
+  FloatingActionButton,
+  SolidButton,
+  Text,
+} from "../lib";
 
 export const Buttons = () => {
   return (
@@ -60,12 +66,7 @@ export const Buttons = () => {
           <FlatButton variant="plain" size="large">
             Button
           </FlatButton>
-          <FlatButton
-            variant="plain"
-            icon={<IconSend />}
-            size="large"
-            outlined
-          >
+          <FlatButton variant="plain" icon={<IconSend />} size="large" outlined>
             Button
           </FlatButton>
         </div>
@@ -263,9 +264,9 @@ export const Buttons = () => {
 
         <hr />
         <Text size="title">FLOATING ACTION BUTTONS</Text>
-        <div className="fab-group">
+        <Card classes={["fab-group"]}>
           <FloatingActionButton
-            classNames={["App__send-button"]}
+            classes={["App__send-button"]}
             size="large"
             variant="accent"
             icon={<IconSend />}
@@ -273,41 +274,41 @@ export const Buttons = () => {
             disabled
           />
           <FloatingActionButton
-            classNames={["App__send-button"]}
+            classes={["App__send-button"]}
             size="large"
             variant="plain"
             icon={<IconSend />}
             onClick={() => null}
           />
           <FloatingActionButton
-            classNames={["App__send-button"]}
+            classes={["App__send-button"]}
             size="large"
             variant="accent"
             icon={<IconSend />}
             onClick={() => null}
           />
           <FloatingActionButton
-            classNames={["App__send-button"]}
+            classes={["App__send-button"]}
             size="large"
             variant="danger"
             icon={<IconSend />}
             onClick={() => null}
           />
           <FloatingActionButton
-            classNames={["App__send-button"]}
+            classes={["App__send-button"]}
             size="large"
             variant="warning"
             icon={<IconSend />}
             onClick={() => null}
           />
           <FloatingActionButton
-            classNames={["App__send-button"]}
+            classes={["App__send-button"]}
             size="large"
             variant="success"
             icon={<IconSend />}
             onClick={() => null}
           />
-        </div>
+        </Card>
       </section>
 
       <section className="theme-dark">
@@ -365,12 +366,7 @@ export const Buttons = () => {
           <FlatButton variant="plain" size="large">
             Button
           </FlatButton>
-          <FlatButton
-            variant="plain"
-            icon={<IconSend />}
-            size="large"
-            outlined
-          >
+          <FlatButton variant="plain" icon={<IconSend />} size="large" outlined>
             Button
           </FlatButton>
         </div>
@@ -568,9 +564,9 @@ export const Buttons = () => {
 
         <hr />
         <Text size="title">FLOATING ACTION BUTTONS</Text>
-        <div className="fab-group">
+        <Card classes={["fab-group"]}>
           <FloatingActionButton
-            classNames={["App__send-button"]}
+            classes={["App__send-button"]}
             size="large"
             variant="accent"
             icon={<IconSend />}
@@ -578,42 +574,42 @@ export const Buttons = () => {
             disabled
           />
           <FloatingActionButton
-            classNames={["App__send-button"]}
+            classes={["App__send-button"]}
             size="large"
             variant="plain"
             icon={<IconSend />}
             onClick={() => null}
           />
           <FloatingActionButton
-            classNames={["App__send-button"]}
+            classes={["App__send-button"]}
             size="large"
             variant="accent"
             icon={<IconSend />}
             onClick={() => null}
           />
           <FloatingActionButton
-            classNames={["App__send-button"]}
+            classes={["App__send-button"]}
             size="large"
             variant="danger"
             icon={<IconSend />}
             onClick={() => null}
           />
           <FloatingActionButton
-            classNames={["App__send-button"]}
+            classes={["App__send-button"]}
             size="large"
             variant="warning"
             icon={<IconSend />}
             onClick={() => null}
           />
           <FloatingActionButton
-            classNames={["App__send-button"]}
+            classes={["App__send-button"]}
             size="large"
             variant="success"
             icon={<IconSend />}
             href="#secHead"
             onClick={() => null}
           />
-        </div>
+        </Card>
       </section>
     </div>
   );

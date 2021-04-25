@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { createClassNames } from "../../createClassNames";
+import { classNames } from "../../classNames";
 import "./TextField.scss";
 
 /**
  * @param {object} props
- * @param {Array<string>} [props.classNames]
+ * @param {Array<string>} [props.classes]
  * @param {string} [props.placeholder]
  * @param {boolean} [props.large]
  * @param {any} [props.leadingIcon]
@@ -17,7 +17,7 @@ import "./TextField.scss";
  * ) => boolean} [props.onChange]
  */
 const TextField = ({
-  classNames = [],
+  classes = [],
   placeholder = "",
   large = false,
   leadingIcon,
@@ -26,11 +26,11 @@ const TextField = ({
   onChange,
 }) => {
   const [text, setText] = useState("");
-  const cn = createClassNames(
+  const cn = classNames(
     "TextField",
     large && "TextField--large",
     transparent && "TextField--transparent",
-    ...classNames
+    ...classes
   );
   return (
     <div className={cn}>

@@ -14,4 +14,4 @@ export * from "./components/Selector/Selector";
 export * from "./components/Switch/Switch";
 export * from "./components/Typography/Typography";
 export * from "./components/TextField/TextField";
-export * from "./createClassNames";
+export * from "./classNames";

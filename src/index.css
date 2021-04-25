@@ -10,11 +10,18 @@ html {
 }
 
 body {
-  background-color: var(--bkg-color);
-  color: var(--text-color);
   margin: 0;
   overflow: hidden;
   padding: 0;
+}
+
+.theme-light {
+  background-color:hsl(216, 8%, 95%);
+  color: var(--text-color);
+}
+.theme-dark {
+  background-color: hsl(210, 8%, 10%);
+  color: var(--text-color);
 }
 
 #modal-root {

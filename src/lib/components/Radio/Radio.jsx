@@ -1,23 +1,23 @@
 import React from "react";
-import { createClassNames } from "../../createClassNames";
+import { classNames } from "../../classNames";
 import "./Radio.scss";
 
 /**
  * @param {object} props
- * @param {Array<string>} [props.classNames]
+ * @param {Array<string>} [props.classes]
  * @param {{ label: string }[]} props.children
  * @param {string} props.name
  * @param {number} props.selected
  * @param {function} props.onChange
  */
 export const Radio = ({
-  classNames = [],
+  classes = [],
   children,
   name,
   selected,
   onChange,
 }) => {
-  const cn = createClassNames("SegmentedControl", ...classNames);
+  const cn = classNames("SegmentedControl", ...classes);
   return (
     <div className={cn}>
       {children.map(({ label }, index) => (

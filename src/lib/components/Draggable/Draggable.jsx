@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
-import { createClassNames } from "../../createClassNames";
+import { classNames } from "../../classNames";
 
 /**
  *
  * @param {object} props
- * @param {Array<string>} [props.classNames]
- * @param {any} [props.children]
+ * @param {Array<string>} [props.classes] array of CSS classes
+ * @param {any} [props.children] draggable content
  */
-export function Draggable({ classNames = [], children }) {
+export function Draggable({ classes = [], children }) {
   const ref = useRef(null);
   useEffect(() => {
     const [rd, ud] = makeDrabbable(ref.current);
@@ -15,7 +15,7 @@ export function Draggable({ classNames = [], children }) {
     return ud;
   }, []);
 
-  const cn = createClassNames("Draggable", ...classNames);
+  const cn = classNames("Draggable", ...classes);
   return (
     <div className={cn} ref={ref} style={{ position: "absolute" }}>
       {children}

@@ -1,31 +1,32 @@
 import React from "react";
-import { createClassNames } from "../../createClassNames";
+import { classNames } from "../../classNames";
 import "./CheckBox.css";
 
 /**
+ * A luna-styled checkbox, 
  * @param {object} props
- * @param {Array<string>} [props.classNames]
- * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant]
- * @param {string} [props.label]
- * @param {"left"|"right"} [props.labelPosition]
- * @param {React.ChangeEventHandler<HTMLInputElement>} [props.onChange]
- * @param {boolean} [props.disabled]
+ * @param {Array<string>} [props.classes] array of CSS classes
+ * @param {boolean} [props.disabled] make checkbox disabled
+ * @param {string} [props.label] label text
+ * @param {"left"|"right"} [props.labelPosition] label position
+ * @param {React.ChangeEventHandler<HTMLInputElement>} [props.onChange] onChange callback
+ * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  */
 const CheckBox = ({
-  classNames = [],
-  variant = "accent",
+  classes = [],
+  disabled = false,
   label,
   labelPosition = "right",
   onChange,
-  disabled = false
+  variant = "accent",
 }) => {
 
-  const cn = createClassNames(
+  const cn = classNames(
     "CheckBox",
     `CheckBox-${variant}`,
     `CheckBox-${labelPosition}Label`,
     disabled && "CheckBox-disabled",
-    ...classNames
+    ...classes
   );
   return (
     <label className={cn}>

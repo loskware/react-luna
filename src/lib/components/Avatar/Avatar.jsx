@@ -1,17 +1,17 @@
 import "./Avatar.css";
 import React from "react";
-import { createClassNames } from "../../createClassNames";
+import { classNames } from "../../classNames";
 
 /**
  * A simple circle avatar
  * @param {object} props
- * @param {Array<string>} [props.classNames] array of CSS class names
+ * @param {Array<string>} [props.classes] array of CSS classes
  * @param {number} [props.size] height = width = size
  * @param {React.CSSProperties} [props.style] inline styles
  * @param {string} props.src image path (URL)
  */
-function Avatar({ classNames = [], size, src, style, ...otherProps }) {
-  const cn = createClassNames("Avatar", ...classNames);
+function Avatar({ classes = [], size, src, style, ...otherProps }) {
+  const cn = classNames("Avatar", ...classes);
   return (
     <img
       className={cn}

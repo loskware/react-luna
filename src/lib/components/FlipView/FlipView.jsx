@@ -1,19 +1,19 @@
 import React from "react";
-import { createClassNames } from "../../createClassNames";
+import { classNames } from "../../classNames";
 import "./FlipView.css";
 
 /**
  * @param {object} props
- * @param {Array<string>} [props.classNames]
- * @param {any} props.frontFace
- * @param {any} props.backFace
- * @param {boolean} props.flipped
+ * @param {Array<string>} [props.classes] array of CSS classes
+ * @param {any} props.frontFace default shown content
+ * @param {any} props.backFace content shown when flipped
+ * @param {boolean} props.flipped make component flipped... or not
  */
-const FlipView = ({ classNames = [], frontFace, backFace, flipped }) => {
-  const cn = createClassNames(
+const FlipView = ({ classes = [], frontFace, backFace, flipped }) => {
+  const cn = classNames(
     "FlipView",
     `${flipped ? "FlipView-flipped" : "FlipView-normal"}`,
-    ...classNames
+    ...classes
   );
   return (
     <div className={cn}>

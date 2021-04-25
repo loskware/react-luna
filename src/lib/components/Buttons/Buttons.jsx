@@ -1,10 +1,10 @@
 import React from "react";
-import { createClassNames } from "../../createClassNames";
+import { classNames } from "../../classNames";
 import "./Buttons.css";
 
 const Button = ({
   children = "",
-  classNames = [],
+  classes = [],
   disabled = false,
   href,
   icon,
@@ -14,12 +14,12 @@ const Button = ({
   variant = "accent",
   ...otherProps
 }) => {
-  const cn = createClassNames(
+  const cn = classNames(
     "Button",
     outlined && `Button-outlined`,
     `Button-${size}`,
     `Button-${variant}`,
-    ...classNames
+    ...classes
   );
   return React.createElement(
     href ? "a" : "button",
@@ -39,7 +39,7 @@ const Button = ({
  * Button with solid background
  * @param {object} props
  * @param {any} [props.children] button content
- * @param {Array<string>} [props.classNames] array of CSS class names
+ * @param {Array<string>} [props.classes] array of CSS classes
  * @param {boolean} [props.disabled] make button disabled
  * @param {string} [props.href] URL of the link. make button render as <a> instead of <button>
  * @param {any} [props.icon] optional icon, rendered before content
@@ -49,7 +49,7 @@ const Button = ({
  */
 const SolidButton = ({
   children = "",
-  classNames = [],
+  classes = [],
   disabled = false,
   href,
   icon = false,
@@ -60,7 +60,7 @@ const SolidButton = ({
 }) => {
   return (
     <Button
-      classNames={["SolidButton", ...classNames]}
+      classes={["SolidButton", ...classes]}
       disabled={disabled}
       icon={icon}
       href={href}
@@ -78,7 +78,7 @@ const SolidButton = ({
  * Text Button with hover effect and optional outline
  * @param {object} props
  * @param {any} [props.children] button content
- * @param {Array<string>} [props.classNames] array of CSS class names
+ * @param {Array<string>} [props.classes] array of CSS classes
  * @param {boolean} [props.disabled] make button disabled
  * @param {string} [props.href] URL of the link. make button render as <a> instead of <button>
  * @param {any} [props.icon] optional icon, rendered before content
@@ -89,7 +89,7 @@ const SolidButton = ({
  */
 const FlatButton = ({
   children = "",
-  classNames = [],
+  classes = [],
   disabled = false,
   href,
   icon = false,
@@ -101,7 +101,7 @@ const FlatButton = ({
 }) => {
   return (
     <Button
-      classNames={["FlatButton", ...classNames]}
+      classes={["FlatButton", ...classes]}
       disabled={disabled}
       icon={icon}
       href={href}
@@ -121,7 +121,7 @@ const FlatButton = ({
  * {@link https://material.io/components/buttons-floating-action-button}
  * @param {object} props
  * @param {any} [props.children] button content
- * @param {Array<string>} [props.classNames] array of CSS class names
+ * @param {Array<string>} [props.classes] array of CSS classes
  * @param {boolean} [props.disabled] make button disabled
  * @param {string} [props.href] URL of the link. make button render as <a> instead of <button>
  * @param {any} [props.icon] optional icon, rendered before content
@@ -132,7 +132,7 @@ const FlatButton = ({
  */
 const FloatingActionButton = ({
   children = "",
-  classNames = [],
+  classes = [],
   disabled = false,
   href,
   icon = false,
@@ -143,7 +143,7 @@ const FloatingActionButton = ({
 }) => {
   return (
     <SolidButton
-      classNames={["FloatingActionButton", ...classNames]}
+      classes={["FloatingActionButton", ...classes]}
       disabled={disabled}
       icon={icon}
       href={href}

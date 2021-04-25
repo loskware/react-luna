@@ -1,13 +1,13 @@
 import React from "react";
-import { createClassNames } from "../../createClassNames";
+import { classNames } from "../../classNames";
 import "./PacmanLoader.scss";
 
 /**
  * @param {object} props
- * @param {Array<string>} [props.classNames]
+ * @param {Array<string>} [props.classes]
  */
-const PacmanLoader = ({ classNames = [] }) => {
-  const cn = createClassNames("PacmanLoader", ...classNames);
+const PacmanLoader = ({ classes = [] }) => {
+  const cn = classNames("PacmanLoader", ...classes);
   return (
     <div className={cn}>
       <div></div>

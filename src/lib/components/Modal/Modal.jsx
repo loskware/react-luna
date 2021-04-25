@@ -1,17 +1,19 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
-import "./Modal.scss";
+import { classNames } from "../../classNames";
+import "./Modal.css";
 
 /**
  * @param {object} props
- * @param {Array<string>} [props.classNames]
+ * @param {Array<string>} [props.classes]
  * @param {any} props.children
  */
-const Modal = ({ classNames = [], children }) => {
+const Modal = ({ classes = [], children }) => {
   const modalRoot = document.getElementById("modal-root");
   const modal = document.createElement("div");
   modal.classList.add("Modal", "acrylic");
-  classNames && modal.classList.add(...classNames);
+  const cn = classNames(...classes);
+  cn && modal.classList.add(cn);
 
   useEffect(() => {
     modalRoot?.appendChild(modal);
