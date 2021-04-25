@@ -5,7 +5,7 @@ import "./CheckBox.css";
 /**
  * @param {object} props
  * @param {Array<string>} [props.classNames]
- * @param {"primary"|"accent"|"danger"|"warning"|"success"} [props.variant]
+ * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant]
  * @param {string} [props.label]
  * @param {"left"|"right"} [props.labelPosition]
  * @param {React.ChangeEventHandler<HTMLInputElement>} [props.onChange]

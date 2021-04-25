@@ -69,42 +69,42 @@
   transition-property: background-color, border-color, opacity;
   will-change: background-color, border-color, opacity;
 }
-.SolidButton:disabled {
+.SolidButton.Button:disabled {
   background-color: var(--disabled-color);
 }
-.SolidButton-primary {
-  color: var(--primary-text-color-inverse);
-  background-color: var(--primary-bkg-color);
+.SolidButton.Button-plain {
+  color: var(--plain-text-color-inverse);
+  background-color: var(--plain-bkg-color);
 }
-.SolidButton-primary:enabled:hover {
-  background-color: var(--primary-bkg-color-sec);
+.SolidButton.Button-plain:enabled:hover {
+  background-color: var(--plain-bkg-color-sec);
 }
-.SolidButton-accent {
+.SolidButton.Button-accent {
   color: var(--accent-text-color-inverse);
   background-color: var(--accent-bkg-color);
 }
-.SolidButton-accent:enabled:hover {
+.SolidButton.Button-accent:enabled:hover {
   background-color: var(--accent-bkg-color-sec);
 }
-.SolidButton-danger {
+.SolidButton.Button-danger {
   color: var(--danger-text-color-inverse);
   background-color: var(--danger-bkg-color);
 }
-.SolidButton-danger:enabled:hover {
+.SolidButton.Button-danger:enabled:hover {
   background-color: var(--danger-bkg-color-sec);
 }
-.SolidButton-warning {
+.SolidButton.Button-warning {
   color: var(--warning-text-color-inverse);
   background-color: var(--warning-bkg-color);
 }
-.SolidButton-warning:enabled:hover {
+.SolidButton.Button-warning:enabled:hover {
   background-color: var(--warning-bkg-color-sec);
 }
-.SolidButton-success {
+.SolidButton.Button-success {
   color: var(--success-text-color-inverse);
   background-color: var(--success-bkg-color);
 }
-.SolidButton-success:enabled:hover {
+.SolidButton.Button-success:enabled:hover {
   background-color: var(--success-bkg-color-sec);
 }
 
@@ -115,40 +115,40 @@
   transition-property: background-color, border-color, color, opacity;
   will-change: background-color, border-color, color, opacity;
 }
-.FlatButton:disabled {
+.FlatButton.Button:disabled {
   color: var(--disabled-color);
 }
-.FlatButton.FlatButton-outlined:disabled {
+.FlatButton.Button.Button-outlined:disabled {
   border-color: var(--disabled-color);
 }
-.FlatButton-primary:enabled:hover {
-  background-color: var(--primary-bkg-color-alfa1);
+.FlatButton.Button-plain:enabled:hover {
+  background-color: var(--plain-bkg-color-alfa1);
 }
-.FlatButton-primary.FlatButton-outlined {
-  border: 1px solid var(--primary-border-color);
+.FlatButton.Button-plain.Button-outlined {
+  border: 1px solid var(--plain-border-color);
 }
-.FlatButton-accent:enabled:hover {
+.FlatButton.Button-accent:enabled:hover {
   background-color: var(--accent-bkg-color-alfa1);
 }
-.FlatButton-accent.FlatButton-outlined {
+.FlatButton.Button-accent.Button-outlined {
   border: 1px solid var(--accent-border-color);
 }
-.FlatButton-danger:enabled:hover {
+.FlatButton.Button-danger:enabled:hover {
   background-color: var(--danger-bkg-color-alfa1);
 }
-.FlatButton-danger.FlatButton-outlined {
+.FlatButton.Button-danger.Button-outlined {
   border: 1px solid var(--danger-border-color);
 }
-.FlatButton-warning:enabled:hover {
+.FlatButton.Button-warning:enabled:hover {
   background-color: var(--warning-bkg-color-alfa1);
 }
-.FlatButton-warning.FlatButton-outlined {
+.FlatButton.Button-warning.Button-outlined {
   border: 1px solid var(--warning-border-color);
 }
-.FlatButton-success:enabled:hover {
+.FlatButton.Button-success:enabled:hover {
   background-color: var(--success-bkg-color-alfa1);
 }
-.FlatButton-success.FlatButton-outlined {
+.FlatButton.Button-success.Button-outlined {
   border: 1px solid var(--success-border-color);
 }
 

@@ -4,21 +4,21 @@ import "./Card.css";
 
 /**
  * @param {object} props
- * @param {Array<string>} [props.classNames]
- * @param {any} [props.children]
- * @param {"primary"|"accent"|"danger"|"warning"|"success"} [props.variant]
- * @param {boolean} [props.hasBorder]
- * @param {boolean} [props.hasShadow]
- * @param {React.CSSProperties} [props.style]
+ * @param {Array<string>} [props.classNames] array of CSS class names
+ * @param {React.ReactNode} [props.children] Card content
+ * @param {boolean} [props.hasBorder] render default border
+ * @param {boolean} [props.hasShadow] render default shadow
+ * @param {React.CSSProperties} [props.style] component in
+ * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  */
 const Card = ({
   classNames = [],
   children,
-  variant = "primary",
   hasBorder = false,
   hasShadow = false,
-  style = {},
-  ...attributes
+  style,
+  variant = "plain",
+  ...otherProps
 }) => {
   const cn = createClassNames(
     "Card",
@@ -28,7 +28,7 @@ const Card = ({
     ...classNames
   );
   return (
-    <div className={cn} style={style} {...attributes} >
+    <div className={cn} style={style} {...otherProps} >
       {children}
     </div>
   );

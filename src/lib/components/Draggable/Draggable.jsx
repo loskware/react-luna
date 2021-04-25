@@ -23,7 +23,7 @@ export function Draggable({ classNames = [], children }) {
   );
 }
 
-
+/** @param {HTMLElement} element */
 function makeDrabbable(element) {
   let mouseX = 0;
   let mouseY = 0;

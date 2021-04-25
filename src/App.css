@@ -59,8 +59,8 @@ section.theme-dark {
   user-select: none;
 }
 .App .navigator .nav-link:hover {
-  color: var(--primary-text-color-inverse);
-  background-color: var(--primary-bkg-color-alfa1);
+  color: var(--plain-text-color-inverse);
+  background-color: var(--plain-bkg-color-alfa1);
 }
 .App > .content {
   flex: 1;

@@ -3,15 +3,24 @@ import { createClassNames } from "../../createClassNames";
 import "./Buttons.css";
 
 const Button = ({
-  classNames = [],
-  href,
-  size = "normal",
-  icon,
-  disabled = false,
   children = "",
+  classNames = [],
+  disabled = false,
+  href,
+  icon,
   onClick,
+  outlined = false,
+  size = "normal",
+  variant = "accent",
+  ...otherProps
 }) => {
-  const cn = createClassNames("Button", `Button-${size}`, ...classNames);
+  const cn = createClassNames(
+    "Button",
+    outlined && `Button-outlined`,
+    `Button-${size}`,
+    `Button-${variant}`,
+    ...classNames
+  );
   return React.createElement(
     href ? "a" : "button",
     {
@@ -19,6 +28,7 @@ const Button = ({
       onClick,
       disabled,
       href,
+      ...otherProps
     },
     icon,
     children && React.createElement("span", null, children)
@@ -26,34 +36,38 @@ const Button = ({
 };
 
 /**
+ * Button with solid background
  * @param {object} props
- * @param {Array<string>} [props.classNames]
- * @param {"normal"|"compact"|"large"} [props.size]
- * @param {"primary"|"accent"|"danger"|"warning"|"success"} [props.variant]
- * @param {any} [props.icon]
- * @param {string} [props.href]
- * @param {boolean} [props.disabled]
- * @param {any} [props.children]
- * @param {function} [props.onClick]
+ * @param {any} [props.children] button content
+ * @param {Array<string>} [props.classNames] array of CSS class names
+ * @param {boolean} [props.disabled] make button disabled
+ * @param {string} [props.href] URL of the link. make button render as <a> instead of <button>
+ * @param {any} [props.icon] optional icon, rendered before content
+ * @param {"normal"|"compact"|"large"} [props.size] button size
+ * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] button color variant
+ * @param {function} [props.onClick] onClick callback
  */
 const SolidButton = ({
+  children = "",
   classNames = [],
+  disabled = false,
+  href,
+  icon = false,
+  onClick,
   size = "normal",
   variant = "accent",
-  icon = false,
-  href,
-  disabled = false,
-  children = "",
-  onClick,
+  ...otherProps
 }) => {
   return (
     <Button
-      classNames={["SolidButton", `SolidButton-${variant}`, ...classNames]}
+      classNames={["SolidButton", ...classNames]}
       disabled={disabled}
       icon={icon}
       href={href}
       onClick={onClick}
       size={size}
+      variant={variant}
+      {...otherProps}
     >
       {children}
     </Button>
@@ -61,41 +75,41 @@ const SolidButton = ({
 };
 
 /**
+ * Text Button with hover effect and optional outline
  * @param {object} props
- * @param {Array<string>} [props.classNames]
- * @param {"normal"|"compact"|"large"} [props.size]
- * @param {"primary"|"accent"|"danger"|"warning"|"success"} [props.variant]
- * @param {any} [props.icon]
- * @param {string} [props.href]
- * @param {boolean} [props.disabled]
- * @param {boolean} [props.outlined]
- * @param {any} [props.children]
- * @param {function} [props.onClick]
+ * @param {any} [props.children] button content
+ * @param {Array<string>} [props.classNames] array of CSS class names
+ * @param {boolean} [props.disabled] make button disabled
+ * @param {string} [props.href] URL of the link. make button render as <a> instead of <button>
+ * @param {any} [props.icon] optional icon, rendered before content
+ * @param {boolean} [props.outlined] make button outlined
+ * @param {"normal"|"compact"|"large"} [props.size] button size
+ * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] button color variant
+ * @param {function} [props.onClick] onClick callback
  */
 const FlatButton = ({
+  children = "",
   classNames = [],
+  disabled = false,
+  href,
+  icon = false,
+  onClick,
+  outlined = false,
   size = "normal",
   variant = "accent",
-  icon,
-  href,
-  disabled = false,
-  outlined = false,
-  children = "",
-  onClick,
+  ...otherProps
 }) => {
   return (
     <Button
-      classNames={[
-        "FlatButton",
-        `FlatButton-${variant}`,
-        outlined && `FlatButton-outlined`,
-        ...classNames,
-      ]}
+      classNames={["FlatButton", ...classNames]}
       disabled={disabled}
       icon={icon}
       href={href}
       onClick={onClick}
+      outlined={outlined}
       size={size}
+      variant={variant}
+      {...otherProps}
     >
       {children}
     </Button>
@@ -103,42 +117,43 @@ const FlatButton = ({
 };
 
 /**
+ * A floating action button (FAB) represents the primary action of a screen.
+ * {@link https://material.io/components/buttons-floating-action-button}
  * @param {object} props
- * @param {Array<string>} [props.classNames]
- * @param {"normal"|"compact"|"large"} [props.size]
- * @param {"primary"|"accent"|"danger"|"warning"|"success"} [props.variant]
- * @param {any} [props.icon]
- * @param {string} [props.href]
- * @param {boolean} [props.disabled]
- * @param {any} [props.children]
- * @param {function} [props.onClick]
+ * @param {any} [props.children] button content
+ * @param {Array<string>} [props.classNames] array of CSS class names
+ * @param {boolean} [props.disabled] make button disabled
+ * @param {string} [props.href] URL of the link. make button render as <a> instead of <button>
+ * @param {any} [props.icon] optional icon, rendered before content
+ * @param {boolean} [props.outlined] make button outlined
+ * @param {"normal"|"compact"|"large"} [props.size] button size
+ * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
+ * @param {function} [props.onClick] onClick callback
  */
 const FloatingActionButton = ({
+  children = "",
   classNames = [],
+  disabled = false,
+  href,
+  icon = false,
+  onClick,
   size = "normal",
   variant = "accent",
-  icon = false,
-  href,
-  disabled = false,
-  children = "",
-  onClick,
+  ...otherProps
 }) => {
   return (
-    <Button
-      classNames={[
-        "FloatingActionButton",
-        "SolidButton",
-        `SolidButton-${variant}`,
-        ...classNames,
-      ]}
+    <SolidButton
+      classNames={["FloatingActionButton", ...classNames]}
       disabled={disabled}
       icon={icon}
       href={href}
       onClick={onClick}
       size={size}
+      variant={variant}
+      {...otherProps}
     >
       {children}
-    </Button>
+    </SolidButton>
   );
 };
 

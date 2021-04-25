@@ -9,9 +9,9 @@
 .Card-shadow {
   box-shadow: var(--elevation-2);
 }
-.Card-primary {
-  background-color: var(--primary-bkg-color-alfa1);
-  border-color: var(--primary-border-color);
+.Card-plain {
+  background-color: var(--plain-bkg-color-alfa1);
+  border-color: var(--plain-border-color);
 }
 .Card-accent {
   background-color: var(--accent-bkg-color-alfa1);

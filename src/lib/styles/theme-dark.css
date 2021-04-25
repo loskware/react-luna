@@ -9,15 +9,15 @@
   --text-color-secondary: hsla(0, 0%, 100%, 0.7);
   --text-color-tertiary: hsla(0, 0%, 100%, 0.3);
   
-  /* PRIMARY */
-  --primary-color: hsla(210, 15%, 100%, 0.1);
-  --primary-bkg-color: var(--primary-color);
-  --primary-bkg-color-sec: hsla(210, 15%, 100%, 0.12);
-  --primary-bkg-color-alfa1: hsla(210, 15%, 100%, 0.06);
-  --primary-bkg-color-alfa2: hsla(210, 15%, 100%, 0.1);
-  --primary-border-color: hsla(210, 15%, 100%, 0.3);
-  --primary-text-color: var(--primary-color);
-  --primary-text-color-inverse: var(--text-color-secondary);
+  /* plain */
+  --plain-color: hsla(210, 15%, 100%, 0.1);
+  --plain-bkg-color: var(--plain-color);
+  --plain-bkg-color-sec: hsla(210, 15%, 100%, 0.12);
+  --plain-bkg-color-alfa1: hsla(210, 15%, 100%, 0.06);
+  --plain-bkg-color-alfa2: hsla(210, 15%, 100%, 0.1);
+  --plain-border-color: hsla(210, 15%, 100%, 0.3);
+  --plain-text-color: var(--plain-color);
+  --plain-text-color-inverse: var(--text-color-secondary);
 
   /* ACCENT */
   --accent-color: hsl(210, 100%, 45%);

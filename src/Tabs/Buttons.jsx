@@ -18,16 +18,16 @@ export const Buttons = () => {
         </div>
 
         <hr />
-        <Text size="title">PRIMARY</Text>
+        <Text size="title">PLAIN</Text>
         <div>
-          <SolidButton variant="primary" icon={<IconLoad />} size="compact">
+          <SolidButton variant="plain" icon={<IconLoad />} size="compact">
             BUTTON
           </SolidButton>
-          <FlatButton variant="primary" size="compact">
+          <FlatButton variant="plain" size="compact">
             BUTTON
           </FlatButton>
           <FlatButton
-            variant="primary"
+            variant="plain"
             icon={<IconSend />}
             size="compact"
             outlined
@@ -37,14 +37,14 @@ export const Buttons = () => {
         </div>
         <hr />
         <div>
-          <SolidButton variant="primary" icon={<IconLoad />} size="normal">
+          <SolidButton variant="plain" icon={<IconLoad />} size="normal">
             Button
           </SolidButton>
-          <FlatButton variant="primary" icon={<IconLoad />}>
+          <FlatButton variant="plain" icon={<IconLoad />}>
             Button
           </FlatButton>
           <FlatButton
-            variant="primary"
+            variant="plain"
             icon={<IconSend />}
             size="normal"
             outlined
@@ -54,14 +54,14 @@ export const Buttons = () => {
         </div>
         <hr />
         <div>
-          <SolidButton variant="primary" icon={<IconLoad />} size="large">
+          <SolidButton variant="plain" icon={<IconLoad />} size="large">
             Button
           </SolidButton>
-          <FlatButton variant="primary" size="large">
+          <FlatButton variant="plain" size="large">
             Button
           </FlatButton>
           <FlatButton
-            variant="primary"
+            variant="plain"
             icon={<IconSend />}
             size="large"
             outlined
@@ -275,7 +275,7 @@ export const Buttons = () => {
           <FloatingActionButton
             classNames={["App__send-button"]}
             size="large"
-            variant="primary"
+            variant="plain"
             icon={<IconSend />}
             onClick={() => null}
           />
@@ -323,16 +323,16 @@ export const Buttons = () => {
         </div>
 
         <hr />
-        <Text size="title">PRIMARY</Text>
+        <Text size="title">PLAIN</Text>
         <div>
-          <SolidButton variant="primary" icon={<IconLoad />} size="compact">
+          <SolidButton variant="plain" icon={<IconLoad />} size="compact">
             BUTTON
           </SolidButton>
-          <FlatButton variant="primary" size="compact">
+          <FlatButton variant="plain" size="compact">
             BUTTON
           </FlatButton>
           <FlatButton
-            variant="primary"
+            variant="plain"
             icon={<IconSend />}
             size="compact"
             outlined
@@ -342,14 +342,14 @@ export const Buttons = () => {
         </div>
         <hr />
         <div>
-          <SolidButton variant="primary" icon={<IconLoad />} size="normal">
+          <SolidButton variant="plain" icon={<IconLoad />} size="normal">
             Button
           </SolidButton>
-          <FlatButton variant="primary" icon={<IconLoad />}>
+          <FlatButton variant="plain" icon={<IconLoad />}>
             Button
           </FlatButton>
           <FlatButton
-            variant="primary"
+            variant="plain"
             icon={<IconSend />}
             size="normal"
             outlined
@@ -359,14 +359,14 @@ export const Buttons = () => {
         </div>
         <hr />
         <div>
-          <SolidButton variant="primary" icon={<IconLoad />} size="large">
+          <SolidButton variant="plain" icon={<IconLoad />} size="large">
             Button
           </SolidButton>
-          <FlatButton variant="primary" size="large">
+          <FlatButton variant="plain" size="large">
             Button
           </FlatButton>
           <FlatButton
-            variant="primary"
+            variant="plain"
             icon={<IconSend />}
             size="large"
             outlined
@@ -580,7 +580,7 @@ export const Buttons = () => {
           <FloatingActionButton
             classNames={["App__send-button"]}
             size="large"
-            variant="primary"
+            variant="plain"
             icon={<IconSend />}
             onClick={() => null}
           />
