@@ -1,6 +1,6 @@
 import React from "react";
 import { classNames } from "../../classNames";
-import "./PacmanLoader.scss";
+import "./PacmanLoader.css";
 
 /**
  * @param {object} props

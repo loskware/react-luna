@@ -17,7 +17,7 @@ export function Draggable({ classes = [], children }) {
 
   const cn = classNames("Draggable", ...classes);
   return (
-    <div className={cn} ref={ref} style={{ position: "absolute" }}>
+    <div className={cn} ref={ref}>
       {children}
     </div>
   );
@@ -33,7 +33,8 @@ function makeDrabbable(element) {
   /** @param {MouseEvent} e */
   function mouseDown(e) {
     e.preventDefault();
-    if (e.target === element) {
+    if (element.contains(e.target)) {
+      console.log("mouse down");
       element.style.cursor = "grabbing";
       mouseX = e.clientX;
       mouseY = e.clientY;

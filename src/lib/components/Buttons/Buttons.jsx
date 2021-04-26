@@ -44,7 +44,7 @@ const Button = ({
  * @param {string} [props.href] URL of the link. make button render as <a> instead of <button>
  * @param {any} [props.icon] optional icon, rendered before content
  * @param {"normal"|"compact"|"large"} [props.size] button size
- * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] button color variant
+ * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  * @param {function} [props.onClick] onClick callback
  */
 const SolidButton = ({

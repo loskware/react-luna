@@ -1,9 +1,9 @@
 import React from "react";
 import { CheckBox, Text } from "../lib";
 
-export const CheckBoxes = () => {
+export const CheckBoxExample = () => {
   return (
-    <div className="CheckBoxes split-screen">
+    <div className="CheckBoxExample split-screen">
       <section className="theme-light">
         <Text size="title">DISABLED</Text>
         <CheckBox
@@ -29,7 +29,7 @@ export const CheckBoxes = () => {
         <CheckBox
           variant="danger"
           label="Lorem Ipsum"
-          labelPosition="left"
+          labelPosition="right"
           onChange={(event) =>
             console.log(`checkbox is ${event.target.checked}`)
           }
@@ -49,7 +49,7 @@ export const CheckBoxes = () => {
         <CheckBox
           variant="success"
           label="Lorem Ipsum"
-          labelPosition="left"
+          labelPosition="right"
           onChange={(event) =>
             console.log(`checkbox is ${event.target.checked}`)
           }
@@ -81,7 +81,7 @@ export const CheckBoxes = () => {
         <CheckBox
           variant="danger"
           label="Lorem Ipsum"
-          labelPosition="left"
+          labelPosition="right"
           onChange={(event) =>
             console.log(`checkbox is ${event.target.checked}`)
           }
@@ -101,7 +101,7 @@ export const CheckBoxes = () => {
         <CheckBox
           variant="success"
           label="Lorem Ipsum"
-          labelPosition="left"
+          labelPosition="right"
           onChange={(event) =>
             console.log(`checkbox is ${event.target.checked}`)
           }

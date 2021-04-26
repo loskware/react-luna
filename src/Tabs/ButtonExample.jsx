@@ -8,9 +8,9 @@ import {
   Text,
 } from "../lib";
 
-export const Buttons = () => {
+export const ButtonExample = () => {
   return (
-    <div className="Buttons split-screen">
+    <div className="ButtonExample split-screen">
       <section id="secHead" className="theme-light">
         <Text size="title">DISABLED</Text>
         <div>

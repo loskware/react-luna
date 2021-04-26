@@ -11,7 +11,7 @@ export * from "./components/Modal/Modal";
 export * from "./components/PacmanLoader/PacmanLoader";
 export * from "./components/Radio/Radio";
 export * from "./components/Selector/Selector";
-export * from "./components/Switch/Switch";
+//export * from "./components/Switch/Switch";
 export * from "./components/Typography/Typography";
 export * from "./components/TextField/TextField";
 export * from "./classNames";

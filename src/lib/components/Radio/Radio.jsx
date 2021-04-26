@@ -1,6 +1,6 @@
 import React from "react";
 import { classNames } from "../../classNames";
-import "./Radio.scss";
+import "./Radio.css";
 
 /**
  * @param {object} props
@@ -17,7 +17,7 @@ export const Radio = ({
   selected,
   onChange,
 }) => {
-  const cn = classNames("SegmentedControl", ...classes);
+  const cn = classNames("RadioGroup", ...classes);
   return (
     <div className={cn}>
       {children.map(({ label }, index) => (

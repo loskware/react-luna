@@ -4,15 +4,23 @@ import "./FlipView.css";
 
 /**
  * @param {object} props
+ * @param {"x"|"y"} [props.axis] rotation axis
  * @param {Array<string>} [props.classes] array of CSS classes
  * @param {any} props.frontFace default shown content
  * @param {any} props.backFace content shown when flipped
- * @param {boolean} props.flipped make component flipped... or not
+ * @param {boolean} [props.flipped] make component flipped... or not
  */
-const FlipView = ({ classes = [], frontFace, backFace, flipped }) => {
+const FlipView = ({
+  axis = "x",
+  classes = [],
+  frontFace,
+  backFace,
+  flipped = false,
+}) => {
   const cn = classNames(
     "FlipView",
-    `${flipped ? "FlipView-flipped" : "FlipView-normal"}`,
+    flipped && "FlipView-flipped",
+    `FlipView-${axis}-axis`,
     ...classes
   );
   return (

@@ -4,11 +4,8 @@
 .FlipView-wrapper {
   position: relative;
   transform-style: preserve-3d;
-  transition: transform var(--transition-duration-normal) ease-in-out;
+  transition: transform var(--transition-duration-slow) var(--transition-timing-ease-in-out);
   will-change: transform;
-}
-.FlipView-flipped > .FlipView-wrapper {
-  transform: rotateX(180deg);
 }
 .FlipView-frontFace {
   backface-visibility: hidden;
@@ -20,5 +17,16 @@
   position: absolute;
   right: 0;
   top: 0;
+}
+.FlipView-x-axis .FlipView-backFace {
   transform: rotateX(180deg);
+}
+.FlipView-flipped.FlipView-x-axis .FlipView-wrapper {
+  transform: rotateX(180deg);
+}
+.FlipView-y-axis .FlipView-backFace {
+  transform: rotateY(180deg);
+}
+.FlipView-flipped.FlipView-y-axis .FlipView-wrapper {
+  transform: rotateY(-180deg);
 }

@@ -65,20 +65,61 @@ section.theme-dark {
 }
 
 /* BUTTONS SECTION */
-.Buttons .Button {
+.ButtonExample .Button {
   margin-right: 0.5rem;
   vertical-align: middle;
 }
-.Buttons .fab-group {
+.ButtonExample .fab-group {
   padding: 1rem;
   text-align: center;
 }
-.Buttons .fab-group > .Button:not(:last-child) {
+.ButtonExamples .fab-group > .Button:not(:last-child) {
   margin-right: 2rem;
 }
 
 /* CHECKBOXES SECTION*/
-.CheckBoxes section {
+.CheckBoxExample section {
   box-sizing: border-box;
   height: 100vh;
+}
+
+/* DRAG TEST */
+section.DraggableExample {
+  height: 100%;
+  padding: 0;
+}
+.DraggableExample .Card {
+  padding: 3rem 5rem;
+}
+.DraggableExample .Draggable:first-child {
+  position: absolute;
+  left: 3rem;
+  top: 3rem;
+}
+.DraggableExample .Draggable:last-child {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+}
+
+/* FLIP EXAMPLE */
+section.FlipExample {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  gap: 32px;
+  padding: 0;
+}
+.FlipExample .Image {
+  vertical-align: bottom;
+}
+.FlipExample .FlipView:last-of-type {
+  margin-top: 3rem;
+}
+
+/* SELECTOR EXAMPLE */
+.SelectorExample {
+  height: 100%;
 }

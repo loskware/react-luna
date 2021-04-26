@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import "./App.css";
 import { Image, Text } from "./lib";
-import { Buttons, CheckBoxes } from "./Tabs";
+import { ButtonExample, CheckBoxExample, FlipExample, SelectorExample } from "./Tabs";
+import { DraggableExample } from "./Tabs/DraggableExample";
 
-const sections = [<Buttons key={0} />, <CheckBoxes key={1} />];
+const sections = [
+  <ButtonExample key="0" />,
+  <CheckBoxExample key="1" />,
+  <DraggableExample key="2" />,
+  <FlipExample key="3" />,
+  <SelectorExample key="4" />
+];
 
 const App = () => {
   const [sectionIndex, setSectionIndex] = useState(0);
@@ -26,6 +33,15 @@ const App = () => {
           </div>
           <div className="nav-link" onClick={() => setSectionIndex(1)}>
             CHECKBOX
+          </div>
+          <div className="nav-link" onClick={() => setSectionIndex(2)}>
+            DRAGGABLE
+          </div>
+          <div className="nav-link" onClick={() => setSectionIndex(3)}>
+            FLIPVIEW
+          </div>
+          <div className="nav-link" onClick={() => setSectionIndex(4)}>
+            SELECTOR
           </div>
         </div>
       </div>

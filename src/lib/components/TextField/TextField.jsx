@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { classNames } from "../../classNames";
-import "./TextField.scss";
+import "./TextField.css";
 
 /**
  * @param {object} props
  * @param {Array<string>} [props.classes]
- * @param {string} [props.placeholder]
  * @param {boolean} [props.large]
  * @param {any} [props.leadingIcon]
+ * @param {string} [props.placeholder]
  * @param {any} [props.trailingIcon]
  * @param {boolean} [props.transparent]
+ * @param {"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  * @param {(
  *  value: string,
  *  prevValue: string,
@@ -18,18 +19,20 @@ import "./TextField.scss";
  */
 const TextField = ({
   classes = [],
-  placeholder = "",
   large = false,
   leadingIcon,
+  placeholder = "",
   trailingIcon,
   transparent = false,
+  variant = "accent",
   onChange,
 }) => {
   const [text, setText] = useState("");
   const cn = classNames(
     "TextField",
-    large && "TextField--large",
-    transparent && "TextField--transparent",
+    `TextField-${variant}`,
+    large && "TextField-large",
+    transparent && "TextField-transparent",
     ...classes
   );
   return (
