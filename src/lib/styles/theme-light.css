@@ -3,6 +3,7 @@
   --bkg-color-sec: hsla(210, 15%, 30%, 0.1);
 
   --border-color: hsla(210, 15%, 0%, 0.3);
+  --border-color-sec: hsla(210, 15%, 0%, 0.2);
 
   --text-color: hsla(0, 0%, 0%, 0.9);
   --text-color-inverse: hsla(0, 0%, 100%, 0.9);
@@ -20,43 +21,43 @@
   --plain-text-color-inverse: var(--text-color-secondary);
 
   /* ACCENT */
-  --accent-color: hsl(210, 100%, 50%);
+  --accent-color: hsl(214, 82%, 55%);
   --accent-bkg-color: var(--accent-color);
-  --accent-bkg-color-sec: hsl(210, 100%, 45%);
-  --accent-bkg-color-alfa1: hsla(210, 100%, 46%, 0.1);
-  --accent-bkg-color-alfa2: hsla(210, 100%, 46%, 0.4);
+  --accent-bkg-color-sec: hsl(214, 82%, 50%);
+  --accent-bkg-color-alfa1: hsla(214, 82%, 50%, 0.1);
+  --accent-bkg-color-alfa2: hsla(214, 82%, 50%, 0.4);
   --accent-border-color: var(--accent-color);
-  --accent-text-color: var(--accent-color);
+  --accent-text-color: hsl(214, 82%, 50%);
   --accent-text-color-inverse: var(--text-color-inverse);
 
   /* DANGER */
-  --danger-color: hsl(12, 100%, 56%);
+  --danger-color: hsl(12, 82%, 55%);
   --danger-bkg-color: var(--danger-color);
-  --danger-bkg-color-sec: hsl(12, 100%, 48%);
-  --danger-bkg-color-alfa1: hsla(12, 100%, 46%, 0.1);
-  --danger-bkg-color-alfa2: hsla(12, 100%, 46%, 0.4);
+  --danger-bkg-color-sec: hsl(12, 82%, 50%);
+  --danger-bkg-color-alfa1: hsla(12, 82%, 50%, 0.1);
+  --danger-bkg-color-alfa2: hsla(12, 82%, 50%, 0.4);
   --danger-border-color: var(--danger-color);
-  --danger-text-color: var(--danger-color);
+  --danger-text-color: hsl(12, 82%, 50%);
   --danger-text-color-inverse: var(--text-color-inverse);
 
   /* WARNING */
-  --warning-color: hsl(51, 99%, 48%);
+  --warning-color: hsl(51, 82%, 55%);
   --warning-bkg-color: var(--warning-color);
-  --warning-bkg-color-sec: hsl(51, 99%, 44%);
-  --warning-bkg-color-alfa1: hsla(51, 99%, 46%, 0.15);
-  --warning-bkg-color-alfa2: hsla(51, 99%, 46%, 0.4);
+  --warning-bkg-color-sec: hsl(51, 82%, 50%);
+  --warning-bkg-color-alfa1: hsla(51, 82%, 50%, 0.12);
+  --warning-bkg-color-alfa2: hsla(51, 82%, 50%, 0.4);
   --warning-border-color: var(--warning-color);
-  --warning-text-color: var(--warning-color);
+  --warning-text-color: hsl(51, 82%, 48%);
   --warning-text-color-inverse: var(--text-color-secondary);
 
   /* SUCCESS */
-  --success-color: hsl(93, 90%, 40%);
+  --success-color: hsl(93, 82%, 40%);
   --success-bkg-color: var(--success-color);
-  --success-bkg-color-sec: hsl(93, 90%, 35%);
-  --success-bkg-color-alfa1: hsla(93, 90%, 46%, 0.15);
-  --success-bkg-color-alfa2: hsla(93, 90%, 46%, 0.4);
+  --success-bkg-color-sec: hsl(93, 82%, 35%);
+  --success-bkg-color-alfa1: hsla(93, 82%, 35%, 0.1);
+  --success-bkg-color-alfa2: hsla(93, 82%, 35%, 0.4);
   --success-border-color: var(--success-color);
-  --success-text-color: var(--success-color);
+  --success-text-color: hsl(93, 82%, 35%);
   --success-text-color-inverse: var(--text-color-inverse);
 
   /* DISABLED */

@@ -1,0 +1,39 @@
+.SickleLoader {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+.SickleLoader::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  bottom: 25%;
+  right: 25%;
+  border-radius: 50%;
+  border-right: 3px solid var(--success-color);
+  animation: SickleLoaderAnimation 1.5s linear infinite normal;
+}
+.SickleLoader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  border-right: 3px solid var(--accent-color);
+  animation: SickleLoaderAnimation 1.5s cubic-bezier( 0.79, 0.33, 0.14, 0.53 ) infinite reverse;
+}
+
+@keyframes SickleLoaderAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}

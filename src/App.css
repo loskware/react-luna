@@ -30,7 +30,7 @@ section.theme-dark {
   display: flex;
   height: 100vh;
 }
-.App .side-bar {
+.App-side-bar {
   align-items: stretch;
   background-color: hsl(208, 19%, 19%);
   display: flex;
@@ -38,28 +38,32 @@ section.theme-dark {
   height: 100%;
   width: 300px;
 }
-.App .title-bar {
+.App-title-bar {
   text-align: center;
   padding-bottom: 3rem;
 }
-.App .title-bar .Text {
+.App-title-bar .Text {
   font-size: 2rem;
 }
-.App .title-bar .Image {
+.App-title-bar .Image {
   height: 128px;
   width: 128px;
 }
-.App .navigator .nav-link {
+.App-navigator .nav-link {
   border-radius: var(--border-radius-l);
+  color: rgba(255 255 255 / 80%);
   cursor: pointer;
-  margin: 8px 16px;
+  margin: 8px 40px 8px 16px;
   padding: 8px 16px;
   user-select: none;
 }
-.App .navigator .nav-link:hover {
-  background-color: var(--plain-bkg-color-alfa1);
+.App-navigator .nav-link:hover {
+  background-color: hsl(208, 19%, 17%);
 }
-.App > .content {
+.App-navigator .nav-link-selected {
+  background-color: hsl(208, 19%, 15%) !important;
+}
+.App-content {
   flex: 1;
   overflow-y: auto;
 }

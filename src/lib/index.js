@@ -9,6 +9,7 @@ export * from "./components/Icon/Icon";
 export * from "./components/Image/Image";
 export * from "./components/Modal/Modal";
 export * from "./components/Loaders/PacmanLoader/PacmanLoader";
+export * from "./components/Loaders/SickleLoader/SickleLoader";
 export * from "./components/Radio/Radio";
 export * from "./components/Selector/Selector";
 //export * from "./components/Switch/Switch";

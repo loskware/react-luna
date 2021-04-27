@@ -279,7 +279,9 @@ export const ButtonExample = () => {
             variant="plain"
             icon={<IconSend />}
             onClick={() => null}
-          />
+          >
+            Ipsum
+          </FloatingActionButton>
           <FloatingActionButton
             classes={["App__send-button"]}
             size="large"
@@ -593,7 +595,9 @@ export const ButtonExample = () => {
             variant="danger"
             icon={<IconSend />}
             onClick={() => null}
-          />
+          >
+            Lorem
+          </FloatingActionButton>
           <FloatingActionButton
             classes={["App__send-button"]}
             size="large"
