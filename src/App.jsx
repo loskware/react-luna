@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { Image, Text } from "./lib";
-import { ButtonExample, CheckBoxExample, FlipExample, SelectorExample } from "./Tabs";
+import { ButtonExample, CheckBoxExample, FlipExample, LoadersExample, SelectorExample } from "./Tabs";
 import { DraggableExample } from "./Tabs/DraggableExample";
 
 const sections = [
@@ -9,7 +9,8 @@ const sections = [
   <CheckBoxExample key="1" />,
   <DraggableExample key="2" />,
   <FlipExample key="3" />,
-  <SelectorExample key="4" />
+  <LoadersExample key="4" />,
+  <SelectorExample key="5" />
 ];
 
 const App = () => {
@@ -41,6 +42,9 @@ const App = () => {
             FLIPVIEW
           </div>
           <div className="nav-link" onClick={() => setSectionIndex(4)}>
+            LOADERS
+          </div>
+          <div className="nav-link" onClick={() => setSectionIndex(5)}>
             SELECTOR
           </div>
         </div>

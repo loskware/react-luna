@@ -18,7 +18,8 @@ import "./Selector.css";
  *  newSelection: number,
  *  lastSelection: number,
  *  e: React.ChangeEvent<HTMLInputElement>
- * ) => boolean} [props.onChange]} props.onChange
+ * ) => void} [props.onChange]} [props.onChange]
+ * @param {"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  */
 export const Selector = ({
   classes = [],
@@ -26,8 +27,9 @@ export const Selector = ({
   name,
   selected,
   onChange,
+  variant = "accent",
 }) => {
-  const cn = classNames("Selector", ...classes);
+  const cn = classNames("Selector", `Selector-${variant}`, ...classes);
   return (
     <div className={cn}>
       {children.map(({ icon, title }, index) => (

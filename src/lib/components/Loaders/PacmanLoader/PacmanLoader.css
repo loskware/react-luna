@@ -12,7 +12,7 @@
   width: 0;
   height: 0;
   z-index: 2;
-  border: var(--pacman-size) solid var(--pacman-color);
+  border: var(--pacman-size) solid var(--accent-bkg-color);
   border-right-color: transparent;
   border-radius: 50%;
   animation: rotate_pacman_half_up 0.5s infinite;
@@ -27,7 +27,7 @@
 .PacmanLoader > div:nth-child(5) {
   z-index: 1;
   animation: pacman-balls 1s infinite linear;
-  background-color: var(--pacman-ball-color);
+  background-color: var(--accent-bkg-color-sec);
   border-radius: 50%;
   width: var(--ball-size);
   height: var(--ball-size);
@@ -72,6 +72,6 @@
     opacity: 0.7;
   }
   100% {
-    transform: translateX(-25px * 2.5);
+    transform: translateX(calc(-25px * 2.5));
   }
 }

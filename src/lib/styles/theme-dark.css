@@ -1,8 +1,8 @@
 .theme-dark {
-  --bkg-color: hsl(210, 8%, 15%);
-  --bkg-color-sec: hsla(210, 15%, 100%, 0.1);
+  --bkg-color: hsl(210, 15%, 15%);
+  --bkg-color-sec: hsla(210, 15%, 80%, 0.1);
 
-  --border-color: hsla(210, 15%, 100%, 0.2);
+  --border-color: hsla(210, 15%, 100%, 0.3);
 
   --text-color: hsla(0, 0%, 100%, 0.9);
   --text-color-inverse: hsla(0, 0%, 0%, 0.9);

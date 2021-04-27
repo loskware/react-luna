@@ -123,3 +123,20 @@ section.FlipExample {
 .SelectorExample {
   height: 100%;
 }
+.SelectorExample section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* LOADERS EXAMPLE */
+.LoadersExample {
+  height: 100%;
+}
+.LoadersExample section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
