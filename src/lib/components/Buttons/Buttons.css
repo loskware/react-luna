@@ -13,6 +13,7 @@
   transition-duration: var(--transition-duration-fast);
   transition-timing-function: linear;
   user-select: none;
+  vertical-align: middle;
   white-space: nowrap;
 }
 .Button:enabled:active {
@@ -20,6 +21,9 @@
 }
 .Button:disabled {
   cursor: default;
+}
+.Button ~ .Button {
+  margin-left: 8px;
 }
 .Button-compact {
   font-size: 12px;

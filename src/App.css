@@ -65,16 +65,10 @@ section.theme-dark {
 }
 
 /* BUTTONS SECTION */
-.ButtonExample .Button {
-  margin-right: 0.5rem;
-  vertical-align: middle;
-}
 .ButtonExample .fab-group {
   padding: 1rem;
+  line-height: 66px;
   text-align: center;
-}
-.ButtonExamples .fab-group > .Button:not(:last-child) {
-  margin-right: 2rem;
 }
 
 /* CHECKBOXES SECTION*/

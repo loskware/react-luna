@@ -20,9 +20,9 @@
   --plain-text-color-inverse: var(--text-color-secondary);
 
   /* ACCENT */
-  --accent-color: hsl(210, 100%, 56%);
+  --accent-color: hsl(210, 100%, 50%);
   --accent-bkg-color: var(--accent-color);
-  --accent-bkg-color-sec: hsl(210, 100%, 51%);
+  --accent-bkg-color-sec: hsl(210, 100%, 45%);
   --accent-bkg-color-alfa1: hsla(210, 100%, 46%, 0.1);
   --accent-bkg-color-alfa2: hsla(210, 100%, 46%, 0.4);
   --accent-border-color: var(--accent-color);
