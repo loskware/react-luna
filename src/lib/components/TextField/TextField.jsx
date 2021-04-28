@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { classNames } from "../../classNames";
-import "./TextField.css";
 
 /**
  * @param {object} props

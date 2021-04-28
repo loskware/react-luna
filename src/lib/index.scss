@@ -1,0 +1,19 @@
+@import "./styles/globals.scss";
+@import "./styles/theme-light.scss";
+@import "./styles/theme-dark.scss";
+
+// COMPONENTS
+@import "./components/Avatar/Avatar.scss";
+@import "./components/Buttons/Buttons.scss";
+@import "./components/Card/Card.scss";
+@import "./components/CheckBox/CheckBox.scss";
+@import "./components/FlipView/FlipView.scss";
+@import "./components/Header/Header.scss";
+@import "./components/Loaders/PacmanLoader/PacmanLoader.scss";
+@import "./components/Loaders/SickleLoader/SickleLoader.scss";
+@import "./components/Modal/Modal.scss";
+@import "./components/Radio/Radio.scss";
+@import "./components/Selector/Selector.scss";
+@import "./components/Switch/Switch.scss";
+@import "./components/TextField/TextField.scss";
+@import "./components/Typography/Typography.scss";

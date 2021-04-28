@@ -1,4 +1,3 @@
-import "./Avatar.css";
 import React from "react";
 import { classNames } from "../../classNames";
 

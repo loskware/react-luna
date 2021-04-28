@@ -1,5 +1,4 @@
 import React from "react";
-import "./SickleLoader.css";
 
 export function SickleLoader() {
   return (

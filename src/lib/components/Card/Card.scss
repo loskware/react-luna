@@ -1,0 +1,35 @@
+.Card {
+  border-radius: var(--border-radius-l);
+  overflow: hidden;
+
+  &-border {
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+  &-shadow {
+    box-shadow: var(--elevation-2);
+  }
+
+  // VARIANTS
+  &-default {
+    background-color: var(--bkg-color);
+    border-color: var(--border-color);
+  }
+  &-accent {
+    background-color: var(--accent-bkg-color-alfa1);
+    border-color: var(--accent-border-color);
+  }
+  &-danger {
+    background-color: var(--danger-bkg-color-alfa1);
+    border-color: var(--danger-border-color);
+  }
+  &-warning {
+    background-color: var(--warning-bkg-color-alfa1);
+    border-color: var(--warning-border-color);
+  }
+  &-success {
+    background-color: var(--success-bkg-color-alfa1);
+    border-color: var(--success-border-color);
+  }
+}

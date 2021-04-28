@@ -1,0 +1,40 @@
+.FlipView {
+  perspective: 600px;
+
+  &-wrapper {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform var(--transition-duration-slow)
+      var(--transition-timing-ease-in-out);
+    will-change: transform;
+  }
+  &-frontFace {
+    backface-visibility: hidden;
+  }
+  &-backFace {
+    backface-visibility: hidden;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  // TRANSITIONS
+  &-x-axis {
+    .FlipView-backFace {
+      transform: rotateX(180deg);
+    }
+    &.FlipView-flipped .FlipView-wrapper {
+      transform: rotateX(180deg);
+    }
+  }
+  &-y-axis {
+    .FlipView-backFace {
+      transform: rotateY(180deg);
+    }
+    &.FlipView-flipped .FlipView-wrapper {
+      transform: rotateY(-180deg);
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.Selector {
+  display: inline-flex;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-m);
+  gap: 2px;
+  line-height: 1rem;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.Selector-option {
+  flex: 1 1 0;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.Selector-option-input {
+  opacity: 0;
+  position: absolute;
+}
+
+.Selector-option-content {
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: transparent;
+  border-radius: var(--border-radius-s);
+  color: var(--text-color-secondary);
+  display: flex;
+  font-weight: 500;
+  padding: 6px 12px;
+  transition-duration: var(--transition-duration-fast);
+  transition-property: background-color, color;
+  transition-timing-function: linear;
+  will-change: background-color, color;
+  &:hover {
+    background-color: var(--bkg-color-sec);
+  }
+  
+  > span {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  > svg,
+  > img {
+    height: 14px;
+    width: 14px;
+  }
+}
+
+.Selector-accent .Selector-option-input:checked + .Selector-option-content {
+  background-color: var(--accent-bkg-color);
+  color: var(--accent-text-color-inverse);
+}
+.Selector-danger .Selector-option-input:checked + .Selector-option-content {
+  background-color: var(--danger-bkg-color);
+  color: var(--danger-text-color-inverse);
+}
+.Selector-warning .Selector-option-input:checked + .Selector-option-content {
+  background-color: var(--warning-bkg-color);
+  color: var(--warning-text-color-inverse);
+}
+.Selector-success .Selector-option-input:checked + .Selector-option-content {
+  background-color: var(--success-bkg-color);
+  color: var(--success-text-color-inverse);
+}

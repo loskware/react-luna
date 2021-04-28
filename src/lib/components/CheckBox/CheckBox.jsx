@@ -1,6 +1,5 @@
 import React from "react";
 import { classNames } from "../../classNames";
-import "./CheckBox.css";
 
 /**
  * A luna-styled checkbox, 

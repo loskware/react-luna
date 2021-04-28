@@ -1,6 +1,5 @@
 import React from "react";
 import { classNames } from "../../classNames";
-import "./Card.css";
 
 /**
  * Simple container with round borders and optional border and shadow

@@ -1,0 +1,198 @@
+// BASE BUTTON CLASS
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-m);
+  outline: none;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  white-space: nowrap;
+  transition-duration: var(--transition-duration-fast);
+  transition-timing-function: linear;
+  transition-property: background-color, border-color, opacity;
+  will-change: background-color, border-color, opacity;
+  user-select: none;
+  cursor: pointer;
+  &:active {
+    opacity: 0.7;
+  }
+
+  // SIZES
+  &-compact {
+    padding: 6px 10px;
+    gap: 4px;
+    font-size: 12px;
+    line-height: 14px;
+    > svg,
+    > img {
+      height: 14px;
+      width: 14px;
+    }
+  }
+
+  &-normal {
+    padding: 8px 14px;
+    gap: 6px;
+    font-size: 14px;
+    line-height: 16px;
+    > svg,
+    > img {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  &-large {
+    padding: 10px 18px;
+    gap: 8px;
+    font-size: 16px;
+    line-height: 18px;
+    > svg,
+    > img {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  // OUTLINED
+  &-outlined {
+    border-color: var(--border-color-sec);
+  }
+
+  // VARIANTS
+  &-plain {
+    &.SolidButton {
+      color: var(--plain-text-color-inverse);
+      background-color: var(--plain-bkg-color);
+      &:hover {
+        background-color: var(--plain-bkg-color-sec);
+      }
+    }
+    &.FlatButton {
+      color: var(--text-color-secondary);
+      &:hover {
+        background-color: var(--plain-bkg-color-alfa1);
+      }
+      &:hover.Button-outlined {
+        border-color: var(--plain-border-color);
+      }
+    }
+  }
+  &-accent {
+    &.SolidButton {
+      color: var(--accent-text-color-inverse);
+      background-color: var(--accent-bkg-color);
+      &:hover {
+        background-color: var(--accent-bkg-color-sec);
+      }
+    }
+    &.FlatButton {
+      color: var(--accent-text-color);
+      &:hover {
+        background-color: var(--accent-bkg-color-alfa1);
+      }
+      &:hover.Button-outlined {
+        border-color: var(--accent-border-color);
+      }
+    }
+  }
+  &-danger {
+    &.SolidButton {
+      color: var(--danger-text-color-inverse);
+      background-color: var(--danger-bkg-color);
+      &:hover {
+        background-color: var(--danger-bkg-color-sec);
+      }
+    }
+    &.FlatButton {
+      color: var(--danger-text-color);
+      &:hover {
+        background-color: var(--danger-bkg-color-alfa1);
+      }
+      &:hover.Button-outlined {
+        border-color: var(--danger-border-color);
+      }
+    }
+  }
+  &-warning {
+    &.SolidButton {
+      color: var(--warning-text-color-inverse);
+      background-color: var(--warning-bkg-color);
+      &:hover {
+        background-color: var(--warning-bkg-color-sec);
+      }
+    }
+    &.FlatButton {
+      color: var(--warning-text-color);
+      &:hover {
+        background-color: var(--warning-bkg-color-alfa1);
+      }
+      &:hover.Button-outlined {
+        border-color: var(--warning-border-color);
+      }
+    }
+  }
+  &-success {
+    &.SolidButton {
+      color: var(--success-text-color-inverse);
+      background-color: var(--success-bkg-color);
+      &:hover {
+        background-color: var(--success-bkg-color-sec);
+      }
+    }
+    &.FlatButton {
+      color: var(--success-text-color);
+      &:hover {
+        background-color: var(--success-bkg-color-alfa1);
+      }
+      &:hover.Button-outlined {
+        border-color: var(--success-border-color);
+      }
+    }
+  }
+
+  // DISABLED
+  &:disabled {
+    cursor: default;
+    &.SolidButton {
+      background-color: var(--disabled-color);
+      color: var(--disabled-text-color-inverse);
+    }
+    &.FlatButton {
+      color: var(--disabled-color);
+      background-color: transparent;
+    }
+    &.FlatButton.Button-outlined {
+      border-color: var(--disabled-color) !important;
+    }
+  }
+
+  // BUTTON GROUP
+  & ~ & {
+    margin-left: 8px;
+  }
+}
+
+/* FLOATING ACTION BUTTON */
+.FloatingActionButton {
+  box-shadow: var(--elevation-4);
+  border-radius: 50vh;
+  padding: 12px;
+}
+.FloatingActionButton > svg,
+.FloatingActionButton > img {
+  height: 24px;
+  width: 24px;
+}
+.FloatingActionButton > svg:only-child,
+.FloatingActionButton > img:only-child {
+  margin: 4px;
+}
+.FloatingActionButton > span {
+  margin-right: 8px;
+}
