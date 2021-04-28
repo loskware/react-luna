@@ -19,19 +19,20 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "babel-build": "babel src/lib -d lib --copy-files",
-    "prepublishOnly": "npm run build"
+    "babel": "babel src/lib -d lib",
+    "sass": "sass --style=compressed src/lib/index.scss:lib/index.min.css",
+    "prepublishOnly": "npm run sass && npm run babel"
   },
   "peerDependencies": {
     "react": "^16 || ^17"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.14",
-    "@babel/core": "^7.13.15",
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.13.16",
     "@babel/preset-react": "^7.13.13",
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
-    "eslint": "^7.24.0",
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.4",
+    "eslint": "^7.25.0",
     "eslint-plugin-react": "^7.23.2",
     "gh-pages": "^3.1.0",
     "react": "^17.0.2",
@@ -60,8 +61,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "dependencies": {
-    "typescript": "^4.2.4"
   }
 }

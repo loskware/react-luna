@@ -2,7 +2,7 @@
   "presets": ["@babel/preset-react"],
   "env": {
     "development": {
-      "presets": [["@babel/preset-react"]]
+      "presets": [["@babel/preset-react", { "useSpread": true }]]
     }
   }
 }
