@@ -51,11 +51,12 @@ section.theme-dark {
 }
 .App-navigator .nav-link {
   border-radius: var(--border-radius-l);
-  color: rgba(255 255 255 / 80%);
-  cursor: pointer;
   margin: 8px 40px 8px 16px;
   padding: 8px 16px;
+  color: rgba(255 255 255 / 80%);
+  font-size: 14px;
   user-select: none;
+  cursor: pointer;
 }
 .App-navigator .nav-link:hover {
   background-color: hsl(208, 19%, 17%);

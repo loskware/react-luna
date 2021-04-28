@@ -11,7 +11,6 @@ import { classNames } from "../../classNames";
  * @param {object} props
  * @param {Array<string>} [props.classes]
  * @param {SegmentedControlChild[]} props.children
- * @param {string} props.name
  * @param {number} props.selected
  * @param {{(
  *  newSelection: number,
@@ -23,7 +22,6 @@ import { classNames } from "../../classNames";
 export const Selector = ({
   classes = [],
   children,
-  name,
   selected,
   onChange,
   variant = "accent",
@@ -36,7 +34,6 @@ export const Selector = ({
           <input
             className="Selector-option-input"
             type="radio"
-            name={name}
             value={index}
             checked={selected === index}
             onChange={(e) => onChange?.(+e.target.value, selected, e)}

@@ -1,69 +1,52 @@
 .TextField {
+  position: relative;
+  display: flex;
+  padding: 0 0.75rem;
   align-items: center;
+  gap: 8px;
+  overflow: hidden;
   background-color: var(--plain-bkg-color-alfa1);
   border-radius: var(--border-radius-m);
   color: var(--text-color);
-  display: flex;
   font-size: 0.875rem;
-  overflow: hidden;
-  padding: 0 0.75rem;
-  position: relative;
-}
-.TextField > input {
-  background: none;
-  border: none;
-  flex: 1;
-  font-size: inherit;
-  line-height: 1;
-  outline: none;
-  padding: 0.375rem 0;
-}
-.TextField > svg,
-.TextField >img {
-  height: 1.25em;
-  width: 1.25em;
-}
-.TextField > svg:first-child,
-.TextField >img:first-child {
-  margin-right: 0.5rem;
-}
-.TextField > svg:last-child,
-.TextField > img:last-child {
-  margin-left: 0.5rem;
-}
-.TextField::after {
-  background-color: var(--accent-border-color);
-  bottom: 0;
-  content: "";
-  height: 2px;
-  left: 0;
-  position: absolute;
-  transition: transform var(--transition-duration-normal)
-    var(--transition-timing-ease-in-out);
-  transform: scale(0, 1);
-  width: 100%;
-  will-change: transform;
-}
-.TextField:focus-within::after {
-  transform: scale(1);
-}
 
-.TextField-large {
-  font-size: 1rem;
-  padding: 0 1rem;
-}
-.TextField-large > input {
-  padding: 0.75rem 0;
-}
-.TextField-large > svg:last-child,
-.TextField-large > img:last-child {
-  margin-left: 0.75rem;
-}
-.TextField-large > svg:first-child,
-.TextField-large > img:first-child {
-  margin-right: 0.75rem;
-}
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: var(--accent-border-color);
+    transition: transform var(--transition-duration-normal)
+      var(--transition-timing-ease-in-out);
+    transform: scale(0, 1);
+    width: 100%;
+    will-change: transform;
+  }
+  &:focus-within::after {
+    transform: scale(1);
+  }
 
-.TextField-transparent {
-  background-color: transparent;
+  > input {
+    background: none;
+    border: none;
+    flex: 1;
+    font-size: inherit;
+    line-height: 1;
+    outline: none;
+    padding: 0.375rem 0;
+  }
+
+  &-large {
+    padding: 0 1rem;
+    gap: 12px;
+    font-size: 1rem;
+    > input {
+      padding: 0.75rem 0;
+    }
+  }
+
+  &-transparent {
+    background-color: transparent;
+  }
 }
