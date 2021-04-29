@@ -1,6 +1,7 @@
 .CheckBox {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   cursor: pointer;
   &:hover > .CheckBox-mark {
     border-color: currentColor;
@@ -27,19 +28,12 @@
   // LABEL POSITIONS
   &-leftLabel {
     flex-direction: row-reverse;
-
-    > .CheckBox-mark {
-      margin-left: 0.5rem;
-    }
     > .CheckBox-label {
       margin-right: auto;
     }
   }
   &-rightLabel {
     flex-direction: row;
-    > .CheckBox-mark {
-      margin-right: 0.5rem;
-    }
     > .CheckBox-label {
       margin-left: auto;
     }
@@ -85,7 +79,7 @@
     background-color: currentColor;
     border-radius: var(--border-radius-s);
     transform: scale(0);
-    transition: transform cubic-bezier(0.18, 0.89, 0.32, 1.28)
+    transition: transform ease-out
       var(--transition-duration-fast);
     will-change: transform;
   }

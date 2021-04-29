@@ -44,7 +44,7 @@ const Button = ({
  * @param {any} [props.icon] optional icon, rendered before content
  * @param {"normal"|"compact"|"large"} [props.size] button size
  * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
- * @param {function} [props.onClick] onClick callback
+ * @param {React.MouseEventHandler<HTMLButtonElement>} [props.onClick] onClick callback
  */
 const SolidButton = ({
   children = "",
@@ -83,8 +83,8 @@ const SolidButton = ({
  * @param {any} [props.icon] optional icon, rendered before content
  * @param {boolean} [props.outlined] make button outlined
  * @param {"normal"|"compact"|"large"} [props.size] button size
- * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] button color variant
- * @param {function} [props.onClick] onClick callback
+ * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
+ * @param {React.MouseEventHandler<HTMLButtonElement>} [props.onClick] onClick callback
  */
 const FlatButton = ({
   children = "",
@@ -127,7 +127,7 @@ const FlatButton = ({
  * @param {boolean} [props.outlined] make button outlined
  * @param {"normal"|"compact"|"large"} [props.size] button size
  * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
- * @param {function} [props.onClick] onClick callback
+ * @param {React.MouseEventHandler<HTMLButtonElement>} [props.onClick] onClick callback
  */
 const FloatingActionButton = ({
   children = "",

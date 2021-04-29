@@ -52,7 +52,7 @@ function makeDrabbable(element) {
     mouseY = e.clientY;
     translateX += deltaX;
     translateY += deltaY;
-    element.style.transform = `translate(${translateX}px, ${translateY}px)`;
+    element.style.transform = `translate3d(${translateX}px, ${translateY}px, 0)`;
   }
 
   /** @param {MouseEvent} e */

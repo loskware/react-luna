@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { IconSetting, IconUsers } from "../icons";
-import { Selector } from "../lib";
+import { SegmentedControl } from "../lib";
 
-export function SelectorExample() {
+export function SegmentedControlExample() {
   return (
     <div className="SelectorExample split-screen">
       <section className="theme-light">
@@ -20,7 +20,18 @@ const ShowCase = () => {
 
   return (
     <>
-      <Selector
+      <SegmentedControl
+        variant="plain"
+        selected={selected}
+        onChange={(index) => setSelected(index)}
+      >
+        {[
+          { icon: <IconUsers />, title: "Tab 1" },
+          { icon: <IconSetting />, title: "Tab 2" },
+          { icon: <IconUsers />, title: "Tab 3" },
+        ]}
+      </SegmentedControl>
+      <SegmentedControl
         variant="accent"
         selected={selected}
         onChange={(index) => setSelected(index)}
@@ -30,8 +41,8 @@ const ShowCase = () => {
           { icon: <IconSetting />, title: "Tab 2" },
           { icon: <IconUsers />, title: "Tab 3" },
         ]}
-      </Selector>
-      <Selector
+      </SegmentedControl>
+      <SegmentedControl
         variant="danger"
         selected={selected}
         onChange={(index) => setSelected(index)}
@@ -41,8 +52,8 @@ const ShowCase = () => {
           { icon: <IconSetting />, title: "Tab 2" },
           { icon: <IconUsers />, title: "Tab 3" },
         ]}
-      </Selector>
-      <Selector
+      </SegmentedControl>
+      <SegmentedControl
         variant="success"
         selected={selected}
         onChange={(index) => setSelected(index)}
@@ -52,8 +63,8 @@ const ShowCase = () => {
           { icon: <IconSetting />, title: "Tab 2" },
           { icon: <IconUsers />, title: "Tab 3" },
         ]}
-      </Selector>
-      <Selector
+      </SegmentedControl>
+      <SegmentedControl
         variant="warning"
         selected={selected}
         onChange={(index) => setSelected(index)}
@@ -63,7 +74,7 @@ const ShowCase = () => {
           { icon: <IconSetting />, title: "Tab 2" },
           { icon: <IconUsers />, title: "Tab 3" },
         ]}
-      </Selector>
+      </SegmentedControl>
     </>
   );
 };

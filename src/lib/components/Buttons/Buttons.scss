@@ -76,7 +76,7 @@
     &.FlatButton {
       color: var(--text-color-secondary);
       &:hover {
-        background-color: var(--plain-bkg-color-alfa1);
+        background-color: var(--plain-bkg-color-alpha1);
       }
       &:hover.Button-outlined {
         border-color: var(--plain-border-color);
@@ -94,7 +94,7 @@
     &.FlatButton {
       color: var(--accent-text-color);
       &:hover {
-        background-color: var(--accent-bkg-color-alfa1);
+        background-color: var(--accent-bkg-color-alpha1);
       }
       &:hover.Button-outlined {
         border-color: var(--accent-border-color);
@@ -112,7 +112,7 @@
     &.FlatButton {
       color: var(--danger-text-color);
       &:hover {
-        background-color: var(--danger-bkg-color-alfa1);
+        background-color: var(--danger-bkg-color-alpha1);
       }
       &:hover.Button-outlined {
         border-color: var(--danger-border-color);
@@ -130,7 +130,7 @@
     &.FlatButton {
       color: var(--warning-text-color);
       &:hover {
-        background-color: var(--warning-bkg-color-alfa1);
+        background-color: var(--warning-bkg-color-alpha1);
       }
       &:hover.Button-outlined {
         border-color: var(--warning-border-color);
@@ -148,7 +148,7 @@
     &.FlatButton {
       color: var(--success-text-color);
       &:hover {
-        background-color: var(--success-bkg-color-alfa1);
+        background-color: var(--success-bkg-color-alpha1);
       }
       &:hover.Button-outlined {
         border-color: var(--success-border-color);

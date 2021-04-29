@@ -3,4 +3,5 @@ export * from "./CheckBoxExample";
 export * from "./DraggableExample";
 export * from "./FlipExample";
 export * from "./LoadersExample";
-export * from "./SelectorExample";
+export * from "./SegmentedControlExample";
+export * from "./SwitchExample";

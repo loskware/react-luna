@@ -2,21 +2,32 @@ import React from "react";
 import { classNames } from "../../classNames";
 
 /**
+ * @callback OnChange
+ * @param {boolean} checked
+ * @param {React.ChangeEvent<HTMLInputElement>} event
+ */
+
+/**
  * @param {object} props
  * @param {Array<string>} [props.classes]
  * @param {boolean} props.checked
- * @param {any} [props.children]
  * @param {"normal"|"large"|"xlarge"} [props.size]
- * @param {function} props.onChange
+ * @param {OnChange} props.onChange
+ * @param {"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  */
 const Switch = ({
   classes = [],
   checked,
-  children,
   size = "normal",
   onChange,
+  variant = "accent",
 }) => {
-  const cn = classNames("Switch", `Switch--${size}`, ...classes);
+  const cn = classNames(
+    "Switch",
+    `Switch-${size}`,
+    `Switch-${variant}`,
+    ...classes
+  );
   return (
     <label className={cn}>
       <input
@@ -24,8 +35,7 @@ const Switch = ({
         checked={checked}
         onChange={(e) => onChange?.(e.target.checked, e)}
       />
-      <span className="Switch__track"></span>
-      <span className="Switch__slider">{children}</span>
+      <span></span>
     </label>
   );
 };

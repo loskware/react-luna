@@ -6,7 +6,8 @@ import {
   CheckBoxExample,
   FlipExample,
   LoadersExample,
-  SelectorExample,
+  SegmentedControlExample,
+  SwitchExample,
 } from "./Tabs";
 import { DraggableExample } from "./Tabs/DraggableExample";
 
@@ -15,7 +16,8 @@ const sections = [
   { title: "CHECKBOX", section: CheckBoxExample },
   { title: "DRAGGABLE", section: DraggableExample },
   { title: "FLIPVIEW", section: FlipExample },
-  { title: "SELECTOR", section: SelectorExample },
+  { title: "SEGMENTED CONTROL", section: SegmentedControlExample },
+  { title: "SWITCH", section: SwitchExample },
   { title: "LOADERS", section: LoadersExample },
 ];
 

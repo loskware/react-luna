@@ -5,6 +5,7 @@ import { classNames } from "../../classNames";
  * A luna-styled checkbox, 
  * @param {object} props
  * @param {Array<string>} [props.classes] array of CSS classes
+ * @param {boolean} props.checked checkbox state
  * @param {boolean} [props.disabled] make checkbox disabled
  * @param {string} [props.label] label text
  * @param {"left"|"right"} [props.labelPosition] label position
@@ -13,6 +14,7 @@ import { classNames } from "../../classNames";
  */
 const CheckBox = ({
   classes = [],
+  checked,
   disabled = false,
   label,
   labelPosition = "right",
@@ -32,6 +34,7 @@ const CheckBox = ({
       <input
         className="CheckBox-input"
         type="checkbox"
+        checked = {!disabled && checked}
         onChange={onChange}
         disabled={disabled}
       />
