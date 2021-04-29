@@ -11,13 +11,15 @@ import { classNames } from "../../classNames";
  * @param {object} props
  * @param {Array<string>} [props.classes]
  * @param {boolean} props.checked
- * @param {"normal"|"large"|"xlarge"} [props.size]
+ * @param {boolean} [props.disabled]
+ * @param {"compact"|"normal"|"large"} [props.size]
  * @param {OnChange} props.onChange
  * @param {"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  */
 const Switch = ({
   classes = [],
   checked,
+  disabled = false,
   size = "normal",
   onChange,
   variant = "accent",
@@ -33,6 +35,7 @@ const Switch = ({
       <input
         type="checkbox"
         checked={checked}
+        disabled={disabled}
         onChange={(e) => onChange?.(e.target.checked, e)}
       />
       <span></span>

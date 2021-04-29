@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { IconSetting, IconUsers } from "../icons";
-import { SegmentedControl } from "../lib";
+import { Card, SegmentedControl } from "../lib";
 
 export function SegmentedControlExample() {
   return (
-    <div className="SelectorExample split-screen">
+    <div className="SegmentedControlExample split-screen">
       <section className="theme-light">
         <ShowCase />
       </section>
@@ -75,6 +75,20 @@ const ShowCase = () => {
           { icon: <IconUsers />, title: "Tab 3" },
         ]}
       </SegmentedControl>
+      <hr />
+      <Card>
+        <SegmentedControl
+          variant="plain"
+          selected={selected}
+          onChange={(index) => setSelected(index)}
+        >
+          {[
+            { icon: <IconUsers />, title: "Tab 1" },
+            { icon: <IconSetting />, title: "Tab 2" },
+            { icon: <IconUsers />, title: "Tab 3" },
+          ]}
+        </SegmentedControl>
+      </Card>
     </>
   );
 };

@@ -10,12 +10,12 @@ export function FlipExample() {
       {/*  FLIPVIEW WITH X AXIS */}
       <FlipView
         frontFace={
-          <Card hasShadow>
+          <Card hasShadow padding="0">
             <Image width={480} src={process.env.PUBLIC_URL + "/mando.jpg"} />
           </Card>
         }
         backFace={
-          <Card hasShadow>
+          <Card hasShadow padding="0">
             <Image width={480} src={process.env.PUBLIC_URL + "/grogu.jpg"} />
           </Card>
         }
@@ -34,12 +34,12 @@ export function FlipExample() {
       <FlipView
         axis="y"
         frontFace={
-          <Card hasShadow>
+          <Card hasShadow padding="0">
             <Image width={480} src={process.env.PUBLIC_URL + "/mando.jpg"} />
           </Card>
         }
         backFace={
-          <Card hasShadow>
+          <Card hasShadow padding="0">
             <Image width={480} src={process.env.PUBLIC_URL + "/grogu.jpg"} />
           </Card>
         }

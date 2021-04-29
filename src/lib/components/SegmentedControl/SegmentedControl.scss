@@ -1,8 +1,8 @@
 .SegmentedControl {
-  display: inline-flex;
+  display: flex;
   background-color: var(--bkg-color-alpha1);
   //border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-m);
+  border-radius: var(--border-radius-l);
   gap: 2px;
   line-height: 1rem;
   overflow: hidden;
@@ -25,17 +25,17 @@
   justify-content: center;
   gap: 8px;
   background-color: transparent;
-  border-radius: var(--border-radius-s);
+  border-radius: var(--border-radius-m);
   color: var(--text-color-secondary);
   display: flex;
-  font-weight: 700;
+  font-weight: 500;
   padding: 6px 12px;
   transition-duration: var(--transition-duration-fast);
   transition-property: background-color, color;
   transition-timing-function: linear;
   will-change: background-color, color;
   &:hover {
-    background-color: var(--bkg-color-alpha1);
+    background-color: var(--bkg-color-alpha2);
   }
 
   > span {

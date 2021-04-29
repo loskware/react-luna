@@ -119,14 +119,17 @@ section.FlipExample {
 }
 
 /* SELECTOR EXAMPLE */
-.SelectorExample {
+.SegmentedControlExample {
   height: 100%;
-}
-.SelectorExample section {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .Card {
+    padding: 40px;
+  }
 }
 
 /* LOADERS EXAMPLE */
@@ -138,4 +141,12 @@ section.FlipExample {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+/* MODAL EXAMPLE */
+.ModalExample {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }

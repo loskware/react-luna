@@ -5,3 +5,4 @@ export * from "./FlipExample";
 export * from "./LoadersExample";
 export * from "./SegmentedControlExample";
 export * from "./SwitchExample";
+export * from "./ModalExample";

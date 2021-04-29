@@ -18,7 +18,7 @@
   will-change: background-color, border-color, opacity;
   user-select: none;
   cursor: pointer;
-  &:active {
+  &:active:enabled {
     opacity: 0.7;
   }
 
@@ -74,7 +74,7 @@
       }
     }
     &.FlatButton {
-      color: var(--text-color-secondary);
+      color: var(--plain-text-color);
       &:hover {
         background-color: var(--plain-bkg-color-alpha1);
       }
@@ -160,15 +160,15 @@
   &:disabled {
     cursor: default;
     &.SolidButton {
-      background-color: var(--disabled-color);
+      background-color: var(--disabled-bkg-color);
       color: var(--disabled-text-color-inverse);
     }
     &.FlatButton {
-      color: var(--disabled-color);
+      color: var(--disabled-text-color);
       background-color: transparent;
     }
     &.FlatButton.Button-outlined {
-      border-color: var(--disabled-color) !important;
+      border-color: var(--disabled-border-color);
     }
   }
 

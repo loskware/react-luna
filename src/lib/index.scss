@@ -8,7 +8,6 @@
 @use "./components/Card/Card.scss";
 @use "./components/CheckBox/CheckBox.scss";
 @use "./components/FlipView/FlipView.scss";
-@use "./components/Header/Header.scss";
 @use "./components/Loaders/PacmanLoader/PacmanLoader.scss";
 @use "./components/Loaders/SickleLoader/SickleLoader.scss";
 @use "./components/Modal/Modal.scss";
@@ -16,4 +15,5 @@
 @use "./components/SegmentedControl/SegmentedControl.scss";
 @use "./components/Switch/Switch.scss";
 @use "./components/TextField/TextField.scss";
+@use "./components/TitleBar/TitleBar.scss";
 @use "./components/Typography/Typography.scss";

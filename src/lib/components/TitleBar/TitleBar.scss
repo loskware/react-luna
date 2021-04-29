@@ -1,9 +1,9 @@
-.Header {
+.TitleBar {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-.Header > div:nth-child(2) {
+.TitleBar > div:nth-child(2) {
   flex: 1;
   margin: 0 1em;
   text-align: center;

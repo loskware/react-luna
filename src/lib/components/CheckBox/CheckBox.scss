@@ -52,7 +52,7 @@
     }
   }
   &:disabled + .CheckBox-mark {
-    border-color: var(--disabled-color);
+    border-color: var(--disabled-border-color);
   }
   &:disabled ~ .CheckBox-label {
     color: var(--disabled-text-color);

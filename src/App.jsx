@@ -6,6 +6,7 @@ import {
   CheckBoxExample,
   FlipExample,
   LoadersExample,
+  ModalExample,
   SegmentedControlExample,
   SwitchExample,
 } from "./Tabs";
@@ -19,6 +20,7 @@ const sections = [
   { title: "SEGMENTED CONTROL", section: SegmentedControlExample },
   { title: "SWITCH", section: SwitchExample },
   { title: "LOADERS", section: LoadersExample },
+  { title: "MODAL", section: ModalExample },
 ];
 
 const App = () => {
