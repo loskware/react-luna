@@ -15,4 +15,4 @@ export * from "./components/Switch/Switch";
 export * from "./components/TextField/TextField";
 export * from "./components/TitleBar/TitleBar";
 export * from "./components/Typography/Typography";
-export * from "./classNames";
+export * from "./tools/classNames";

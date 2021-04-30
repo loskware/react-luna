@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { classNames } from "../../classNames";
+import { classNames } from "../../tools/classNames";
 
 /**
  * @param {object} props

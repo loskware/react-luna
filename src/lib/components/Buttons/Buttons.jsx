@@ -1,5 +1,5 @@
 import React from "react";
-import { classNames } from "../../classNames";
+import { classNames } from "../../tools/classNames";
 
 const Button = ({
   children = "",

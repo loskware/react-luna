@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
-import { classNames } from "../../classNames";
+import { classNames } from "../../tools/classNames";
 
 /**
  * @param {object} props

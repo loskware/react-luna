@@ -1,5 +1,5 @@
 import React from "react";
-import { classNames } from "../../classNames";
+import { classNames } from "../../tools/classNames";
 
 /**
  * Simple container with round borders and optional border and shadow
