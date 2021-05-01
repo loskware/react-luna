@@ -11,12 +11,20 @@ export function FlipExample() {
       <FlipView
         frontFace={
           <Card hasShadow padding="0">
-            <Image width={480} src={process.env.PUBLIC_URL + "/mando.jpg"} />
+            <Image
+              width={480}
+              src={process.env.PUBLIC_URL + "/mando.jpg"}
+              alt="The Mandalorian"
+            />
           </Card>
         }
         backFace={
           <Card hasShadow padding="0">
-            <Image width={480} src={process.env.PUBLIC_URL + "/grogu.jpg"} />
+            <Image
+              width={480}
+              src={process.env.PUBLIC_URL + "/grogu.jpg"}
+              alt="The Child"
+            />
           </Card>
         }
         flipped={flippedX}
@@ -35,12 +43,20 @@ export function FlipExample() {
         axis="y"
         frontFace={
           <Card hasShadow padding="0">
-            <Image width={480} src={process.env.PUBLIC_URL + "/mando.jpg"} />
+            <Image
+              width={480}
+              src={process.env.PUBLIC_URL + "/mando.jpg"}
+              alt="The Mandalorian"
+            />
           </Card>
         }
         backFace={
           <Card hasShadow padding="0">
-            <Image width={480} src={process.env.PUBLIC_URL + "/grogu.jpg"} />
+            <Image
+              width={480}
+              src={process.env.PUBLIC_URL + "/grogu.jpg"}
+              alt="The Child"
+            />
           </Card>
         }
         flipped={flippedY}

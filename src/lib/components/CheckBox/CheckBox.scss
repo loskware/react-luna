@@ -13,16 +13,16 @@
 
   // VARIANTS
   &-accent {
-    color: var(--accent-color);
+    color: var(--luna-accent-color);
   }
   &-danger {
-    color: var(--danger-color);
+    color: var(--luna-danger-color);
   }
   &-warning {
-    color: var(--warning-color);
+    color: var(--luna-warning-color);
   }
   &-success {
-    color: var(--success-color);
+    color: var(--luna-success-color);
   }
 
   // LABEL POSITIONS
@@ -52,10 +52,10 @@
     }
   }
   &:disabled + .CheckBox-mark {
-    border-color: var(--disabled-border-color);
+    border-color: var(--luna-disabled-border-color);
   }
   &:disabled ~ .CheckBox-label {
-    color: var(--disabled-text-color);
+    color: var(--luna-disabled-text-color);
   }
 }
 
@@ -65,9 +65,9 @@
   box-sizing: content-box;
   height: 16px;
   width: 16px;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-m);
-  transition: border-color ease-in-out var(--transition-duration-fast);
+  border: 1px solid var(--luna-border-color);
+  border-radius: var(--luna-border-radius-m);
+  transition: border-color ease-in-out var(--luna-duration-fast);
   will-change: border-color;
   &::after {
     position: absolute;
@@ -77,16 +77,16 @@
     right: 4px;
     content: "";
     background-color: currentColor;
-    border-radius: var(--border-radius-s);
+    border-radius: var(--luna-border-radius-s);
     transform: scale(0);
     transition: transform ease-out
-      var(--transition-duration-fast);
+      var(--luna-duration-fast);
     will-change: transform;
   }
 }
 
 .CheckBox-label {
-  color: var(--text-color-secondary);
+  color: var(--luna-text-color-secondary);
   font-size: 0.875rem;
   user-select: none;
   white-space: nowrap;

@@ -11,7 +11,7 @@
   bottom: 25%;
   right: 25%;
   border-radius: 50%;
-  border-right: 3px solid var(--success-color);
+  border-right: 3px solid var(--luna-danger-color);
   animation: SickleLoaderAnimation 1.5s linear infinite normal;
 }
 .SickleLoader::after {
@@ -22,7 +22,7 @@
   bottom: 0;
   right: 0;
   border-radius: 50%;
-  border-right: 3px solid var(--accent-color);
+  border-right: 3px solid var(--luna-accent-color);
   animation: SickleLoaderAnimation 1.5s cubic-bezier( 0.79, 0.33, 0.14, 0.53 ) infinite reverse;
 }
 

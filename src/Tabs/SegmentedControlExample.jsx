@@ -26,9 +26,9 @@ const ShowCase = () => {
         onChange={(index) => setSelected(index)}
       >
         {[
-          { icon: <IconUsers />, title: "Tab 1" },
-          { icon: <IconSetting />, title: "Tab 2" },
-          { icon: <IconUsers />, title: "Tab 3" },
+          { icon: <IconUsers /> },
+          { icon: <IconSetting /> },
+          { icon: <IconUsers /> },
         ]}
       </SegmentedControl>
       <SegmentedControl

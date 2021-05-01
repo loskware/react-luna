@@ -4,8 +4,8 @@
   &-wrapper {
     position: relative;
     transform-style: preserve-3d;
-    transition: transform var(--transition-duration-slow)
-      var(--transition-timing-ease-in-out);
+    transition: transform var(--luna-duration-slow)
+      var(--luna-timing-ease-in-out);
     will-change: transform;
   }
   &-frontFace {

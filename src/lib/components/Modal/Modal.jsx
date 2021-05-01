@@ -10,7 +10,7 @@ import { classNames } from "../../tools/classNames";
 const Modal = ({ classes = [], children }) => {
   const modalRoot = document.getElementById("modal-root");
   const modal = document.createElement("div");
-  modal.classList.add("Modal", "acrylic");
+  modal.classList.add("Modal", "luna-acrylic");
   const cn = classNames(...classes);
   cn && modal.classList.add(cn);
 

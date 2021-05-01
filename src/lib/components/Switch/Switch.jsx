@@ -34,7 +34,7 @@ const Switch = ({
     <label className={cn}>
       <input
         type="checkbox"
-        checked={checked}
+        checked={!disabled && checked}
         disabled={disabled}
         onChange={(e) => onChange?.(e.target.checked, e)}
       />

@@ -1,8 +1,8 @@
 .SegmentedControl {
   display: flex;
-  background-color: var(--bkg-color-alpha1);
-  //border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-l);
+  background-color: var(--luna-bkg-color-alpha1);
+  //border: 1px solid var(--luna-border-color);
+  border-radius: var(--luna-border-radius-l);
   gap: 2px;
   line-height: 1rem;
   overflow: hidden;
@@ -25,17 +25,17 @@
   justify-content: center;
   gap: 8px;
   background-color: transparent;
-  border-radius: var(--border-radius-m);
-  color: var(--text-color-secondary);
+  border-radius: var(--luna-border-radius-m);
+  color: var(--luna-text-color-secondary);
   display: flex;
   font-weight: 500;
-  padding: 6px 12px;
-  transition-duration: var(--transition-duration-fast);
+  padding: 6px 18px;
+  transition-duration: var(--luna-duration-fast);
   transition-property: background-color, color;
   transition-timing-function: linear;
   will-change: background-color, color;
   &:hover {
-    background-color: var(--bkg-color-alpha2);
+    background-color: var(--luna-bkg-color-alpha2);
   }
 
   > span {
@@ -49,39 +49,39 @@
   }
 }
 
-.SegmentedControl-option-input:checked
+/* .SegmentedControl-option-input:checked
   + .SegmentedControl-option-content {
-  box-shadow: var(--elevation-1);
-}
+  box-shadow: var(--luna-elevation-1);
+} */
 
 .SegmentedControl-plain
   .SegmentedControl-option-input:checked
   + .SegmentedControl-option-content {
-  background-color: var(--plain-bkg-color);
-  color: var(--plain-text-color-inverse);
+  background-color: var(--luna-plain-bkg-color);
+  color: var(--luna-plain-text-color-inverse);
 }
 
 .SegmentedControl-accent
   .SegmentedControl-option-input:checked
   + .SegmentedControl-option-content {
-  background-color: var(--accent-bkg-color);
-  color: var(--accent-text-color-inverse);
+  background-color: var(--luna-accent-bkg-color);
+  color: var(--luna-accent-text-color-inverse);
 }
 .SegmentedControl-danger
   .SegmentedControl-option-input:checked
   + .SegmentedControl-option-content {
-  background-color: var(--danger-bkg-color);
-  color: var(--danger-text-color-inverse);
+  background-color: var(--luna-danger-bkg-color);
+  color: var(--luna-danger-text-color-inverse);
 }
 .SegmentedControl-warning
   .SegmentedControl-option-input:checked
   + .SegmentedControl-option-content {
-  background-color: var(--warning-bkg-color);
-  color: var(--warning-text-color-inverse);
+  background-color: var(--luna-warning-bkg-color);
+  color: var(--luna-warning-text-color-inverse);
 }
 .SegmentedControl-success
   .SegmentedControl-option-input:checked
   + .SegmentedControl-option-content {
-  background-color: var(--success-bkg-color);
-  color: var(--success-text-color-inverse);
+  background-color: var(--luna-success-bkg-color);
+  color: var(--luna-success-text-color-inverse);
 }

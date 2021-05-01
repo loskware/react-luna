@@ -1,6 +1,6 @@
 @import-normalize;
 @import "lib/index.scss";
-@import "lib/theme.css";
+@import "lib/theme.scss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 html {
@@ -20,11 +20,11 @@ body {
 
 .theme-light {
   background-color:hsl(216, 8%, 96%);
-  color: var(--text-color);
+  color: var(--luna-text-color);
 }
 .theme-dark {
   background-color: hsl(210, 8%, 10%);
-  color: var(--text-color);
+  color: var(--luna-text-color);
 }
 
 #modal-root {

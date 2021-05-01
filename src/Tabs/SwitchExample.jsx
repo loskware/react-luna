@@ -20,7 +20,27 @@ const ShowCase = () => {
   return (
     <>
       <Text size="title">DISABLED</Text>
-
+      <Switch
+        checked={checked}
+        variant="accent"
+        size="compact"
+        onChange={() => setChecked(!checked)}
+        disabled
+      />
+      <Switch
+        checked={checked}
+        variant="accent"
+        size="normal"
+        onChange={() => setChecked(!checked)}
+        disabled
+      />
+      <Switch
+        checked={checked}
+        variant="accent"
+        size="large"
+        onChange={() => setChecked(!checked)}
+        disabled
+      />
       <hr />
       <Text size="title">ACCENT</Text>
       <Switch

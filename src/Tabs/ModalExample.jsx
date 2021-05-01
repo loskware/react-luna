@@ -5,7 +5,9 @@ export function ModalExample() {
   const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     document.body.classList.toggle("theme-dark");
-    return () => document.body.classList.toggle("theme-dark");
+    return () => {
+      document.body.classList.toggle("theme-dark");
+    };
   });
   return (
     <div className="ModalExample theme-dark">

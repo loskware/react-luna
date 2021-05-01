@@ -5,9 +5,9 @@
   align-items: center;
   gap: 8px;
   overflow: hidden;
-  background-color: var(--plain-bkg-color-alpha1);
-  border-radius: var(--border-radius-m);
-  color: var(--text-color);
+  background-color: var(--luna-plain-bkg-color-alpha1);
+  border-radius: var(--luna-border-radius-m);
+  color: var(--luna-text-color);
   font-size: 0.875rem;
 
   &::after {
@@ -16,9 +16,9 @@
     bottom: 0;
     left: 0;
     height: 2px;
-    background-color: var(--accent-border-color);
-    transition: transform var(--transition-duration-normal)
-      var(--transition-timing-ease-in-out);
+    background-color: var(--luna-accent-border-color);
+    transition: transform var(--luna-duration-normal)
+      var(--luna-timing-ease-in-out);
     transform: scale(0, 1);
     width: 100%;
     will-change: transform;

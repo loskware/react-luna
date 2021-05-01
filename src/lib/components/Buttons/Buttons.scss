@@ -6,13 +6,13 @@
   vertical-align: middle;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: var(--border-radius-m);
+  border-radius: var(--luna-border-radius-m);
   outline: none;
   font-family: inherit;
   font-weight: 500;
   letter-spacing: 0.25px;
   white-space: nowrap;
-  transition-duration: var(--transition-duration-fast);
+  transition-duration: var(--luna-duration-fast);
   transition-timing-function: linear;
   transition-property: background-color, border-color, opacity;
   will-change: background-color, border-color, opacity;
@@ -61,97 +61,97 @@
 
   // OUTLINED
   &-outlined {
-    border-color: var(--border-color-sec);
+    border-color: var(--luna-border-color-sec);
   }
 
   // VARIANTS
   &-plain {
     &.SolidButton {
-      color: var(--plain-text-color-inverse);
-      background-color: var(--plain-bkg-color);
+      color: var(--luna-plain-text-color-inverse);
+      background-color: var(--luna-plain-bkg-color);
       &:hover {
-        background-color: var(--plain-bkg-color-sec);
+        background-color: var(--luna-plain-bkg-color-sec);
       }
     }
     &.FlatButton {
-      color: var(--plain-text-color);
+      color: var(--luna-plain-text-color);
       &:hover {
-        background-color: var(--plain-bkg-color-alpha1);
+        background-color: var(--luna-plain-bkg-color-alpha1);
       }
       &:hover.Button-outlined {
-        border-color: var(--plain-border-color);
+        border-color: var(--luna-plain-border-color);
       }
     }
   }
   &-accent {
     &.SolidButton {
-      color: var(--accent-text-color-inverse);
-      background-color: var(--accent-bkg-color);
+      color: var(--luna-accent-text-color-inverse);
+      background-color: var(--luna-accent-bkg-color);
       &:hover {
-        background-color: var(--accent-bkg-color-sec);
+        background-color: var(--luna-accent-bkg-color-sec);
       }
     }
     &.FlatButton {
-      color: var(--accent-text-color);
+      color: var(--luna-accent-text-color);
       &:hover {
-        background-color: var(--accent-bkg-color-alpha1);
+        background-color: var(--luna-accent-bkg-color-alpha1);
       }
       &:hover.Button-outlined {
-        border-color: var(--accent-border-color);
+        border-color: var(--luna-accent-border-color);
       }
     }
   }
   &-danger {
     &.SolidButton {
-      color: var(--danger-text-color-inverse);
-      background-color: var(--danger-bkg-color);
+      color: var(--luna-danger-text-color-inverse);
+      background-color: var(--luna-danger-bkg-color);
       &:hover {
-        background-color: var(--danger-bkg-color-sec);
+        background-color: var(--luna-danger-bkg-color-sec);
       }
     }
     &.FlatButton {
-      color: var(--danger-text-color);
+      color: var(--luna-danger-text-color);
       &:hover {
-        background-color: var(--danger-bkg-color-alpha1);
+        background-color: var(--luna-danger-bkg-color-alpha1);
       }
       &:hover.Button-outlined {
-        border-color: var(--danger-border-color);
+        border-color: var(--luna-danger-border-color);
       }
     }
   }
   &-warning {
     &.SolidButton {
-      color: var(--warning-text-color-inverse);
-      background-color: var(--warning-bkg-color);
+      color: var(--luna-warning-text-color-inverse);
+      background-color: var(--luna-warning-bkg-color);
       &:hover {
-        background-color: var(--warning-bkg-color-sec);
+        background-color: var(--luna-warning-bkg-color-sec);
       }
     }
     &.FlatButton {
-      color: var(--warning-text-color);
+      color: var(--luna-warning-text-color);
       &:hover {
-        background-color: var(--warning-bkg-color-alpha1);
+        background-color: var(--luna-warning-bkg-color-alpha1);
       }
       &:hover.Button-outlined {
-        border-color: var(--warning-border-color);
+        border-color: var(--luna-warning-border-color);
       }
     }
   }
   &-success {
     &.SolidButton {
-      color: var(--success-text-color-inverse);
-      background-color: var(--success-bkg-color);
+      color: var(--luna-success-text-color-inverse);
+      background-color: var(--luna-success-bkg-color);
       &:hover {
-        background-color: var(--success-bkg-color-sec);
+        background-color: var(--luna-success-bkg-color-sec);
       }
     }
     &.FlatButton {
-      color: var(--success-text-color);
+      color: var(--luna-success-text-color);
       &:hover {
-        background-color: var(--success-bkg-color-alpha1);
+        background-color: var(--luna-success-bkg-color-alpha1);
       }
       &:hover.Button-outlined {
-        border-color: var(--success-border-color);
+        border-color: var(--luna-success-border-color);
       }
     }
   }
@@ -160,15 +160,15 @@
   &:disabled {
     cursor: default;
     &.SolidButton {
-      background-color: var(--disabled-bkg-color);
-      color: var(--disabled-text-color-inverse);
+      background-color: var(--luna-disabled-bkg-color);
+      color: var(--luna-disabled-text-color-inverse);
     }
     &.FlatButton {
-      color: var(--disabled-text-color);
+      color: var(--luna-disabled-text-color);
       background-color: transparent;
     }
     &.FlatButton.Button-outlined {
-      border-color: var(--disabled-border-color);
+      border-color: var(--luna-disabled-border-color);
     }
   }
 
@@ -180,7 +180,7 @@
 
 /* FLOATING ACTION BUTTON */
 .FloatingActionButton {
-  box-shadow: var(--elevation-4);
+  box-shadow: var(--luna-elevation-4);
   border-radius: 50vh;
   padding: 12px;
 }

@@ -20,7 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "babel": "babel src/lib -d lib",
-    "sass": "sass src/lib/index.scss:lib/index.css src/lib/theme.css:lib/theme.css --no-source-map",
+    "sass": "sass src/lib/index.scss:lib/index.css src/lib/theme.scss:lib/theme.css --no-source-map",
     "prepublishOnly": "npm run sass && npm run babel"
   },
   "peerDependencies": {
