@@ -19,14 +19,14 @@ import { classNames } from "../../utils/classNames";
 /**
  * Implementation of iOS & macOS SegmentedControl
  * @param {object} props
- * @param {Array<string>} [props.classes] array of CSS classes
+ * @param {string} [props.className] custom CSS class
  * @param {Array<Segment>} props.children array of icon/label objects
  * @param {number} props.selected set the selected option
  * @param {OnSelectionChange} [props.onChange]
  * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  */
 export const SegmentedControl = ({
-  classes = [],
+  className,
   children,
   selected,
   onChange,
@@ -36,7 +36,7 @@ export const SegmentedControl = ({
   const cn = classNames(
     "SegmentedControl",
     `SegmentedControl-${variant}`,
-    ...classes
+    className
   );
   return (
     <div className={cn} {...other}>

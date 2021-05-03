@@ -4,10 +4,10 @@ import { classNames } from "../../utils/classNames";
 /**
  *
  * @param {object} props
- * @param {Array<string>} [props.classes] array of CSS classes
+ * @param {string} [props.className] custom CSS class
  * @param {any} [props.children] draggable content
  */
-export function Draggable({ classes = [], children, ...other }) {
+export function Draggable({ className, children, ...other }) {
   const ref = useRef(null);
   useEffect(() => {
     const [rd, ud] = makeDrabbable(ref.current);
@@ -15,7 +15,7 @@ export function Draggable({ classes = [], children, ...other }) {
     return ud;
   }, []);
 
-  const cn = classNames("Draggable", ...classes);
+  const cn = classNames("Draggable", className);
   return (
     <div className={cn} ref={ref} {...other}>
       {children}
@@ -33,6 +33,7 @@ function makeDrabbable(element) {
   /** @param {MouseEvent} e */
   function mouseDown(e) {
     e.preventDefault();
+    // @ts-ignore
     if (element.contains(e.target)) {
       element.style.cursor = "grabbing";
       mouseX = e.clientX;

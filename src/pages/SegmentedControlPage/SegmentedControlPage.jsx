@@ -3,9 +3,9 @@ import { IconSetting, IconUsers } from "../../icons";
 import { Card, SegmentedControl } from "../../lib";
 import "./SegmentedControlPage.scss";
 
-export function SegmentedControlExample() {
+export function SegmentedControlPage() {
   return (
-    <div className="SegmentedControlExample split-screen">
+    <div className="SegmentedControlPage split-screen">
       <section className="theme-light">
         <ShowCase />
       </section>

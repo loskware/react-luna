@@ -1,0 +1,35 @@
+&-side-bar {
+  align-items: stretch;
+  background-color: hsl(208, 19%, 19%);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 300px;
+}
+
+&-title-bar {
+  text-align: center;
+  padding-bottom: 3rem;
+  .Text {
+    font-size: 2rem;
+  }
+  .Image {
+    height: 128px;
+    width: 128px;
+  }
+}
+
+.nav-link {
+  border-radius: var(--luna-border-radius-l);
+  margin: 8px 40px 8px 16px;
+  padding: 8px 16px;
+  color: rgba(255 255 255 / 80%);
+  font-size: 14px;
+  user-select: none;
+  &:hover:not(.nav-link-selected) {
+    background-color: hsl(208, 19%, 17%);
+  }
+  &-selected {
+    background-color: hsl(208, 19%, 15%);
+  }
+}

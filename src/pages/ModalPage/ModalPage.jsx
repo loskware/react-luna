@@ -11,7 +11,7 @@ export function ModalPage() {
     };
   });
   return (
-    <div className="ModalExample theme-dark">
+    <div className="ModalPage theme-dark">
       <SolidButton onClick={() => setShowModal(true)}>SHOW MODAL</SolidButton>
       {showModal && (
         <Modal>

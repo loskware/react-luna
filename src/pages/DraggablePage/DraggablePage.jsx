@@ -4,7 +4,7 @@ import "./DraggablePage.scss";
 
 export function DraggablePage() {
   return (
-    <section className="DraggableExample theme-dark">
+    <section className="DraggablePage theme-dark">
       <Draggable>
         <Card variant="accent" hasBorder hasShadow>
           Drag me

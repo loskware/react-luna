@@ -1,0 +1,17 @@
+.DraggablePage {
+  height: 100%;
+  padding: 0;
+  .Card {
+    padding: 3rem 5rem;
+  }
+  .Draggable:first-child {
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+  }
+  .Draggable:last-child {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+  }
+}

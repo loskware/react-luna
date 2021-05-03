@@ -4,14 +4,14 @@ import { classNames } from "../../utils/classNames";
 /**
  * @param {object} props
  * @param {"x"|"y"} [props.axis] rotation axis
- * @param {Array<string>} [props.classes] array of CSS classes
+ * @param {string} [props.className] custom CSS class
  * @param {any} props.frontFace default shown content
  * @param {any} props.backFace content shown when flipped
  * @param {boolean} [props.flipped] make component flipped... or not
  */
 export const FlipView = ({
   axis = "x",
-  classes = [],
+  className,
   frontFace,
   backFace,
   flipped = false,
@@ -21,7 +21,7 @@ export const FlipView = ({
     "FlipView",
     flipped && "FlipView-flipped",
     `FlipView-${axis}-axis`,
-    ...classes
+    className
   );
   return (
     <div className={cn} {...other}>

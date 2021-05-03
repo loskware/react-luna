@@ -38,7 +38,7 @@ const Button = ({
  * Button with solid background
  * @param {object} props
  * @param {any} [props.children] button content
- * @param {Array<string>} [props.classes] array of CSS classes
+ * @param {string} [props.className] custom CSS class
  * @param {boolean} [props.disabled] make button disabled
  * @param {string} [props.href] URL of the link. make button render as <a> instead of <button>
  * @param {any} [props.icon] optional icon, rendered before content
@@ -48,7 +48,7 @@ const Button = ({
  */
 const SolidButton = ({
   children = "",
-  classes = [],
+  className,
   disabled = false,
   href,
   icon = false,
@@ -59,7 +59,7 @@ const SolidButton = ({
 }) => {
   return (
     <Button
-      classes={["SolidButton", ...classes]}
+      className={["SolidButton", className]}
       disabled={disabled}
       icon={icon}
       href={href}
@@ -77,7 +77,7 @@ const SolidButton = ({
  * Text Button with hover effect and optional outline
  * @param {object} props
  * @param {any} [props.children] button content
- * @param {Array<string>} [props.classes] array of CSS classes
+ * @param {string} [props.className] custom CSS class
  * @param {boolean} [props.disabled] make button disabled
  * @param {string} [props.href] URL of the link. make button render as <a> instead of <button>
  * @param {any} [props.icon] optional icon, rendered before content
@@ -88,7 +88,7 @@ const SolidButton = ({
  */
 const FlatButton = ({
   children = "",
-  classes = [],
+  className,
   disabled = false,
   href,
   icon = false,
@@ -100,7 +100,7 @@ const FlatButton = ({
 }) => {
   return (
     <Button
-      classes={["FlatButton", ...classes]}
+      classes={["FlatButton", className]}
       disabled={disabled}
       icon={icon}
       href={href}
@@ -120,7 +120,7 @@ const FlatButton = ({
  * {@link https://material.io/components/buttons-floating-action-button}
  * @param {object} props
  * @param {any} [props.children] button content
- * @param {Array<string>} [props.classes] array of CSS classes
+ * @param {string} [props.className] custom CSS class
  * @param {boolean} [props.disabled] make button disabled
  * @param {string} [props.href] URL of the link. make button render as <a> instead of <button>
  * @param {any} [props.icon] optional icon, rendered before content
@@ -131,7 +131,7 @@ const FlatButton = ({
  */
 const FloatingActionButton = ({
   children = "",
-  classes = [],
+  className,
   disabled = false,
   href,
   icon = false,
@@ -141,8 +141,8 @@ const FloatingActionButton = ({
   ...other
 }) => {
   return (
-    <SolidButton
-      classes={["FloatingActionButton", ...classes]}
+    <Button
+      classes={["SolidButton", "FloatingActionButton", className]}
       disabled={disabled}
       icon={icon}
       href={href}
@@ -152,7 +152,7 @@ const FloatingActionButton = ({
       {...other}
     >
       {children}
-    </SolidButton>
+    </Button>
   );
 };
 

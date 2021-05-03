@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 import "./App.scss";
-import { Image, Text } from "./lib";
 import {
   ButtonPage,
   CheckboxPage,
+  DraggablePage,
   FlipViewPage,
   LoadersPage,
   ModalPage,
   RadioPage,
-  SegmentedControlExample,
+  SegmentedControlPage,
   SwitchExample,
 } from "./pages";
-import { DraggablePage } from "./pages/DraggablePage/DraggablePage";
+import { TitleBar } from "./lib";
 
 const sections = [
   { title: "BUTTON", section: ButtonPage },
   { title: "CHECKBOX", section: CheckboxPage },
   { title: "RADIO", section: RadioPage },
   { title: "SWITCH", section: SwitchExample },
-  { title: "SEGMENTED CONTROL", section: SegmentedControlExample },
+  { title: "SEGMENTED CONTROL", section: SegmentedControlPage },
   { title: "DRAGGABLE", section: DraggablePage },
   { title: "FLIPVIEW", section: FlipViewPage },
   { title: "LOADERS", section: LoadersPage },
@@ -26,11 +26,20 @@ const sections = [
 ];
 
 const App = () => {
-  const [sectionIndex, setSectionIndex] = useState(0);
+  const [sectionIndex] = useState(0);
 
   return (
-    <div className="App">
-      <div className="App-side-bar theme-dark">
+    <div className="App theme-light">
+      <TitleBar className="App-title-bar" middleContent="BUTTON" />
+      <div className="App-content">{React.createElement(sections[sectionIndex].section)}</div>
+      <div id="modal-root"></div>
+    </div>
+  );
+};
+
+export { App };
+
+{/* <div className="App-side-bar theme-dark">
         <div className="App-title-bar">
           <Text size="title" weight={700}>
             REACT LUNA
@@ -53,11 +62,4 @@ const App = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="App-content">{React.createElement(sections[sectionIndex].section)}</div>
-      <div id="modal-root"></div>
-    </div>
-  );
-};
-
-export { App };
+      </div> */}

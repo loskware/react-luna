@@ -5,7 +5,7 @@ import { classNames } from "../../utils/classNames";
  * Simple container with round borders and optional border and shadow
  * @param {object} props
  * @param {string} [props.backgroundColor] shortcut for setting background color
- * @param {Array<string>} [props.classes] array of CSS classes
+ * @param {string} [props.className] custom CSS class
  * @param {React.ReactNode} [props.children] Card content
  * @param {boolean} [props.hasBorder] render default border
  * @param {boolean} [props.hasShadow] render default shadow
@@ -15,7 +15,7 @@ import { classNames } from "../../utils/classNames";
  */
 export const Card = ({
   backgroundColor = "",
-  classes = [],
+  className,
   children,
   hasBorder = false,
   hasShadow = true,
@@ -29,7 +29,7 @@ export const Card = ({
     `Card-${variant}`,
     hasBorder && "Card-border",
     hasShadow && "Card-shadow",
-    ...classes
+    className,
   );
   return (
     <div

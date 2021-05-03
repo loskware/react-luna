@@ -4,20 +4,23 @@ import { classNames } from "../../utils/classNames";
 /**
 
  * @param {object} props
- * @param {Array<string>} [props.classes] array of CSS classes
- * @param {React.ReactNode} [props.leading] leading content
- * @param {React.ReactNode} [props.titleBar] content centered inside the bar, equaly spaced from leading and trailing contents
- * @param {React.ReactNode} [props.trailing] trailing content
+ * @param {string} [props.className] custom CSS classes
+ * @param {React.ReactNode} [props.leadingContent] leading content
+ * @param {React.ReactNode} [props.middleContent] content centered inside the bar, equaly spaced from leading and trailing contents
+ * @param {React.ReactNode} [props.trailingContent] trailing content
  */
-const Header = ({ classes = [], leading, titleBar, trailing }) => {
-  const cn = classNames("TitleBar", ...classes)
+export const TitleBar = ({
+  className,
+  leadingContent,
+  middleContent,
+  trailingContent,
+}) => {
+  const cn = classNames("TitleBar", className);
   return (
     <header className={cn}>
-      <div>{leading}</div>
-      <div>{titleBar}</div>
-      <div>{trailing}</div>
+      <div>{leadingContent}</div>
+      <div>{middleContent}</div>
+      <div>{trailingContent}</div>
     </header>
   );
 };
-
-export { Header };

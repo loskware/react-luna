@@ -11,7 +11,7 @@ import "./ButtonPage.scss";
 
 export const ButtonPage = () => {
   return (
-    <div className="ButtonExample split-screen">
+    <div className="ButtonPage split-screen">
       <section id="secHead" className="theme-light">
         <ShowCase />
       </section>
@@ -35,7 +35,7 @@ const ShowCase = () => (
       </FlatButton>
     </div>
 
-    <hr />
+    <div className="v-spacer"></div>
     <Text size="title">PLAIN</Text>
     <div>
       <SolidButton variant="plain" icon={<IconLoad />} size="compact">
@@ -48,7 +48,7 @@ const ShowCase = () => (
         BUTTON
       </FlatButton>
     </div>
-    <hr />
+    <div className="v-spacer"></div>
     <div>
       <SolidButton variant="plain" icon={<IconLoad />} size="normal">
         BUTTON
@@ -60,7 +60,7 @@ const ShowCase = () => (
         BUTTON
       </FlatButton>
     </div>
-    <hr />
+    <div className="v-spacer"></div>
     <div>
       <SolidButton variant="plain" icon={<IconLoad />} size="large">
         BUTTON
@@ -73,7 +73,7 @@ const ShowCase = () => (
       </FlatButton>
     </div>
 
-    <hr />
+    <div className="v-spacer"></div>
     <Text size="title">ACCENT</Text>
     <div>
       <SolidButton icon={<IconLoad />} size="compact">
@@ -84,7 +84,7 @@ const ShowCase = () => (
         BUTTON
       </FlatButton>
     </div>
-    <hr />
+    <div className="v-spacer"></div>
     <div>
       <SolidButton icon={<IconLoad />} size="normal">
         BUTTON
@@ -94,7 +94,7 @@ const ShowCase = () => (
         BUTTON
       </FlatButton>
     </div>
-    <hr />
+    <div className="v-spacer"></div>
     <div>
       <SolidButton icon={<IconLoad />} size="large">
         BUTTON
@@ -105,7 +105,7 @@ const ShowCase = () => (
       </FlatButton>
     </div>
 
-    <hr />
+    <div className="v-spacer"></div>
     <Text size="title">DANGER</Text>
     <div>
       <SolidButton variant="danger" icon={<IconLoad />} size="compact">
@@ -118,7 +118,7 @@ const ShowCase = () => (
         BUTTON
       </FlatButton>
     </div>
-    <hr />
+    <div className="v-spacer"></div>
     <div>
       <SolidButton variant="danger" icon={<IconLoad />} size="normal">
         BUTTON
@@ -130,7 +130,7 @@ const ShowCase = () => (
         BUTTON
       </FlatButton>
     </div>
-    <hr />
+    <div className="v-spacer"></div>
     <div>
       <SolidButton variant="danger" icon={<IconLoad />} size="large">
         BUTTON
@@ -143,7 +143,7 @@ const ShowCase = () => (
       </FlatButton>
     </div>
 
-    <hr />
+    <div className="v-spacer"></div>
     <Text size="title">WARNING</Text>
     <div>
       <SolidButton variant="warning" icon={<IconLoad />} size="compact">
@@ -156,7 +156,7 @@ const ShowCase = () => (
         BUTTON
       </FlatButton>
     </div>
-    <hr />
+    <div className="v-spacer"></div>
     <div>
       <SolidButton variant="warning" icon={<IconLoad />} size="normal">
         BUTTON
@@ -168,7 +168,7 @@ const ShowCase = () => (
         BUTTON
       </FlatButton>
     </div>
-    <hr />
+    <div className="v-spacer"></div>
     <div>
       <SolidButton variant="warning" icon={<IconLoad />} size="large">
         BUTTON
@@ -181,7 +181,7 @@ const ShowCase = () => (
       </FlatButton>
     </div>
 
-    <hr />
+    <div className="v-spacer"></div>
     <Text size="title">SUCCESS</Text>
     <div>
       <SolidButton variant="success" icon={<IconLoad />} size="compact">
@@ -194,7 +194,7 @@ const ShowCase = () => (
         BUTTON
       </FlatButton>
     </div>
-    <hr />
+    <div className="v-spacer"></div>
     <div>
       <SolidButton variant="success" icon={<IconLoad />} size="normal">
         BUTTON
@@ -206,7 +206,7 @@ const ShowCase = () => (
         BUTTON
       </FlatButton>
     </div>
-    <hr />
+    <div className="v-spacer"></div>
     <div>
       <SolidButton variant="success" icon={<IconLoad />} size="large">
         BUTTON
@@ -219,7 +219,7 @@ const ShowCase = () => (
       </FlatButton>
     </div>
 
-    <hr />
+    <div className="v-spacer"></div>
     <Text size="title">FLOATING ACTION BUTTONS</Text>
     <Card classes={["fab-group"]}>
       <FloatingActionButton

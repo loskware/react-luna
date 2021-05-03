@@ -1,0 +1,9 @@
+.CheckboxPage {
+  section {
+    box-sizing: border-box;
+    height: 100vh;
+    > div:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+}

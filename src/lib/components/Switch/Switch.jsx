@@ -9,7 +9,7 @@ import { classNames } from "../../utils/classNames";
 
 /**
  * @param {object} props
- * @param {Array<string>} [props.classes]
+ * @param {string} [props.className] custom CSS class
  * @param {boolean} props.checked
  * @param {boolean} [props.disabled]
  * @param {"compact"|"normal"|"large"} [props.size]
@@ -17,7 +17,7 @@ import { classNames } from "../../utils/classNames";
  * @param {"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  */
 export const Switch = ({
-  classes = [],
+  className,
   checked,
   disabled = false,
   size = "normal",
@@ -29,7 +29,7 @@ export const Switch = ({
     "Switch",
     `Switch-${size}`,
     `Switch-${variant}`,
-    ...classes
+    className
   );
   return (
     <label className={cn} {...other}>

@@ -3,8 +3,8 @@ import { classNames } from "../../utils/classNames";
 
 /**
  * @param {object} props
- * @param {Array<string>} [props.classes]
- * @param {boolean} [props.large]
+ * @param {string} [props.className] custom CSS class
+ * @param {boolean} [props.large] large variant
  * @param {any} [props.leadingIcon]
  * @param {string} [props.placeholder]
  * @param {any} [props.trailingIcon]
@@ -17,7 +17,7 @@ import { classNames } from "../../utils/classNames";
  * ) => boolean} [props.onChange]
  */
 const TextField = ({
-  classes = [],
+  className,
   large = false,
   leadingIcon,
   placeholder = "",
@@ -32,7 +32,7 @@ const TextField = ({
     `TextField-${variant}`,
     large && "TextField-large",
     transparent && "TextField-transparent",
-    ...classes
+    className
   );
   return (
     <div className={cn}>

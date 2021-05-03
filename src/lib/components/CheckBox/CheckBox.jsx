@@ -5,7 +5,7 @@ import { classNames } from "../../utils/classNames";
  * A luna-styled checkbox,
  * @param {object} props
  * @param {boolean} props.checked checkbox state
- * @param {Array<string>} [props.classes] array of CSS classes
+ * @param {string} [props.className] custom CSS class
  * @param {boolean} [props.disabled] make checkbox disabled
  * @param {React.ChangeEventHandler<HTMLInputElement>} [props.onChange] onChange callback
  * @param {string} [props.value]
@@ -13,7 +13,7 @@ import { classNames } from "../../utils/classNames";
  */
 export const CheckBox = ({
   checked,
-  classes = [],
+  className,
   disabled = false,
   onChange,
   value,
@@ -24,7 +24,7 @@ export const CheckBox = ({
     "CheckBox",
     `CheckBox-${variant}`,
     disabled && "CheckBox-disabled",
-    ...classes
+    className
   );
   return (
     <label className={cn} {...other}>

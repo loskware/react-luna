@@ -3,7 +3,7 @@ import { PacmanLoader, SickleLoader } from "../../lib";
 
 export function LoadersPage() {
   return (
-    <div className="LoadersExample split-screen">
+    <div className="LoadersPage split-screen">
       <section className="theme-light">
         <PacmanLoader />
         <SickleLoader />

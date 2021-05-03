@@ -6,7 +6,7 @@ export function FlipViewPage() {
   const [flippedY, setFlippedY] = useState(false);
 
   return (
-    <section className="FlipExample theme-dark">
+    <section className="FlipViewPage theme-dark">
       {/*  FLIPVIEW WITH X AXIS */}
       <FlipView
         frontFace={

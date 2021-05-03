@@ -4,7 +4,7 @@ import { classNames } from "../../utils/classNames";
 /**
  * @param {object} props
  * @param {any} props.children
- * @param {Array<string>} [props.classes]
+ * @param {string} [props.className]
  * @param {string} [props.fillColor]
  * @param {number} [props.height]
  * @param {string} [props.strokeColor]
@@ -13,7 +13,7 @@ import { classNames } from "../../utils/classNames";
  * @returns
  */
 export function Icon({
-  classes = [],
+  className,
   fillColor = "none",
   height = 24,
   strokeColor = "currentColor",
@@ -22,7 +22,7 @@ export function Icon({
   width = 24,
   ...other
 }) {
-  const cn = classNames("Icon", ...classes);
+  const cn = classNames("Icon", className);
   return (
     <svg
       className={cn}

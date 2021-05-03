@@ -4,7 +4,7 @@ import "./CheckboxPage.scss";
 
 export const CheckboxPage = () => {
   return (
-    <div className="CheckBoxExample split-screen">
+    <div className="CheckboxPage split-screen">
       <section className="theme-light">
         <ShowCase />
       </section>
