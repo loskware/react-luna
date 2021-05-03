@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { classNames } from "../../tools/classNames";
+import { classNames } from "../../utils/classNames";
 
 /**
  *
@@ -7,7 +7,7 @@ import { classNames } from "../../tools/classNames";
  * @param {Array<string>} [props.classes] array of CSS classes
  * @param {any} [props.children] draggable content
  */
-export function Draggable({ classes = [], children }) {
+export function Draggable({ classes = [], children, ...other }) {
   const ref = useRef(null);
   useEffect(() => {
     const [rd, ud] = makeDrabbable(ref.current);
@@ -17,7 +17,7 @@ export function Draggable({ classes = [], children }) {
 
   const cn = classNames("Draggable", ...classes);
   return (
-    <div className={cn} ref={ref}>
+    <div className={cn} ref={ref} {...other}>
       {children}
     </div>
   );
@@ -34,7 +34,6 @@ function makeDrabbable(element) {
   function mouseDown(e) {
     e.preventDefault();
     if (element.contains(e.target)) {
-      console.log("mouse down");
       element.style.cursor = "grabbing";
       mouseX = e.clientX;
       mouseY = e.clientY;

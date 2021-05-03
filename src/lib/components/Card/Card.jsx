@@ -1,5 +1,5 @@
 import React from "react";
-import { classNames } from "../../tools/classNames";
+import { classNames } from "../../utils/classNames";
 
 /**
  * Simple container with round borders and optional border and shadow
@@ -13,7 +13,7 @@ import { classNames } from "../../tools/classNames";
  * @param {React.CSSProperties} [props.style] component inline style
  * @param {"default"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  */
-const Card = ({
+export const Card = ({
   backgroundColor = "",
   classes = [],
   children,
@@ -22,7 +22,7 @@ const Card = ({
   padding = "",
   style,
   variant = "default",
-  ...otherProps
+  ...other
 }) => {
   const cn = classNames(
     "Card",
@@ -35,11 +35,9 @@ const Card = ({
     <div
       className={cn}
       style={{ backgroundColor, padding, ...style }}
-      {...otherProps}
+      {...other}
     >
       {children}
     </div>
   );
 };
-
-export { Card };

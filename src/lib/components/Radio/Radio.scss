@@ -1,6 +1,69 @@
-.RadioGroup-vertical {
-  display: block;
+.Radio {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  &:hover > .Radio-mark {
+    border-color: currentColor;
+  }
+
+  // VARIANTS
+  &-accent {
+    color: var(--luna-accent-color);
+  }
+  &-danger {
+    color: var(--luna-danger-color);
+  }
+  &-warning {
+    color: var(--luna-warning-color);
+  }
+  &-success {
+    color: var(--luna-success-color);
+  }
+  &-disabled {
+    color: var(--luna-disabled-color);
+    cursor: default;
+  }
 }
-.RadioGroup-vertical {
-  display: inline-block;
+
+.Radio-input {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  opacity: 0;
+  
+  &:checked + .Radio-mark {
+    border-color: currentColor;
+    &::after {
+      transform: scale(1);
+    }
+  }
+  &:disabled + .Radio-mark {
+    border-color: var(--luna-disabled-border-color);
+  }
+}
+
+.Radio-mark {
+  position: relative;
+  display: block;
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  border: 1px solid var(--luna-border-color);
+  border-radius: 50%;
+  transition: border-color ease-in-out var(--luna-duration-fast);
+  will-change: border-color;
+  &::after {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    content: "";
+    background-color: currentColor;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform ease-out
+      var(--luna-duration-fast);
+    will-change: transform;
+  }
 }

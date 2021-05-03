@@ -1,8 +1,8 @@
 import React from "react";
 
-export function SickleLoader() {
+export const SickleLoader = ({...other}) => {
   return (
-    <div className="SickleLoader">
+    <div className="SickleLoader" {...other}>
       <span className="SickleLoader-outer"></span>
       <span className="SickleLoader-inner"></span>
     </div>

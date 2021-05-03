@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { IconSetting, IconUsers } from "../icons";
-import { Card, SegmentedControl } from "../lib";
+import { IconSetting, IconUsers } from "../../icons";
+import { Card, SegmentedControl } from "../../lib";
+import "./SegmentedControlPage.scss";
 
 export function SegmentedControlExample() {
   return (

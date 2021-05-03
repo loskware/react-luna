@@ -1,5 +1,5 @@
 import React from "react";
-import { classNames } from "../../../tools/classNames";
+import { classNames } from "../../../utils/classNames";
 
 /**
  * @param {object} props
@@ -7,10 +7,15 @@ import { classNames } from "../../../tools/classNames";
  * @param {string} [props.color]
  * @param {string} [props.size]
  */
-const PacmanLoader = ({ classes = [], color, size = "25px" }) => {
+export const PacmanLoader = ({
+  classes = [],
+  color,
+  size = "25px",
+  ...other
+}) => {
   const cn = classNames("PacmanLoader", ...classes);
   return (
-    <div className={cn} style={{ fontSize: size, color }}>
+    <div className={cn} style={{ fontSize: size, color }} {...other}>
       <div></div>
       <div></div>
       <div></div>
@@ -19,5 +24,3 @@ const PacmanLoader = ({ classes = [], color, size = "25px" }) => {
     </div>
   );
 };
-
-export { PacmanLoader };

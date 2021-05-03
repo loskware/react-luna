@@ -1,47 +1,42 @@
 import React from "react";
-import { classNames } from "../../tools/classNames";
+import { classNames } from "../../utils/classNames";
 
 /**
- * A luna-styled checkbox, 
+ * A luna-styled checkbox,
  * @param {object} props
- * @param {Array<string>} [props.classes] array of CSS classes
  * @param {boolean} props.checked checkbox state
+ * @param {Array<string>} [props.classes] array of CSS classes
  * @param {boolean} [props.disabled] make checkbox disabled
- * @param {string} [props.label] label text
- * @param {"left"|"right"} [props.labelPosition] label position
  * @param {React.ChangeEventHandler<HTMLInputElement>} [props.onChange] onChange callback
+ * @param {string} [props.value]
  * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  */
-const CheckBox = ({
-  classes = [],
+export const CheckBox = ({
   checked,
+  classes = [],
   disabled = false,
-  label,
-  labelPosition = "right",
   onChange,
+  value,
   variant = "accent",
+  ...other
 }) => {
-
   const cn = classNames(
     "CheckBox",
     `CheckBox-${variant}`,
-    `CheckBox-${labelPosition}Label`,
     disabled && "CheckBox-disabled",
     ...classes
   );
   return (
-    <label className={cn}>
+    <label className={cn} {...other}>
       <input
         className="CheckBox-input"
         type="checkbox"
-        checked = {!disabled && checked}
+        checked={checked}
         onChange={onChange}
         disabled={disabled}
+        value={value}
       />
       <span className="CheckBox-mark"></span>
-      {label && <span className="CheckBox-label">{label}</span>}
     </label>
   );
 };
-
-export { CheckBox };

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Switch, Text } from "../lib";
+import { Switch, Text } from "../../lib";
+import "./SwitchPage.scss";
 
 export const SwitchExample = () => {
   return (

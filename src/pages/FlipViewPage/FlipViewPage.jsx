@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Card, FlatButton, FlipView, Image } from "../lib";
+import { Card, FlatButton, FlipView, Image } from "../../lib";
 
-export function FlipExample() {
+export function FlipViewPage() {
   const [flippedX, setFlippedX] = useState(false);
   const [flippedY, setFlippedY] = useState(false);
 

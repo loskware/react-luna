@@ -1,14 +1,9 @@
 .CheckBox {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   cursor: pointer;
   &:hover > .CheckBox-mark {
     border-color: currentColor;
-  }
-
-  &-disabled {
-    cursor: default;
   }
 
   // VARIANTS
@@ -24,19 +19,9 @@
   &-success {
     color: var(--luna-success-color);
   }
-
-  // LABEL POSITIONS
-  &-leftLabel {
-    flex-direction: row-reverse;
-    > .CheckBox-label {
-      margin-right: auto;
-    }
-  }
-  &-rightLabel {
-    flex-direction: row;
-    > .CheckBox-label {
-      margin-left: auto;
-    }
+  &-disabled {
+    color: var(--luna-disabled-color);
+    cursor: default;
   }
 }
 
@@ -53,9 +38,6 @@
   }
   &:disabled + .CheckBox-mark {
     border-color: var(--luna-disabled-border-color);
-  }
-  &:disabled ~ .CheckBox-label {
-    color: var(--luna-disabled-text-color);
   }
 }
 
@@ -83,11 +65,4 @@
       var(--luna-duration-fast);
     will-change: transform;
   }
-}
-
-.CheckBox-label {
-  color: var(--luna-text-color-secondary);
-  font-size: 0.875rem;
-  user-select: none;
-  white-space: nowrap;
 }

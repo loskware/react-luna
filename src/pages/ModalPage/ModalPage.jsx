@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Card, FlatButton, Modal, SolidButton } from "../lib";
+import { Card, FlatButton, Modal, SolidButton } from "../../lib";
+import "./ModalPage.scss";
 
-export function ModalExample() {
+export function ModalPage() {
   const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     document.body.classList.toggle("theme-dark");

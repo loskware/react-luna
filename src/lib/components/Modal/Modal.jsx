@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
-import { classNames } from "../../tools/classNames";
+import { classNames } from "../../utils/classNames";
 
 /**
  * @param {object} props
  * @param {Array<string>} [props.classes]
  * @param {any} props.children
  */
-const Modal = ({ classes = [], children }) => {
+export const Modal = ({ classes = [], children }) => {
   const modalRoot = document.getElementById("modal-root");
   const modal = document.createElement("div");
   modal.classList.add("Modal", "luna-acrylic");
@@ -23,5 +23,3 @@ const Modal = ({ classes = [], children }) => {
 
   return createPortal(children, modal);
 };
-
-export { Modal };

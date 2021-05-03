@@ -20,6 +20,15 @@
         background-color: var(--luna-disabled-bkg-color);
       }
     }
+    &:disabled:checked + span {
+      &::before {
+        background-color: var(--luna-disabled-bkg-color-alpha2);
+      }
+      &::after {
+        background-color: var(--luna-disabled-bkg-color);
+        transform: translate3d(100%, 0, 0);
+      }
+    }
   }
   > span {
     // Switch track

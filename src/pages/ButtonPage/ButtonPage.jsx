@@ -1,14 +1,15 @@
-import { IconSend, IconLoad } from "../icons";
 import React from "react";
+import { IconSend, IconLoad } from "../../icons";
 import {
   Card,
   FlatButton,
   FloatingActionButton,
   SolidButton,
   Text,
-} from "../lib";
+} from "../../lib";
+import "./ButtonPage.scss";
 
-export const ButtonExample = () => {
+export const ButtonPage = () => {
   return (
     <div className="ButtonExample split-screen">
       <section id="secHead" className="theme-light">

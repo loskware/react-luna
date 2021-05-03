@@ -1,5 +1,5 @@
 import React from "react";
-import { classNames } from "../../tools/classNames";
+import { classNames } from "../../utils/classNames";
 
 /**
  * Segmented Control Option
@@ -31,6 +31,7 @@ export const SegmentedControl = ({
   selected,
   onChange,
   variant = "accent",
+  ...other
 }) => {
   const cn = classNames(
     "SegmentedControl",
@@ -38,7 +39,7 @@ export const SegmentedControl = ({
     ...classes
   );
   return (
-    <div className={cn}>
+    <div className={cn} {...other}>
       {children.map(({ icon, title }, index) => (
         <label className="SegmentedControl-option" key={index}>
           <input

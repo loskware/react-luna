@@ -1,5 +1,5 @@
 import React from "react";
-import { classNames } from "../../tools/classNames";
+import { classNames } from "../../utils/classNames";
 
 /**
  * @param {object} props

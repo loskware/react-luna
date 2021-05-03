@@ -1,5 +1,5 @@
 import React from "react";
-import { classNames } from "../../tools/classNames";
+import { classNames } from "../../utils/classNames";
 
 /**
  * @callback OnChange
@@ -16,13 +16,14 @@ import { classNames } from "../../tools/classNames";
  * @param {OnChange} props.onChange
  * @param {"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  */
-const Switch = ({
+export const Switch = ({
   classes = [],
   checked,
   disabled = false,
   size = "normal",
   onChange,
   variant = "accent",
+  ...other
 }) => {
   const cn = classNames(
     "Switch",
@@ -31,10 +32,10 @@ const Switch = ({
     ...classes
   );
   return (
-    <label className={cn}>
+    <label className={cn} {...other}>
       <input
         type="checkbox"
-        checked={!disabled && checked}
+        checked={checked}
         disabled={disabled}
         onChange={(e) => onChange?.(e.target.checked, e)}
       />
@@ -42,5 +43,3 @@ const Switch = ({
     </label>
   );
 };
-
-export { Switch };

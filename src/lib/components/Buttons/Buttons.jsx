@@ -1,5 +1,5 @@
 import React from "react";
-import { classNames } from "../../tools/classNames";
+import { classNames } from "../../utils/classNames";
 
 const Button = ({
   children = "",
@@ -11,7 +11,7 @@ const Button = ({
   outlined = false,
   size = "normal",
   variant = "accent",
-  ...otherProps
+  ...other
 }) => {
   const cn = classNames(
     "Button",
@@ -27,7 +27,7 @@ const Button = ({
       onClick,
       disabled,
       href,
-      ...otherProps
+      ...other
     },
     icon,
     children && React.createElement("span", null, children)
@@ -55,7 +55,7 @@ const SolidButton = ({
   onClick,
   size = "normal",
   variant = "accent",
-  ...otherProps
+  ...other
 }) => {
   return (
     <Button
@@ -66,7 +66,7 @@ const SolidButton = ({
       onClick={onClick}
       size={size}
       variant={variant}
-      {...otherProps}
+      {...other}
     >
       {children}
     </Button>
@@ -96,7 +96,7 @@ const FlatButton = ({
   outlined = false,
   size = "normal",
   variant = "accent",
-  ...otherProps
+  ...other
 }) => {
   return (
     <Button
@@ -108,7 +108,7 @@ const FlatButton = ({
       outlined={outlined}
       size={size}
       variant={variant}
-      {...otherProps}
+      {...other}
     >
       {children}
     </Button>
@@ -138,7 +138,7 @@ const FloatingActionButton = ({
   onClick,
   size = "normal",
   variant = "accent",
-  ...otherProps
+  ...other
 }) => {
   return (
     <SolidButton
@@ -149,7 +149,7 @@ const FloatingActionButton = ({
       onClick={onClick}
       size={size}
       variant={variant}
-      {...otherProps}
+      {...other}
     >
       {children}
     </SolidButton>

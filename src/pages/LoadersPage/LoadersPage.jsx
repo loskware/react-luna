@@ -1,7 +1,7 @@
 import React from "react";
-import { PacmanLoader, SickleLoader } from "../lib";
+import { PacmanLoader, SickleLoader } from "../../lib";
 
-export function LoadersExample() {
+export function LoadersPage() {
   return (
     <div className="LoadersExample split-screen">
       <section className="theme-light">

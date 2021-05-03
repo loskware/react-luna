@@ -1,7 +1,8 @@
 import React from "react";
-import { Card, Draggable } from "../lib";
+import { Card, Draggable } from "../../lib";
+import "./DraggablePage.scss";
 
-export function DraggableExample() {
+export function DraggablePage() {
   return (
     <section className="DraggableExample theme-dark">
       <Draggable>

@@ -18,7 +18,7 @@ hr {
   width: 100%;
 }
 
-section.theme-light, 
+section.theme-light,
 section.theme-dark {
   overflow-y: auto;
   padding: 3rem;
@@ -58,8 +58,7 @@ section.theme-dark {
     color: rgba(255 255 255 / 80%);
     font-size: 14px;
     user-select: none;
-    cursor: pointer;
-    &:hover {
+    &:hover:not(.nav-link-selected) {
       background-color: hsl(208, 19%, 17%);
     }
     &-selected {
@@ -81,10 +80,17 @@ section.theme-dark {
 }
 
 /* CHECKBOXES SECTION*/
-.CheckBoxExample section {
-  box-sizing: border-box;
-  height: 100vh;
+.CheckBoxExample {
+  section {
+    box-sizing: border-box;
+    height: 100vh;
+    > div:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
 }
+
+/*  */
 
 /* DRAG TEST */
 section.DraggableExample {

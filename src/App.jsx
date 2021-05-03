@@ -2,25 +2,27 @@ import React, { useState } from "react";
 import "./App.scss";
 import { Image, Text } from "./lib";
 import {
-  ButtonExample,
-  CheckBoxExample,
-  FlipExample,
-  LoadersExample,
-  ModalExample,
+  ButtonPage,
+  CheckboxPage,
+  FlipViewPage,
+  LoadersPage,
+  ModalPage,
+  RadioPage,
   SegmentedControlExample,
   SwitchExample,
-} from "./Tabs";
-import { DraggableExample } from "./Tabs/DraggableExample";
+} from "./pages";
+import { DraggablePage } from "./pages/DraggablePage/DraggablePage";
 
 const sections = [
-  { title: "BUTTON", section: ButtonExample },
-  { title: "CHECKBOX", section: CheckBoxExample },
-  { title: "DRAGGABLE", section: DraggableExample },
-  { title: "FLIPVIEW", section: FlipExample },
-  { title: "SEGMENTED CONTROL", section: SegmentedControlExample },
+  { title: "BUTTON", section: ButtonPage },
+  { title: "CHECKBOX", section: CheckboxPage },
+  { title: "RADIO", section: RadioPage },
   { title: "SWITCH", section: SwitchExample },
-  { title: "LOADERS", section: LoadersExample },
-  { title: "MODAL", section: ModalExample },
+  { title: "SEGMENTED CONTROL", section: SegmentedControlExample },
+  { title: "DRAGGABLE", section: DraggablePage },
+  { title: "FLIPVIEW", section: FlipViewPage },
+  { title: "LOADERS", section: LoadersPage },
+  { title: "MODAL", section: ModalPage },
 ];
 
 const App = () => {
@@ -53,6 +55,7 @@ const App = () => {
         </div>
       </div>
       <div className="App-content">{React.createElement(sections[sectionIndex].section)}</div>
+      <div id="modal-root"></div>
     </div>
   );
 };

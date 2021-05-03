@@ -1,15 +1,15 @@
 import React from "react";
-import { classNames } from "../../tools/classNames";
+import { classNames } from "../../utils/classNames";
 
 /**
  * @param {object} props
- * @param {Array<string>} [props.classes]
- * @param {string} props.src
  * @param {string} props.alt
+ * @param {Array<string>} [props.classes]
  * @param {number} [props.height]
+ * @param {string} props.src
  * @param {number} [props.width]
  */
-const Image = ({ classes = [], src, alt = "", height, width }) => {
+export const Image = ({ alt = "", classes = [], src, height, width, ...other }) => {
   const cn = classNames("Image", ...classes);
   return (
     <img
@@ -18,8 +18,7 @@ const Image = ({ classes = [], src, alt = "", height, width }) => {
       alt={alt}
       width={width}
       height={height}
+      {...other}
     />
   );
 };
-
-export { Image };

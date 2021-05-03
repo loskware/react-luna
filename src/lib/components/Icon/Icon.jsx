@@ -1,5 +1,5 @@
 import React from "react";
-import { classNames } from "../../tools/classNames";
+import { classNames } from "../../utils/classNames";
 
 /**
  * @param {object} props
@@ -19,7 +19,8 @@ export function Icon({
   strokeColor = "currentColor",
   children,
   tooltip,
-  width = 24
+  width = 24,
+  ...other
 }) {
   const cn = classNames("Icon", ...classes);
   return (
@@ -33,6 +34,7 @@ export function Icon({
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      {...other}
     >
       {children}
       {tooltip && <title>{tooltip}</title>}

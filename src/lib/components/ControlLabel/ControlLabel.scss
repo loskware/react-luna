@@ -1,0 +1,33 @@
+.ControlLabel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &-left {
+    flex-direction: row-reverse;
+    > .ControlLabel-label {
+      margin-right: 8px;
+    }
+  }
+  &-right {
+    flex-direction: row;
+    > .ControlLabel-label {
+      margin-left: 8px;
+    }
+  }
+
+  &-label {
+    color: var(--luna-text-color-secondary);
+    font-size: 0.875rem;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  &-disabled {
+    cursor: default;
+    > .ControlLabel-label {
+      color: var(--luna-disabled-text-color);
+    }
+  }
+}

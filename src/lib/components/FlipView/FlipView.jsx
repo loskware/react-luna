@@ -1,5 +1,5 @@
 import React from "react";
-import { classNames } from "../../tools/classNames";
+import { classNames } from "../../utils/classNames";
 
 /**
  * @param {object} props
@@ -9,12 +9,13 @@ import { classNames } from "../../tools/classNames";
  * @param {any} props.backFace content shown when flipped
  * @param {boolean} [props.flipped] make component flipped... or not
  */
-const FlipView = ({
+export const FlipView = ({
   axis = "x",
   classes = [],
   frontFace,
   backFace,
   flipped = false,
+  ...other
 }) => {
   const cn = classNames(
     "FlipView",
@@ -23,7 +24,7 @@ const FlipView = ({
     ...classes
   );
   return (
-    <div className={cn}>
+    <div className={cn} {...other}>
       <div className="FlipView-wrapper">
         <div className="FlipView-frontFace">{frontFace}</div>
         <div className="FlipView-backFace">{backFace}</div>
@@ -31,5 +32,3 @@ const FlipView = ({
     </div>
   );
 };
-
-export { FlipView };
