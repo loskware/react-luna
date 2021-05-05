@@ -2,9 +2,6 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 1em;
-  width: 2em;
-  cursor: pointer;
   font-size: 24px;
 
   > input {
@@ -13,6 +10,7 @@
     position: absolute;
     top: 0;
     &:disabled + span {
+      cursor: default;
       &::before {
         background-color: var(--luna-disabled-bkg-color-alpha2);
       }
@@ -31,6 +29,10 @@
     }
   }
   > span {
+    display: block;
+    height: 1em;
+    width: 2em;
+    cursor: pointer;
     // Switch track
     &::before {
       position: absolute;
@@ -117,5 +119,4 @@
       }
     }
   }
-
 }

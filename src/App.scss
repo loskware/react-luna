@@ -1,12 +1,115 @@
 .App {
+  box-sizing: border-box;
+  padding-top: 56px;
+  min-height: 100vh;
+
   &-title-bar {
-    box-shadow: var(--luna-elevation-8);
-    padding: 16px 32px;
-    background-color: var(--luna-accent-bkg-color-sec);
-    color: var(--luna-text-color-inverse);
-    font-weight: 300;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: var(--luna-elevation-6);
+    padding: 8px 16px;
+    background-color: hsl(263, 82, 45);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    font-weight: 500;
+    .Button {
+      color: rgba(255, 255, 255, 0.8);
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+    .Button + .Button {
+      margin-left: 8px;
+    }
+    .MenuButton {
+      visibility: hidden;
+    }
   }
+  &-side-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 276px;
+    padding: 82px 0 24px 24px;
+    z-index: 50;
+    .Text {
+      font-size: 1.5rem;
+      font-weight: 500;
+      align-self: center;
+    }
+    .Card {
+      height: 100%;
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+      padding-bottom: 40px;
+      overflow-y: auto;
+      background-color: var(--side-bar-bkg-color);
+    }
+    .Image {
+      height: 128px;
+      width: 128px;
+      align-self: center;
+      margin: 16px 16px 24px;
+    }
+  }
+  &-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0 0 0 / 70%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 49;
+  }
+  &-link {
+    border-radius: var(--luna-border-radius-l);
+    margin: 8px 0;
+    padding: 8px 16px;
+    color: var(--luna-text-color-secondary);
+    font-size: 14px;
+    user-select: none;
+    &:hover:not(.App-link-selected) {
+      background-color: var(--luna-bkg-color-alpha1);
+    }
+    &-selected {
+      background-color: var(--luna-bkg-color-alpha2);
+    }
+  }
+
   &-content {
-    padding: 48px;
+    min-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px 24px 24px 300px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .App-title-bar .MenuButton {
+    visibility: initial;
+  }
+  .App-side-bar {
+    transition: transform ease-in-out 0.2s;
+    transform: translate3d(-300px, 0, 0);
+  }
+  .App-backdrop {
+    transition: opacity ease-in-out 0.2s;
+  }
+  .App-side-bar-show {
+    transform: translate3d(0px, 0, 0);
+  }
+  .App-side-bar-show + .App-backdrop {
+    opacity: 1;
+    visibility: visible;
+  }
+  .App-content {
+    padding: 32px 64px;
   }
 }

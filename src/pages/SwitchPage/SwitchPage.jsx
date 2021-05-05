@@ -3,23 +3,10 @@ import { Switch, Text } from "../../lib";
 import "./SwitchPage.scss";
 
 export const SwitchExample = () => {
-  return (
-    <div className="CheckBoxExample split-screen">
-      <section className="theme-light">
-        <ShowCase />
-      </section>
-      <section className="theme-dark">
-        <ShowCase />
-      </section>
-    </div>
-  );
-};
-
-const ShowCase = () => {
   const [checked, setChecked] = useState(true);
 
   return (
-    <>
+    <div className="CheckBoxExample">
       <Text size="title">DISABLED</Text>
       <Switch
         checked={checked}
@@ -42,7 +29,7 @@ const ShowCase = () => {
         onChange={() => setChecked(!checked)}
         disabled
       />
-      <hr />
+      <div className="v-spacer"></div>
       <Text size="title">ACCENT</Text>
       <Switch
         checked={checked}
@@ -62,7 +49,7 @@ const ShowCase = () => {
         size="large"
         onChange={() => setChecked(!checked)}
       />
-      <hr />
+      <div className="v-spacer"></div>
       <Text size="title">DANGER</Text>
       <Switch
         checked={checked}
@@ -82,7 +69,7 @@ const ShowCase = () => {
         size="large"
         onChange={() => setChecked(!checked)}
       />
-      <hr />
+      <div className="v-spacer"></div>
       <Text size="title">WARNING</Text>
       <Switch
         checked={checked}
@@ -102,7 +89,7 @@ const ShowCase = () => {
         size="large"
         onChange={() => setChecked(!checked)}
       />
-      <hr />
+      <div className="v-spacer"></div>
       <Text size="title">SUCCESS</Text>
       <Switch
         checked={checked}
@@ -122,6 +109,6 @@ const ShowCase = () => {
         size="large"
         onChange={() => setChecked(!checked)}
       />
-    </>
+    </div>
   );
 };

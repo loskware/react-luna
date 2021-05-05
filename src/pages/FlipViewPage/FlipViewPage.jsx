@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Card, FlatButton, FlipView, Image } from "../../lib";
+import "./FlipViewPage.scss";
 
 export function FlipViewPage() {
   const [flippedX, setFlippedX] = useState(false);
   const [flippedY, setFlippedY] = useState(false);
 
   return (
-    <section className="FlipViewPage theme-dark">
+    <section className="FlipViewPage">
       {/*  FLIPVIEW WITH X AXIS */}
       <FlipView
         frontFace={

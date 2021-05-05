@@ -4,17 +4,19 @@ import "./DraggablePage.scss";
 
 export function DraggablePage() {
   return (
-    <section className="DraggablePage theme-dark">
-      <Draggable>
-        <Card variant="accent" hasBorder hasShadow>
-          Drag me
-        </Card>
-      </Draggable>
-      <Draggable>
-        <Card variant="danger" hasBorder hasShadow>
-          Drag me
-        </Card>
-      </Draggable>
-    </section>
+    <div className="DraggablePage">
+      <Card variant="default">
+        <Draggable>
+          <Card variant="accent" hasBorder>
+            Drag me
+          </Card>
+        </Draggable>
+        <Draggable>
+          <Card variant="danger" hasBorder>
+            Drag me
+          </Card>
+        </Draggable>
+      </Card>
+    </div>
   );
 }

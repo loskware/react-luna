@@ -33,6 +33,11 @@
       height: 14px;
       width: 14px;
     }
+    > svg:only-child,
+    > img:only-child {
+      height: auto;
+      width: auto;
+    }
   }
 
   &-normal {
@@ -44,6 +49,11 @@
     > img {
       height: 16px;
       width: 16px;
+    }
+    > svg:only-child,
+    > img:only-child {
+      height: auto;
+      width: auto;
     }
   }
 
@@ -57,11 +67,30 @@
       height: 18px;
       width: 18px;
     }
+    > svg:only-child,
+    > img:only-child {
+      height: auto;
+      width: auto;
+    }
   }
 
   // OUTLINED
   &-outlined {
     border-color: var(--luna-border-color-sec);
+  }
+
+  // ROUNDED
+  &-rounded {
+    border-radius: 50%;
+    &.Button-compact {
+      padding: 6px;
+    }
+    &.Button-normal {
+      padding: 8px;
+    }
+    &.Button-large {
+      padding: 12px;
+    }
   }
 
   // VARIANTS

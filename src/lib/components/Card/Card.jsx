@@ -18,7 +18,7 @@ export const Card = ({
   className,
   children,
   hasBorder = false,
-  hasShadow = true,
+  hasShadow = false,
   padding = "",
   style,
   variant = "default",

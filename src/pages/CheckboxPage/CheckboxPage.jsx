@@ -3,23 +3,10 @@ import { CheckBox, ControLabel, Text } from "../../lib";
 import "./CheckboxPage.scss";
 
 export const CheckboxPage = () => {
-  return (
-    <div className="CheckboxPage split-screen">
-      <section className="theme-light">
-        <ShowCase />
-      </section>
-      <section className="theme-dark">
-        <ShowCase />
-      </section>
-    </div>
-  );
-};
-
-const ShowCase = () => {
   const [checked, setChecked] = useState(true);
 
   return (
-    <>
+    <div className="CheckboxPage">
       <Text size="title">DISABLED</Text>
       <ControLabel
         label="Lorem Ipsum"
@@ -31,7 +18,7 @@ const ShowCase = () => {
         }
         disabled
       />
-      <hr />
+      <div className="v-spacer"></div>
       <Text size="title">ACCENT</Text>
       <ControLabel
         label="Lorem Ipsum"
@@ -43,7 +30,7 @@ const ShowCase = () => {
           />
         }
       />
-      <hr />
+      <div className="v-spacer"></div>
       <Text size="title">DANGER</Text>
       <ControLabel
         label="Lorem Ipsum"
@@ -55,7 +42,7 @@ const ShowCase = () => {
           />
         }
       />
-      <hr />
+      <div className="v-spacer"></div>
       <Text size="title">WARNING</Text>
       <ControLabel
         label="Lorem Ipsum"
@@ -68,7 +55,7 @@ const ShowCase = () => {
           />
         }
       />
-      <hr />
+      <div className="v-spacer"></div>
       <Text size="title">SUCCESS</Text>
       <ControLabel
         label="Lorem Ipsum"
@@ -80,6 +67,6 @@ const ShowCase = () => {
           />
         }
       />
-    </>
+    </div>
   );
 };

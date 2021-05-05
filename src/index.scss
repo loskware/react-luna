@@ -1,6 +1,7 @@
-@import-normalize;
-@import "lib/index.scss";
-@import "lib/theme.scss";
+@use "./minireset.scss";
+@use "lib/index.scss";
+@use "lib/theme.scss";
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 html {
@@ -25,10 +26,16 @@ body {
 }
 
 .theme-light {
+  --side-bar-bkg-color: #E2E4E6;
+  --modal-bkg: #E2E4E6;
+
   background-color:hsl(216, 8%, 96%);
   color: var(--luna-text-color);
 }
 .theme-dark {
+  --side-bar-bkg-color: #2A2C2F;
+  --modal-bkg: #2A2C2F;
+
   background-color: hsl(210, 8%, 10%);
   color: var(--luna-text-color);
 }

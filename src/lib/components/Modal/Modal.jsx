@@ -11,6 +11,7 @@ export const Modal = ({ className, children, rootId = "modal-root" }) => {
   let modalRoot = document.getElementById(rootId);
   if (!modalRoot) {
     modalRoot = document.createElement("div");
+    modalRoot.id = rootId;
     document.body.append(modalRoot);
   }
   const modal = document.createElement("div");
@@ -18,9 +19,9 @@ export const Modal = ({ className, children, rootId = "modal-root" }) => {
   className && modal.classList.add(className);
 
   useEffect(() => {
-    modalRoot.appendChild(modal);
+    modalRoot.append(modal);
     return () => {
-      modalRoot.removeChild(modal);
+      modal.remove();
     };
   });
 

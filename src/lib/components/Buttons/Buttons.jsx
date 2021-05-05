@@ -9,13 +9,15 @@ const Button = ({
   icon,
   onClick,
   outlined = false,
+  rounded = false,
   size = "normal",
   variant = "accent",
   ...other
 }) => {
   const cn = classNames(
     "Button",
-    outlined && `Button-outlined`,
+    outlined && "Button-outlined",
+    rounded && "Button-rounded",
     `Button-${size}`,
     `Button-${variant}`,
     ...classes
@@ -42,6 +44,7 @@ const Button = ({
  * @param {boolean} [props.disabled] make button disabled
  * @param {string} [props.href] URL of the link. make button render as <a> instead of <button>
  * @param {any} [props.icon] optional icon, rendered before content
+ * @param {boolean} [props.rounded] make button rounded
  * @param {"normal"|"compact"|"large"} [props.size] button size
  * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  * @param {React.MouseEventHandler<HTMLButtonElement>} [props.onClick] onClick callback
@@ -53,17 +56,19 @@ const SolidButton = ({
   href,
   icon = false,
   onClick,
+  rounded = false,
   size = "normal",
   variant = "accent",
   ...other
 }) => {
   return (
     <Button
-      className={["SolidButton", className]}
+      classes={["SolidButton", className]}
       disabled={disabled}
       icon={icon}
       href={href}
       onClick={onClick}
+      rounded={rounded}
       size={size}
       variant={variant}
       {...other}
@@ -82,6 +87,7 @@ const SolidButton = ({
  * @param {string} [props.href] URL of the link. make button render as <a> instead of <button>
  * @param {any} [props.icon] optional icon, rendered before content
  * @param {boolean} [props.outlined] make button outlined
+ * @param {boolean} [props.rounded] make button rounded
  * @param {"normal"|"compact"|"large"} [props.size] button size
  * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  * @param {React.MouseEventHandler<HTMLButtonElement>} [props.onClick] onClick callback
@@ -94,6 +100,7 @@ const FlatButton = ({
   icon = false,
   onClick,
   outlined = false,
+  rounded = false,
   size = "normal",
   variant = "accent",
   ...other
@@ -106,6 +113,7 @@ const FlatButton = ({
       href={href}
       onClick={onClick}
       outlined={outlined}
+      rounded={rounded}
       size={size}
       variant={variant}
       {...other}

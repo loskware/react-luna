@@ -1,5 +1,24 @@
-.ButtonPage .fab-group {
-  padding: 1rem;
-  line-height: 66px;
-  text-align: center;
+.ButtonPage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 16px 16px 0;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    .Button {
+      margin-top: 4px;
+    }
+    .Text {
+      margin-bottom: 16px;
+    }
+  }
+  > div:last-child {
+    .Button {
+      margin-top: 8px;
+    }
+  }
 }

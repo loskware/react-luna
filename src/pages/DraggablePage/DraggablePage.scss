@@ -1,6 +1,10 @@
 .DraggablePage {
-  height: 100%;
-  padding: 0;
+  > .Card {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+  }
+
   .Card {
     padding: 3rem 5rem;
   }

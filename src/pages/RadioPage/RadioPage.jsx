@@ -3,14 +3,25 @@ import { ControLabel, Radio } from "../../lib";
 import "./RadioPage.scss";
 
 export const RadioPage = () => {
+  const [checkedIndex, setCheckedIndex] = useState(null);
+
   return (
-    <div className="CheckBoxExample split-screen">
-      <section className="theme-light">
-        <ShowCase />
-      </section>
-      <section className="theme-dark">
-        <ShowCase />
-      </section>
+    <div className="RadioPage split-screen">
+      {Options.map((option, index) => (
+        <ControLabel
+          key={Math.random()}
+          label={option.label}
+          disabled={index === 0}
+          control={
+            <Radio
+              // @ts-ignore
+              variant={option.variant}
+              checked={index === checkedIndex}
+              onChange={() => setCheckedIndex(index)}
+            />
+          }
+        />
+      ))}
     </div>
   );
 };
@@ -22,27 +33,3 @@ const Options = [
   { label: "Option 4", variant: "warning" },
   { label: "Option 5", variant: "success" },
 ];
-
-const ShowCase = () => {
-  const [checkedIndex, setCheckedIndex] = useState(null);
-
-  return (
-    <>
-      {Options.map((option, index) => (
-        <div key={Math.random()}>
-          <ControLabel
-            label={option.label}
-            disabled={index === 0}
-            control={
-              <Radio
-                variant={option.variant}
-                checked={index === checkedIndex}
-                onChange={() => setCheckedIndex(index)}
-              />
-            }
-          />
-        </div>
-      ))}
-    </>
-  );
-};

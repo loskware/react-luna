@@ -4,23 +4,10 @@ import { Card, SegmentedControl } from "../../lib";
 import "./SegmentedControlPage.scss";
 
 export function SegmentedControlPage() {
-  return (
-    <div className="SegmentedControlPage split-screen">
-      <section className="theme-light">
-        <ShowCase />
-      </section>
-      <section className="theme-dark">
-        <ShowCase />
-      </section>
-    </div>
-  );
-}
-
-const ShowCase = () => {
   const [selected, setSelected] = useState(0);
 
   return (
-    <>
+    <div className="SegmentedControlPage">
       <SegmentedControl
         variant="plain"
         selected={selected}
@@ -76,7 +63,7 @@ const ShowCase = () => {
           { icon: <IconUsers />, title: "Tab 3" },
         ]}
       </SegmentedControl>
-      <hr />
+      <div className="v-spacer"></div>
       <Card>
         <SegmentedControl
           variant="plain"
@@ -90,6 +77,6 @@ const ShowCase = () => {
           ]}
         </SegmentedControl>
       </Card>
-    </>
+    </div>
   );
-};
+}
