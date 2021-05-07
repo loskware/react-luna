@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-luna/static/css/main.78f78580.chunk.css",
-    "main.js": "/react-luna/static/js/main.7ea97b44.chunk.js",
-    "main.js.map": "/react-luna/static/js/main.7ea97b44.chunk.js.map",
+    "main.css": "/react-luna/static/css/main.c2bca452.chunk.css",
+    "main.js": "/react-luna/static/js/main.6e14bf32.chunk.js",
+    "main.js.map": "/react-luna/static/js/main.6e14bf32.chunk.js.map",
     "runtime-main.js": "/react-luna/static/js/runtime-main.932b3de9.js",
     "runtime-main.js.map": "/react-luna/static/js/runtime-main.932b3de9.js.map",
     "static/js/2.9890a478.chunk.js": "/react-luna/static/js/2.9890a478.chunk.js",
     "static/js/2.9890a478.chunk.js.map": "/react-luna/static/js/2.9890a478.chunk.js.map",
     "index.html": "/react-luna/index.html",
-    "static/css/main.78f78580.chunk.css.map": "/react-luna/static/css/main.78f78580.chunk.css.map",
+    "static/css/main.c2bca452.chunk.css.map": "/react-luna/static/css/main.c2bca452.chunk.css.map",
     "static/js/2.9890a478.chunk.js.LICENSE.txt": "/react-luna/static/js/2.9890a478.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.932b3de9.js",
     "static/js/2.9890a478.chunk.js",
-    "static/css/main.78f78580.chunk.css",
-    "static/js/main.7ea97b44.chunk.js"
+    "static/css/main.c2bca452.chunk.css",
+    "static/js/main.6e14bf32.chunk.js"
   ]
 }
