@@ -15,12 +15,7 @@
     color: rgba(255, 255, 255, 0.8);
     font-size: 18px;
     font-weight: 500;
-    .Button {
-      color: rgba(255, 255, 255, 0.8);
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-      }
-    }
+    
     .Button + .Button {
       margin-left: 8px;
     }

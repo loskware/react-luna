@@ -11,7 +11,7 @@ import {
   SegmentedControlPage,
   SwitchExample,
 } from "./pages";
-import { Card, FlatButton, Header, Icon, Image, TitleBar } from "./lib";
+import { Card, FlatButton, Header, Icon, Image, SolidButton, TitleBar } from "./lib";
 import { classNames } from "./lib/utils";
 
 const sections = [
@@ -60,13 +60,13 @@ export const App = () => {
         trailingContent={
           <>
             <FlatButton
-              variant="plain"
+              variant="soft"
               rounded
               icon={theme.changeThemeIcon}
               onClick={changeTheme}
             />
-            <FlatButton
-              variant="plain"
+            <SolidButton
+              variant="soft"
               rounded
               icon={IconGithub}
               href="https://github.com/loskware/react-luna"

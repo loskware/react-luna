@@ -23,9 +23,12 @@
   --luna-plain-text-color-inverse: var(--luna-text-color-inverse);
 
   /* SOFT */
-  --luna-soft-bkg-color: rgba(255, 255, 255, 0.2);
-  --luna-soft-border-color: rgba(255, 255, 255, 0.2);
-  --luna-soft-text-color: rgba(255, 255, 255, 0.8);
+  --luna-soft-bkg-color: hsla(0, 0%, 100%, 0.7);
+  --luna-soft-bkg-color-sec: hsla(0, 0%, 90%, 0.7);
+  --luna-soft-bkg-color-alpha1: hsla(0, 0%, 100%, 0.2);
+  --luna-soft-border-color: hsla(0, 0%, 100%, 0.2);
+  --luna-soft-text-color: hsla(0, 0%, 100%, 0.8);
+  --luna-soft-text-color-inverse: hsla(0, 0%, 0%, 0.8);
 
   /* ACCENT */
   --luna-accent-color: hsl(214, 82%, 45%);
@@ -104,9 +107,12 @@
   --luna-plain-text-color-inverse: var(--luna-text-color-inverse);
 
   /* SOFT */
-  --luna-soft-bkg-color: rgba(255, 255, 255, 0.2);
-  --luna-soft-border-color: rgba(255, 255, 255, 0.2);
-  --luna-soft-text-color: rgba(255, 255, 255, 0.8);
+  --luna-soft-bkg-color: hsla(0, 0%, 100%, 0.7);
+  --luna-soft-bkg-color-sec: hsla(0, 0%, 90%, 0.7);
+  --luna-soft-bkg-color-alpha1: hsla(0, 0%, 100%, 0.2);
+  --luna-soft-border-color: hsla(0, 0%, 100%, 0.2);
+  --luna-soft-text-color: hsla(0, 0%, 100%, 0.8);
+  --luna-soft-text-color-inverse: hsla(0, 0%, 0%, 0.8);
 
   /* ACCENT */
   --luna-accent-color: hsl(214, 82%, 55%);
