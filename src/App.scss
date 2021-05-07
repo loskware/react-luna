@@ -11,7 +11,7 @@
     z-index: 100;
     box-shadow: var(--luna-elevation-6);
     padding: 8px 16px;
-    background-color: hsl(263, 82, 45);
+    background-color: hsl(263, 88%, 53%);
     color: rgba(255, 255, 255, 0.8);
     font-size: 18px;
     font-weight: 500;
@@ -36,7 +36,7 @@
     width: 276px;
     padding: 82px 0 24px 24px;
     z-index: 50;
-    .Text {
+    .Header {
       font-size: 1.5rem;
       font-weight: 500;
       align-self: center;

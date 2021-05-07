@@ -1,37 +1,71 @@
-.Text {
-  font-size: 1em;
-  line-height: 1.5em;
+.Text-accent, .Header-accent {
+  color: var(--luna-accent-text-color);
 }
-
-.Text-primary {
+.Text-error, .Header-error {
+  color: var(--luna-error-text-color);
+}
+.Text-warning, .Header-warning {
+  color: var(--luna-warning-text-color);
+}
+.Text-success, .Header-success {
+  color: var(--luna-success-text-color);
+}
+.Text-primary, .Header-primary {
   color: var(--luna-text-color);
 }
-.Text-accent {
-  color: var(--luna-text-color-accent);
+.Text-secondary, .Header-secondary {
+  color: var(--luna-text-color-secondary);
+}
+.Text-tertiary, .Header-tertiary {
+  color: var(--luna-text-color-tertiary);
+}
+.Text-inverse, .Header-inverse {
+  color: var(--luna-text-color-inverse);
 }
 
-.Text--size-title {
-  font-size: 1.125rem;
-}
-.Text--size-body {
-  font-size: 0.875rem;
-}
-.Text--size-subtitle {
-  font-size: 0.75rem;
-}
-.Text--size-label {
-  font-size: 0.625rem;
-}
 
-.Text--weight-300 {
+.Text-initial, .Header-initial {
+  font-weight: initial;
+}
+.Text-inherit, .Header-inherit {
+  font-weight: inherit;
+}
+.Text-normal, .Header-normal {
+  font-weight: normal;
+}
+.Text-bold, .Header-bold {
+  font-weight: bold;
+}
+.Text-bolder, .Header-bolder {
+  font-weight: bolder;
+}
+.Text-lighter, .Header-lighter {
+  font-weight: lighter;
+}
+.Text-100, .Header-100 {
+  font-weight: 100;
+}
+.Text-200, .Header-200 {
+  font-weight: 200;
+}
+.Text-300, .Header-300 {
   font-weight: 300;
 }
-.Text--weight-400 {
+.Text-400, .Header-400 {
   font-weight: 400;
 }
-.Text--weight-600 {
+.Text-500, .Header-500 {
+  font-weight: 500;
+}
+.Text-600, .Header-600 {
   font-weight: 600;
 }
-.Text--weight-700 {
+.Text-700, .Header-700 {
   font-weight: 700;
+}
+.Text-800, .Header-800 {
+  font-weight: 800;
+}
+.Text-900, .Header-900 {
+  font-weight: 900;
 }

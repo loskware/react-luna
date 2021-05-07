@@ -9,7 +9,7 @@ export const RadioPage = () => {
     <div className="RadioPage split-screen">
       {Options.map((option, index) => (
         <ControLabel
-          key={Math.random()}
+          key={index}
           label={option.label}
           disabled={index === 0}
           control={

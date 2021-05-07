@@ -134,7 +134,7 @@ const FlatButton = ({
  * @param {any} [props.icon] optional icon, rendered before content
  * @param {boolean} [props.outlined] make button outlined
  * @param {"normal"|"compact"|"large"} [props.size] button size
- * @param {"plain"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
+ * @param {"plain"|"soft"|"accent"|"danger"|"warning"|"success"} [props.variant] color variant
  * @param {React.MouseEventHandler<HTMLButtonElement>} [props.onClick] onClick callback
  */
 const FloatingActionButton = ({

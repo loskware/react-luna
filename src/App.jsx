@@ -11,7 +11,7 @@ import {
   SegmentedControlPage,
   SwitchExample,
 } from "./pages";
-import { Card, FlatButton, Icon, Image, Text, TitleBar } from "./lib";
+import { Card, FlatButton, Header, Icon, Image, TitleBar } from "./lib";
 import { classNames } from "./lib/utils";
 
 const sections = [
@@ -78,7 +78,7 @@ export const App = () => {
       {/* SIDE BAR */}
       <div className={sideCn}>
         <Card hasShadow>
-          <Text color="accent">REACT LUNA</Text>
+          <Header>REACT LUNA</Header>
           <Image
             src={process.env.PUBLIC_URL + "/android-chrome-512x512.png"}
             alt="React Luna Logo"

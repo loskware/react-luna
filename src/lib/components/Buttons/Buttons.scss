@@ -112,6 +112,13 @@
       }
     }
   }
+  &-soft {
+    color: var(--luna-success-text-color-inverse);
+    background-color: var(--luna-success-bkg-color);
+    &:hover {
+      background-color: var(--luna-success-bkg-color-sec);
+    }
+  }
   &-accent {
     &.SolidButton {
       color: var(--luna-accent-text-color-inverse);
