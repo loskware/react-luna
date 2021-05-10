@@ -2,27 +2,35 @@ import React from "react";
 import { classNames } from "../../utils/classNames";
 
 /**
- * @param {object} props
- * @param {"x"|"y"} [props.axis] rotation axis
- * @param {string} [props.className] custom CSS class
- * @param {any} props.frontFace default shown content
- * @param {any} props.backFace content shown when flipped
- * @param {boolean} [props.flipped] make component flipped... or not
+ * @typedef FlipViewProps
+ * @property {"x"|"y"} [axis] rotation axis
+ * @property {React.ReactNode} frontFace default shown content
+ * @property {React.ReactNode} backFace content shown when flipped
+ * @property {boolean} [flipped] make component flipped... or not
  */
-export const FlipView = ({
-  axis = "x",
-  className,
-  frontFace,
-  backFace,
-  flipped = false,
-  ...other
-}) => {
+
+/**
+ * A container that can flip visible face (back/front)
+ * @param {FlipViewProps & React.ComponentPropsWithoutRef<"div">} props
+ * @returns 
+ */
+export const FlipView = (props) => {
+  const {
+    axis = "x",
+    className,
+    frontFace,
+    backFace,
+    flipped = false,
+    ...other
+  } = props;
+
   const cn = classNames(
     "FlipView",
     flipped && "FlipView-flipped",
     `FlipView-${axis}-axis`,
     className
   );
+  
   return (
     <div className={cn} {...other}>
       <div className="FlipView-wrapper">

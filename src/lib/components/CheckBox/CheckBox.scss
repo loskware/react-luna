@@ -1,7 +1,7 @@
 .CheckBox {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  cursor: pointer;
   &:hover > .CheckBox-mark {
     border-color: currentColor;
   }
@@ -19,30 +19,33 @@
   &-success {
     color: var(--luna-success-color);
   }
-  &-disabled {
-    color: var(--luna-disabled-color);
-    cursor: default;
-  }
 }
 
 .CheckBox-input {
   position: absolute;
-  height: 0;
-  width: 0;
+  left: 0;
+  top: 0;
+  height: 18px;
+  width: 18px;
   opacity: 0;
+  cursor: pointer;
+  z-index: 1;
   &:checked + .CheckBox-mark {
     border-color: currentColor;
     &::after {
       transform: scale(1);
     }
   }
-  &:disabled + .CheckBox-mark {
-    border-color: var(--luna-disabled-border-color);
+  &:disabled {
+    cursor: default;
+    + .CheckBox-mark {
+      border-color: var(--luna-disabled-border-color);
+      color: var(--luna-disabled-color);
+    }
   }
 }
 
 .CheckBox-mark {
-  position: relative;
   display: block;
   box-sizing: content-box;
   height: 16px;

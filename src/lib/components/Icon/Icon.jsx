@@ -2,26 +2,26 @@ import React from "react";
 import { classNames } from "../../utils/classNames";
 
 /**
- * @param {object} props
- * @param {any} props.children
- * @param {string} [props.className]
- * @param {string} [props.fillColor]
- * @param {number} [props.height]
- * @param {string} [props.strokeColor]
- * @param {string} [props.tooltip]
- * @param {number} [props.width]
- * @returns
+ * @typedef IconProps
+ * @property {string} [props.tooltip]
  */
-export function Icon({
-  className,
-  fillColor = "none",
-  height = 24,
-  strokeColor = "currentColor",
-  children,
-  tooltip,
-  width = 24,
-  ...other
-}) {
+
+/**
+ * Icon component
+ * @param {IconProps & React.ComponentPropsWithoutRef<"svg">} props 
+ * @returns 
+ */
+export function Icon(props) {
+  const {
+    className,
+    fill = "none",
+    height = 24,
+    stroke = "currentColor",
+    children,
+    tooltip,
+    width = 24,
+    ...other
+  } = props;
   const cn = classNames("Icon", className);
   return (
     <svg
@@ -29,8 +29,8 @@ export function Icon({
       height={height}
       width={width}
       viewBox="0 0 24 24"
-      fill={fillColor}
-      stroke={strokeColor}
+      fill={fill}
+      stroke={stroke}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"

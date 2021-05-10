@@ -1,6 +1,6 @@
 import React from "react";
 import { IconSend, IconLoad } from "../../icons";
-import { FlatButton, FloatingActionButton, SolidButton, Text } from "../../lib";
+import { Card, FlatButton, FloatingActionButton, SolidButton, Text } from "../../lib";
 import "./ButtonPage.scss";
 
 export const ButtonPage = () => {
@@ -276,6 +276,50 @@ export const ButtonPage = () => {
           ACTION
         </FloatingActionButton>
       </div>
+
+      {/* SOFT VARIANT */}
+      <Card backgroundColor="hsl(263, 88%, 53%)">
+        <Text color="white">SOFT</Text>
+        <SolidButton variant="soft" icon={<IconLoad />} size="compact">
+          BUTTON
+        </SolidButton>
+        <FlatButton variant="soft" size="compact">
+          BUTTON
+        </FlatButton>
+        <FlatButton
+          variant="soft"
+          icon={<IconSend />}
+          size="compact"
+          outlined
+        >
+          BUTTON
+        </FlatButton>
+        <div className="v-spacer"></div>
+        <SolidButton variant="soft" icon={<IconLoad />} size="normal">
+          BUTTON
+        </SolidButton>
+        <FlatButton variant="soft" icon={<IconLoad />}>
+          BUTTON
+        </FlatButton>
+        <FlatButton
+          variant="soft"
+          icon={<IconSend />}
+          size="normal"
+          outlined
+        >
+          BUTTON
+        </FlatButton>
+        <div className="v-spacer"></div>
+        <SolidButton variant="soft" icon={<IconLoad />} size="large">
+          BUTTON
+        </SolidButton>
+        <FlatButton variant="soft" size="large">
+          BUTTON
+        </FlatButton>
+        <FlatButton variant="soft" icon={<IconSend />} size="large" outlined>
+          BUTTON
+        </FlatButton>
+      </Card>
     </div>
   );
 };

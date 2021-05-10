@@ -1,34 +1,38 @@
 .SegmentedControl {
   display: flex;
+  gap: 2px;
+  padding: 4px;
+  overflow: hidden;
+  line-height: 1rem;
   background-color: var(--luna-bkg-color-alpha1);
   border-radius: var(--luna-border-radius-l);
-  gap: 2px;
-  line-height: 1rem;
-  overflow: hidden;
-  padding: 4px;
 }
 
 .SegmentedControl-option {
+  position: relative;
   flex: 1 1 0;
   user-select: none;
   white-space: nowrap;
 }
 
 .SegmentedControl-option-input {
-  opacity: 0;
   position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .SegmentedControl-option-content {
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: transparent;
-  border-radius: var(--luna-border-radius-m);
-  color: var(--luna-text-color-secondary);
-  display: flex;
-  font-weight: 500;
   padding: 6px 18px;
+  border-radius: var(--luna-border-radius-m);
+  background-color: transparent;
+  color: var(--luna-text-color-secondary);
+  font-weight: 500;
   transition-duration: var(--luna-duration-fast);
   transition-property: background-color, color;
   transition-timing-function: linear;
@@ -47,11 +51,6 @@
     width: 14px;
   }
 }
-
-/* .SegmentedControl-option-input:checked
-  + .SegmentedControl-option-content {
-  box-shadow: var(--luna-elevation-1);
-} */
 
 .SegmentedControl-plain
   .SegmentedControl-option-input:checked

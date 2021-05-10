@@ -2,12 +2,11 @@ import React, { useEffect, useRef } from "react";
 import { classNames } from "../../utils/classNames";
 
 /**
- *
- * @param {object} props
- * @param {string} [props.className] custom CSS class
- * @param {any} [props.children] draggable content
+ * Mouse draggable container
+ * @param {React.ComponentPropsWithoutRef<"div">} props
  */
-export function Draggable({ className, children, ...other }) {
+export function Draggable(props) {
+  const { className, children, ...other } = props;
   const ref = useRef(null);
   useEffect(() => {
     const [rd, ud] = makeDrabbable(ref.current);
@@ -33,7 +32,6 @@ function makeDrabbable(element) {
   /** @param {MouseEvent} e */
   function mouseDown(e) {
     e.preventDefault();
-    // @ts-ignore
     if (element.contains(e.target)) {
       element.style.cursor = "grabbing";
       mouseX = e.clientX;
@@ -66,13 +64,11 @@ function makeDrabbable(element) {
   function registerDraggable() {
     document.addEventListener("mousedown", mouseDown);
     element.style.cursor = "grab";
-    console.log("Registered Draggable");
   }
 
   function unregistrerDraggable() {
     document.removeEventListener("mousedown", mouseDown);
     element.style.cursor = null;
-    console.log("Unregistered Draggable");
   }
 
   return [registerDraggable, unregistrerDraggable];

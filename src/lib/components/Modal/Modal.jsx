@@ -2,12 +2,18 @@ import { useEffect } from "react";
 import { createPortal } from "react-dom";
 
 /**
- * @param {object} props
- * @param {string} [props.className]
- * @param {any} props.children
- * @param {string} [props.rootId]
+ * @typedef ModalProps
+ * @property {string} [rootId]
  */
-export const Modal = ({ className, children, rootId = "modal-root" }) => {
+
+/**
+ * A component for showing modal contents
+ * @param {ModalProps & import("react").ComponentPropsWithoutRef<"div">} props
+ * @returns 
+ */
+export const Modal = (props) => {
+  const { className, children, rootId = "modal-root" } = props;
+  
   let modalRoot = document.getElementById(rootId);
   if (!modalRoot) {
     modalRoot = document.createElement("div");

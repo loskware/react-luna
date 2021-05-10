@@ -5,12 +5,18 @@
   font-size: 24px;
 
   > input {
-    left: 0;
-    opacity: 0;
     position: absolute;
     top: 0;
-    &:disabled + span {
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+    &:disabled {
       cursor: default;
+    }
+    &:disabled + span {
       &::before {
         background-color: var(--luna-disabled-bkg-color-alpha2);
       }
@@ -32,7 +38,6 @@
     display: block;
     height: 1em;
     width: 2em;
-    cursor: pointer;
     // Switch track
     &::before {
       position: absolute;

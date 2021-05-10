@@ -2,17 +2,16 @@ import React from "react";
 import { classNames } from "../../../utils/classNames";
 
 /**
- * @param {object} props
- * @param {string} [props.className] custom CSS class
- * @param {string} [props.color]
- * @param {string} [props.size]
+ * @typedef PacmanLoaderProps
+ * @property {string} [color]
+ * @property {string|number} [size]
  */
-export const PacmanLoader = ({
-  className,
-  color,
-  size = "25px",
-  ...other
-}) => {
+
+/**
+ * @param {PacmanLoaderProps & React.ComponentPropsWithoutRef<"div">} props
+ */
+export const PacmanLoader = (props) => {
+  const { className, color, size = 25, ...other } = props;
   const cn = classNames("PacmanLoader", className);
   return (
     <div className={cn} style={{ fontSize: size, color }} {...other}>

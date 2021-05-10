@@ -9,67 +9,69 @@ export function FlipViewPage() {
   return (
     <section className="FlipViewPage">
       {/*  FLIPVIEW WITH X AXIS */}
-      <FlipView
-        frontFace={
-          <Card hasShadow padding="0">
-            <Image
-              width={480}
-              src={process.env.PUBLIC_URL + "/mando.jpg"}
-              alt="The Mandalorian"
-            />
-          </Card>
-        }
-        backFace={
-          <Card hasShadow padding="0">
-            <Image
-              width={480}
-              src={process.env.PUBLIC_URL + "/grogu.jpg"}
-              alt="The Child"
-            />
-          </Card>
-        }
-        flipped={flippedX}
-      />
-      <FlatButton
-        variant="accent"
-        size="large"
-        outlined
-        onClick={() => setFlippedX(!flippedX)}
-      >
-        FLIP VERTICALLY
-      </FlatButton>
+      <div>
+        <FlipView
+          frontFace={
+            <Card hasShadow padding="0">
+              <Image
+                width={480}
+                src={process.env.PUBLIC_URL + "/mando.jpg"}
+                alt="The Mandalorian"
+              />
+            </Card>
+          }
+          backFace={
+            <Card hasShadow padding="0">
+              <Image
+                width={480}
+                src={process.env.PUBLIC_URL + "/grogu.jpg"}
+                alt="The Child"
+              />
+            </Card>
+          }
+          flipped={flippedX}
+        />
+        <FlatButton
+          variant="accent"
+          outlined
+          onClick={() => setFlippedX(!flippedX)}
+        >
+          FLIP VERTICALLY
+        </FlatButton>
+      </div>
 
       {/*  FLIPVIEW WITH Y AXIS */}
-      <FlipView
-        axis="y"
-        frontFace={
-          <Card hasShadow padding="0">
-            <Image
-              width={480}
-              src={process.env.PUBLIC_URL + "/mando.jpg"}
-              alt="The Mandalorian"
-            />
-          </Card>
-        }
-        backFace={
-          <Card hasShadow padding="0">
-            <Image
-              width={480}
-              src={process.env.PUBLIC_URL + "/grogu.jpg"}
-              alt="The Child"
-            />
-          </Card>
-        }
-        flipped={flippedY}
-      />
-      <FlatButton
-        variant="accent"
-        size="large"
-        outlined
-        onClick={() => setFlippedY(!flippedY)}
-      >
-        FLIP HORIZONTALLY
-      </FlatButton>
+      <div>
+        <FlipView
+          axis="y"
+          frontFace={
+            <Card hasShadow padding="0">
+              <Image
+                width={480}
+                src={process.env.PUBLIC_URL + "/mando.jpg"}
+                alt="The Mandalorian"
+              />
+            </Card>
+          }
+          backFace={
+            <Card hasShadow padding="0">
+              <Image
+                width={480}
+                src={process.env.PUBLIC_URL + "/grogu.jpg"}
+                alt="The Child"
+              />
+            </Card>
+          }
+          flipped={flippedY}
+        />
+        <FlatButton
+          variant="accent"
+          outlined
+          onClick={() => setFlippedY(!flippedY)}
+        >
+          FLIP HORIZONTALLY
+        </FlatButton>
+      </div>
     </section>
   );
 }

@@ -2,7 +2,6 @@ import React from "react";
 import { classNames } from "../../utils/classNames";
 
 const Typography = ({ children, className, tag, ...other }) => {
-  console.log(other);
   return React.createElement(
     tag,
     {
@@ -17,7 +16,8 @@ const Typography = ({ children, className, tag, ...other }) => {
  * @typedef TextProps
  * @property {string} [className]
  * @property {React.ReactNode} children
- * @property {"accent"|"error"|"warning"|"success"|"primary"|"secondary"|"tertiary"|"inverse"} [color]
+ * @property {string} [color]
+ * @property {"accent"|"error"|"warning"|"success"|"primary"|"secondary"|"tertiary"|"inverse"} [theme]
  * @property {React.CSSProperties} [style]
  * @property {string} [tag]
  * @property {"normal"|"bold"|"bolder"|"lighter"|number|"initial"|"inherit"} [weight]
@@ -30,17 +30,18 @@ const Text = ({
   color,
   style,
   tag = "p",
+  theme,
   weight,
   ...other
 }) => {
   const cn = classNames(
     "Text",
-    color && `Text-${color}`,
+    theme && `Text-${theme}`,
     weight && `Text-${weight}`,
     className
   );
   return (
-    <Typography tag={tag} className={cn} style={style} {...other}>
+    <Typography tag={tag} className={cn} style={{color, ...style}} {...other}>
       {children}
     </Typography>
   );
@@ -52,18 +53,19 @@ const Header = ({
   children,
   color,
   style,
-  tag = "h2",
+  tag = "p",
+  theme,
   weight,
   ...other
 }) => {
   const cn = classNames(
     "Header",
-    color && `Header-${color}`,
+    theme && `Header-${theme}`,
     weight && `Header-${weight}`,
     className
   );
   return (
-    <Typography tag={tag} className={cn} style={style} {...other}>
+    <Typography tag={tag} className={cn} style={{color, ...style}} {...other}>
       {children}
     </Typography>
   );

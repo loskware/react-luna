@@ -2,23 +2,22 @@ import React from "react";
 import { classNames } from "../../utils/classNames";
 
 /**
- * A simple circle avatar
- * @param {object} props
- * @param {string} [props.classes] custom CSS classes
- * @param {number} [props.size] height = width = size
- * @param {string} props.src image path (URL)
- * @param {React.CSSProperties} [props.style] inline styles
+ * @typedef AvatarProps
+ * @property {string|number} [size] height = width = size
  */
-export const Avatar = ({ classes, size, src, style, ...other }) => {
-  const cn = classNames("Avatar", classes);
+
+/**
+ * A simple circle avatar
+ * @param {AvatarProps & React.ComponentPropsWithoutRef<"img">} props
+ */
+export const Avatar = (props) => {
+  const { className, height, width, size, ...other} = props;
+  const cn = classNames("Avatar", className);
   return (
     <img
       className={cn}
-      width={`${size}px`}
-      height={`${size}px`}
-      src={src}
-      alt=""
-      style={style}
+      width={width || size}
+      height={height || size}
       {...other}
     />
   );

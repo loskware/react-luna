@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ControLabel, Radio } from "../../lib";
+import { ControlLabel, Radio } from "../../lib";
 import "./RadioPage.scss";
 
 export const RadioPage = () => {
@@ -8,7 +8,7 @@ export const RadioPage = () => {
   return (
     <div className="RadioPage split-screen">
       {Options.map((option, index) => (
-        <ControLabel
+        <ControlLabel
           key={index}
           label={option.label}
           disabled={index === 0}

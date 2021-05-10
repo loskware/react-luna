@@ -13,11 +13,14 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react"],
+  settings: {
+    react: {
+      version: "latest",
+    },
+  },
   rules: {
     "react/prop-types": 0,
-    "no-warning-comments": [
-      1,
-      { terms: ["todo", "fixme"], location: "start" },
-    ],
+    "no-warning-comments": [1, { terms: ["todo", "fixme"], location: "start" }],
+    "no-console": ["warn"],
   },
 };

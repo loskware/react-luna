@@ -1,6 +1,5 @@
 .App {
   box-sizing: border-box;
-  padding-top: 56px;
   min-height: 100vh;
 
   &-title-bar {
@@ -12,7 +11,7 @@
     box-shadow: var(--luna-elevation-6);
     padding: 8px 16px;
     background-color: hsl(263, 88%, 53%);
-    color: rgba(255, 255, 255, 0.8);
+    color: white;
     font-size: 18px;
     font-weight: 500;
     
@@ -31,11 +30,6 @@
     width: 276px;
     padding: 82px 0 24px 24px;
     z-index: 50;
-    .Header {
-      font-size: 1.5rem;
-      font-weight: 500;
-      align-self: center;
-    }
     .Card {
       height: 100%;
       display: flex;
@@ -44,6 +38,11 @@
       padding-bottom: 40px;
       overflow-y: auto;
       background-color: var(--side-bar-bkg-color);
+    }
+    .Header {
+      font-size: 1.5rem;
+      font-weight: 500;
+      align-self: center;
     }
     .Image {
       height: 128px;
@@ -82,7 +81,7 @@
     min-height: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 24px 24px 24px 300px;
+    padding: 82px 24px 24px 300px;
   }
 }
 
@@ -105,6 +104,6 @@
     visibility: visible;
   }
   .App-content {
-    padding: 32px 64px;
+    padding: 82px 64px 32px;
   }
 }

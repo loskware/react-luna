@@ -14,10 +14,9 @@
     }
     .Text {
       margin-bottom: 16px;
+      font-weight: 500;
     }
-  }
-  > div:last-child {
-    .Button {
+    .FloatingActionButton {
       margin-top: 8px;
     }
   }

@@ -2,42 +2,35 @@ import React from "react";
 import { classNames } from "../../utils/classNames";
 
 /**
- * @callback OnChange
- * @param {boolean} checked
- * @param {React.ChangeEvent<HTMLInputElement>} event
+ * @typedef SwitchProps
+ * @property {"compact"|"normal"|"large"} [size] switch size
+ * @property {"accent"|"danger"|"warning"|"success"} [variant] color variant
  */
 
 /**
- * @param {object} props
- * @param {string} [props.className] custom CSS class
- * @param {boolean} props.checked
- * @param {boolean} [props.disabled]
- * @param {"compact"|"normal"|"large"} [props.size]
- * @param {OnChange} props.onChange
- * @param {"accent"|"danger"|"warning"|"success"} [props.variant] color variant
+ * A luna-styled Switch
+ * @param {SwitchProps & React.ComponentPropsWithoutRef<"input">} props
  */
-export const Switch = ({
-  className,
-  checked,
-  disabled = false,
-  size = "normal",
-  onChange,
-  variant = "accent",
-  ...other
-}) => {
+export const Switch = (props) => {
+  const {
+    className,
+    size = "normal",
+    variant = "accent",
+    ...other
+  } = props;
+
   const cn = classNames(
     "Switch",
     `Switch-${size}`,
     `Switch-${variant}`,
     className
   );
+
   return (
-    <label className={cn} {...other}>
+    <label className={cn}>
       <input
         type="checkbox"
-        checked={checked}
-        disabled={disabled}
-        onChange={(e) => onChange?.(e.target.checked, e)}
+        {...other}
       />
       <span></span>
     </label>

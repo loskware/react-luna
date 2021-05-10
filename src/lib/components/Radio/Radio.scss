@@ -1,7 +1,7 @@
 .Radio {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  cursor: pointer;
   &:hover > .Radio-mark {
     border-color: currentColor;
   }
@@ -19,31 +19,32 @@
   &-success {
     color: var(--luna-success-color);
   }
-  &-disabled {
-    color: var(--luna-disabled-color);
-    cursor: default;
-  }
 }
 
 .Radio-input {
   position: absolute;
-  height: 16px;
-  width: 16px;
+  left: 0;
+  top: 0;
+  height: 18px;
+  width: 18px;
   opacity: 0;
-  
+  cursor: pointer;
   &:checked + .Radio-mark {
     border-color: currentColor;
     &::after {
       transform: scale(1);
     }
   }
-  &:disabled + .Radio-mark {
-    border-color: var(--luna-disabled-border-color);
+  &:disabled {
+    cursor: default;
+    + .Radio-mark {
+      border-color: var(--luna-disabled-border-color);
+      color: var(--luna-disabled-color);
+    }
   }
 }
 
 .Radio-mark {
-  position: relative;
   display: block;
   box-sizing: content-box;
   height: 16px;
