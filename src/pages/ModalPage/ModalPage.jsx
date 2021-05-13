@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import { Card, FlatButton, Modal, SolidButton } from "../../lib";
+import { Card, Button, Modal } from "../../lib";
 import "./ModalPage.scss";
 
 export function ModalPage() {
   const [showModal, setShowModal] = useState(false);
   return (
     <div className="ModalPage">
-      <SolidButton onClick={() => setShowModal(true)}>SHOW MODAL</SolidButton>
+      <Button solid onClick={() => setShowModal(true)}>
+        SHOW MODAL
+      </Button>
       {showModal && (
         <Modal>
           <Card backgroundColor="var(--modal-bkg)" padding="24px 32px">
-            <FlatButton onClick={() => setShowModal(false)}>
-              DISMISS MODAL
-            </FlatButton>
+            <Button onClick={() => setShowModal(false)}>DISMISS MODAL</Button>
           </Card>
         </Modal>
       )}

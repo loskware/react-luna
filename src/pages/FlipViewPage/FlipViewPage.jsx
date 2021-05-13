@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, FlatButton, FlipView, Image } from "../../lib";
+import { Card, Button, FlipView, Image } from "../../lib";
 import "./FlipViewPage.scss";
 
 export function FlipViewPage() {
@@ -31,13 +31,13 @@ export function FlipViewPage() {
           }
           flipped={flippedX}
         />
-        <FlatButton
-          variant="accent"
+        <Button
+          theme="accent"
           outlined
           onClick={() => setFlippedX(!flippedX)}
         >
           FLIP VERTICALLY
-        </FlatButton>
+        </Button>
       </div>
 
       {/*  FLIPVIEW WITH Y AXIS */}
@@ -64,13 +64,13 @@ export function FlipViewPage() {
           }
           flipped={flippedY}
         />
-        <FlatButton
-          variant="accent"
+        <Button
+          theme="accent"
           outlined
           onClick={() => setFlippedY(!flippedY)}
         >
           FLIP HORIZONTALLY
-        </FlatButton>
+        </Button>
       </div>
     </section>
   );

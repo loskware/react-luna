@@ -11,28 +11,28 @@ import {
   SegmentedControlPage,
   SwitchExample,
 } from "./pages";
-import { Card, FlatButton, Header, Icon, Image, TitleBar } from "./lib";
+import { Card, Button, LinkButton, Header, Icon, Image, TitleBar } from "./lib";
 import { classNames } from "./lib/utils";
 
-const sections = [
-  { title: "BUTTON", tag: "<{Type}Button />", section: ButtonPage },
-  { title: "CHECKBOX", tag: "<CheckBox />", section: CheckboxPage },
-  { title: "RADIO", tag: "<Radio />", section: RadioPage },
-  { title: "SWITCH", tag: "<Switch />", section: SwitchExample },
+const pages = [
+  { title: "BUTTON", tag: "<{Type}Button />", page: ButtonPage },
+  { title: "CHECKBOX", tag: "<CheckBox />", page: CheckboxPage },
+  { title: "RADIO", tag: "<Radio />", page: RadioPage },
+  { title: "SWITCH", tag: "<Switch />", page: SwitchExample },
   {
     title: "SEGMENTED CONTROL",
     tag: "<SegmentedControl />",
-    section: SegmentedControlPage,
+    page: SegmentedControlPage,
   },
-  { title: "DRAGGABLE", tag: "<Draggable />", section: DraggablePage },
-  { title: "FLIPVIEW", tag: "<FlipView />", section: FlipViewPage },
-  { title: "LOADERS", tag: "<{Variant}Loader />", section: LoadersPage },
-  { title: "MODAL", tag: "<Modal />", section: ModalPage },
+  { title: "DRAGGABLE", tag: "<Draggable />", page: DraggablePage },
+  { title: "FLIPVIEW", tag: "<FlipView />", page: FlipViewPage },
+  { title: "LOADERS", tag: "<{Variant}Loader />", page: LoadersPage },
+  { title: "MODAL", tag: "<Modal />", page: ModalPage },
 ];
 
 export const App = () => {
   const [theme, setTheme] = useState(DarkTheme);
-  const [sectionIndex, setSectionIndex] = useState(0);
+  const [pageIndex, setPageIndex] = useState(0);
   const [showSidebar, setShowsidebar] = useState(false);
 
   function changeTheme() {
@@ -42,56 +42,64 @@ export const App = () => {
 
   const sideCn = classNames("App-side-bar", showSidebar && "App-side-bar-show");
 
+  const toogleSideBar = () => setShowsidebar(!showSidebar);
+
   return (
-    <div className={`App ${theme.label}`}>
+    <div
+      className={`App ${theme.label}`}
+      style={{ overflow: showSidebar ? "hidden" : "auto" }}
+    >
       {/* TITLE BAR */}
       <TitleBar
         className="App-title-bar"
         leadingContent={
-          <FlatButton
+          <Button
             className="MenuButton"
-            variant="soft"
+            theme="soft"
             rounded
-            icon={IconMenu}
-            onClick={() => setShowsidebar(!showSidebar)}
-          />
+            onClick={toogleSideBar}
+          >
+            {IconMenu}
+          </Button>
         }
-        middleContent={sections[sectionIndex].tag}
+        middleContent={pages[pageIndex].tag}
         trailingContent={
           <>
-            <FlatButton
-              variant="soft"
+            <Button theme="soft" rounded onClick={changeTheme}>
+              {theme.changeThemeIcon}
+            </Button>
+            <LinkButton
+              theme="soft"
               rounded
-              icon={theme.changeThemeIcon}
-              onClick={changeTheme}
-            />
-            <FlatButton
-              variant="soft"
-              rounded
-              icon={IconGithub}
               href="https://github.com/loskware/react-luna"
               target="_blank"
-            />
+            >
+              {IconGithub}
+            </LinkButton>
           </>
         }
       />
       {/* SIDE BAR */}
       <div className={sideCn}>
         <Card padding={24} hasShadow>
-          <Header>REACT LUNA</Header>
+          <Header>
+            REACT
+            <br />
+            <span>LUNA</span>
+          </Header>
           <Image
             src={process.env.PUBLIC_URL + "/android-chrome-512x512.png"}
             alt="React Luna Logo"
           />
           <div className="App-navigator">
-            {sections.map((value, index) => (
+            {pages.map((value, index) => (
               <div
                 className={`App-link${
-                  index === sectionIndex ? " App-link-selected" : ""
+                  index === pageIndex ? " App-link-selected" : ""
                 }`}
                 key={index}
                 onClick={() => {
-                  setSectionIndex(index);
+                  setPageIndex(index);
                   setShowsidebar(false);
                 }}
               >
@@ -101,13 +109,17 @@ export const App = () => {
           </div>
         </Card>
       </div>
-      <div className="App-backdrop"></div>
+      <div
+        className="App-backdrop luna-acrylic"
+        onClick={(event) => {
+          if (event.target === event.currentTarget) toogleSideBar();
+        }}
+      />
       {/* CONTENT */}
       <div className="App-content">
-        {React.createElement(sections[sectionIndex].section)}
+        {React.createElement(pages[pageIndex].page)}
       </div>
       <div id="modal-root" />
-      
     </div>
   );
 };

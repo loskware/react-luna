@@ -1,5 +1,6 @@
 export * from "./IconCheck";
 export * from "./IconMail";
+export * from "./IconMoon";
 export * from "./IconSearch";
 export * from "./IconSend";
 export * from "./IconServer";

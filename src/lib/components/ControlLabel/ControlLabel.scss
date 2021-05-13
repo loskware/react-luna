@@ -8,13 +8,13 @@
   &-left {
     flex-direction: row-reverse;
     > .ControlLabel-label {
-      margin-right: 8px;
+      margin-right: 12px;
     }
   }
   &-right {
     flex-direction: row;
     > .ControlLabel-label {
-      margin-left: 8px;
+      margin-left: 12px;
     }
   }
 

@@ -1,324 +1,332 @@
-import React from "react";
-import { IconSend, IconLoad } from "../../icons";
-import { Card, FlatButton, FloatingActionButton, SolidButton, Text } from "../../lib";
+import React, { useState } from "react";
+import { IconMoon } from "../../icons";
+import { Card, Button, Text } from "../../lib";
 import "./ButtonPage.scss";
 
+const colors = ["#be00ff", "#ff8200", "#0088ff"];
+
 export const ButtonPage = () => {
+  const [colorIndex, setColorIndex] = useState(0);
+
   return (
     <div className="ButtonPage">
-      {/* DISABLED VARIANT */}
+      {/* DISABLED theme */}
       <div>
-        <Text size="title">DISABLED</Text>
-        <SolidButton icon={<IconLoad />} size="compact" disabled>
+        <Text>DISABLED</Text>
+        <Button solid size="compact" disabled>
           BUTTON
-        </SolidButton>
-        <FlatButton size="compact" disabled>
+        </Button>
+        <Button size="compact" disabled>
           BUTTON
-        </FlatButton>
-        <FlatButton size="compact" icon={<IconSend />} outlined disabled>
+        </Button>
+        <Button size="compact" outlined disabled>
           BUTTON
-        </FlatButton>
+        </Button>
         <div className="v-spacer"></div>
-        <SolidButton icon={<IconLoad />} size="normal" disabled>
+        <Button solid size="normal" disabled>
           BUTTON
-        </SolidButton>
-        <FlatButton icon={<IconLoad />} disabled>
+        </Button>
+        <Button disabled>BUTTON</Button>
+        <Button size="normal" outlined disabled>
           BUTTON
-        </FlatButton>
-        <FlatButton icon={<IconSend />} size="normal" outlined disabled>
-          BUTTON
-        </FlatButton>
+        </Button>
         <div className="v-spacer"></div>
-        <SolidButton icon={<IconLoad />} size="large" disabled>
+        <Button solid size="large" disabled>
           BUTTON
-        </SolidButton>
-        <FlatButton size="large" disabled>
+        </Button>
+        <Button size="large" disabled>
           BUTTON
-        </FlatButton>
-        <FlatButton icon={<IconSend />} size="large" outlined disabled>
+        </Button>
+        <Button size="large" outlined disabled>
+          <IconMoon size={20} />
           BUTTON
-        </FlatButton>
+        </Button>
       </div>
 
-      {/* PLAIN VARIANT */}
+      {/* PLAIN theme */}
       <div>
-        <Text size="title">PLAIN</Text>
-        <SolidButton variant="plain" icon={<IconLoad />} size="compact">
+        <Text>PLAIN</Text>
+        <Button solid theme="plain" size="compact">
           BUTTON
-        </SolidButton>
-        <FlatButton variant="plain" size="compact">
+        </Button>
+        <Button theme="plain" size="compact">
           BUTTON
-        </FlatButton>
-        <FlatButton variant="plain" icon={<IconSend />} size="compact" outlined>
+        </Button>
+        <Button theme="plain" size="compact" outlined>
           BUTTON
-        </FlatButton>
+        </Button>
         <div className="v-spacer"></div>
-        <SolidButton variant="plain" icon={<IconLoad />} size="normal">
+        <Button solid theme="plain" size="normal">
           BUTTON
-        </SolidButton>
-        <FlatButton variant="plain" icon={<IconLoad />}>
+        </Button>
+        <Button theme="plain">BUTTON</Button>
+        <Button theme="plain" size="normal" outlined>
           BUTTON
-        </FlatButton>
-        <FlatButton variant="plain" icon={<IconSend />} size="normal" outlined>
-          BUTTON
-        </FlatButton>
+        </Button>
         <div className="v-spacer"></div>
-        <SolidButton variant="plain" icon={<IconLoad />} size="large">
+        <Button solid theme="plain" size="large">
           BUTTON
-        </SolidButton>
-        <FlatButton variant="plain" size="large">
+        </Button>
+        <Button theme="plain" size="large">
           BUTTON
-        </FlatButton>
-        <FlatButton variant="plain" icon={<IconSend />} size="large" outlined>
+        </Button>
+        <Button theme="plain" size="large" outlined>
+          <IconMoon size={20} />
           BUTTON
-        </FlatButton>
+        </Button>
       </div>
 
-      {/* ACCENT VARIANT */}
+      {/* ACCENT theme */}
       <div>
-        <Text size="title">ACCENT</Text>
-        <SolidButton icon={<IconLoad />} size="compact">
+        <Text>ACCENT</Text>
+        <Button solid size="compact">
           BUTTON
-        </SolidButton>
-        <FlatButton size="compact">BUTTON</FlatButton>
-        <FlatButton icon={<IconSend />} size="compact" outlined>
+        </Button>
+        <Button size="compact">BUTTON</Button>
+        <Button size="compact" outlined>
           BUTTON
-        </FlatButton>
+        </Button>
         <div className="v-spacer"></div>
-        <SolidButton icon={<IconLoad />} size="normal">
+        <Button solid size="normal">
           BUTTON
-        </SolidButton>
-        <FlatButton icon={<IconLoad />}>BUTTON</FlatButton>
-        <FlatButton icon={<IconSend />} size="normal" outlined>
+        </Button>
+        <Button>BUTTON</Button>
+        <Button size="normal" outlined>
           BUTTON
-        </FlatButton>
+        </Button>
         <div className="v-spacer"></div>
-        <SolidButton icon={<IconLoad />} size="large">
+        <Button solid size="large">
           BUTTON
-        </SolidButton>
-        <FlatButton size="large">BUTTON</FlatButton>
-        <FlatButton icon={<IconSend />} size="large" outlined>
+        </Button>
+        <Button size="large">BUTTON</Button>
+        <Button size="large" outlined>
+          <IconMoon size={20} />
           BUTTON
-        </FlatButton>
+        </Button>
       </div>
 
-      {/* DANGER VARIANT */}
+      {/* DANGER theme */}
       <div>
-        <Text size="title">DANGER</Text>
-        <SolidButton variant="danger" icon={<IconLoad />} size="compact">
+        <Text>DANGER</Text>
+        <Button solid theme="danger" size="compact">
           BUTTON
-        </SolidButton>
-        <FlatButton variant="danger" size="compact">
+        </Button>
+        <Button theme="danger" size="compact">
           BUTTON
-        </FlatButton>
-        <FlatButton
-          variant="danger"
-          icon={<IconSend />}
-          size="compact"
-          outlined
-        >
+        </Button>
+        <Button theme="danger" size="compact" outlined>
           BUTTON
-        </FlatButton>
+        </Button>
         <div className="v-spacer"></div>
-        <SolidButton variant="danger" icon={<IconLoad />} size="normal">
+        <Button solid theme="danger" size="normal">
           BUTTON
-        </SolidButton>
-        <FlatButton variant="danger" icon={<IconLoad />}>
+        </Button>
+        <Button theme="danger">BUTTON</Button>
+        <Button theme="danger" size="normal" outlined>
           BUTTON
-        </FlatButton>
-        <FlatButton variant="danger" icon={<IconSend />} size="normal" outlined>
-          BUTTON
-        </FlatButton>
+        </Button>
         <div className="v-spacer"></div>
-        <SolidButton variant="danger" icon={<IconLoad />} size="large">
+        <Button solid theme="danger" size="large">
           BUTTON
-        </SolidButton>
-        <FlatButton variant="danger" size="large">
+        </Button>
+        <Button theme="danger" size="large">
           BUTTON
-        </FlatButton>
-        <FlatButton variant="danger" icon={<IconSend />} size="large" outlined>
+        </Button>
+        <Button theme="danger" size="large" outlined>
+          <IconMoon size={20} />
           BUTTON
-        </FlatButton>
+        </Button>
       </div>
 
-      {/* WARNING VARIANT */}
+      {/* WARNING theme */}
       <div>
-        <Text size="title">WARNING</Text>
-        <SolidButton variant="warning" icon={<IconLoad />} size="compact">
+        <Text>WARNING</Text>
+        <Button solid theme="warning" size="compact">
           BUTTON
-        </SolidButton>
-        <FlatButton variant="warning" size="compact">
+        </Button>
+        <Button theme="warning" size="compact">
           BUTTON
-        </FlatButton>
-        <FlatButton
-          variant="warning"
-          icon={<IconSend />}
-          size="compact"
-          outlined
-        >
+        </Button>
+        <Button theme="warning" size="compact" outlined>
           BUTTON
-        </FlatButton>
+        </Button>
         <div className="v-spacer"></div>
-        <SolidButton variant="warning" icon={<IconLoad />} size="normal">
+        <Button solid theme="warning" size="normal">
           BUTTON
-        </SolidButton>
-        <FlatButton variant="warning" icon={<IconLoad />}>
+        </Button>
+        <Button theme="warning">BUTTON</Button>
+        <Button theme="warning" size="normal" outlined>
           BUTTON
-        </FlatButton>
-        <FlatButton
-          variant="warning"
-          icon={<IconSend />}
-          size="normal"
-          outlined
-        >
-          BUTTON
-        </FlatButton>
+        </Button>
         <div className="v-spacer"></div>
-        <SolidButton variant="warning" icon={<IconLoad />} size="large">
+        <Button solid theme="warning" size="large">
           BUTTON
-        </SolidButton>
-        <FlatButton variant="warning" size="large">
+        </Button>
+        <Button theme="warning" size="large">
           BUTTON
-        </FlatButton>
-        <FlatButton variant="warning" icon={<IconSend />} size="large" outlined>
+        </Button>
+        <Button theme="warning" size="large" outlined>
+          <IconMoon size={20} />
           BUTTON
-        </FlatButton>
+        </Button>
       </div>
 
-      {/* SUCCESS VARIANT */}
+      {/* SUCCESS theme */}
       <div>
-        <Text size="title">SUCCESS</Text>
-        <SolidButton variant="success" icon={<IconLoad />} size="compact">
+        <Text>SUCCESS</Text>
+        <Button solid theme="success" size="compact">
           BUTTON
-        </SolidButton>
-        <FlatButton variant="success" size="compact">
+        </Button>
+        <Button theme="success" size="compact">
           BUTTON
-        </FlatButton>
-        <FlatButton
-          variant="success"
-          icon={<IconSend />}
-          size="compact"
-          outlined
-        >
+        </Button>
+        <Button theme="success" size="compact" outlined>
           BUTTON
-        </FlatButton>
+        </Button>
         <div className="v-spacer"></div>
-        <SolidButton variant="success" icon={<IconLoad />} size="normal">
+        <Button solid theme="success" size="normal">
           BUTTON
-        </SolidButton>
-        <FlatButton variant="success" icon={<IconLoad />}>
+        </Button>
+        <Button theme="success">BUTTON</Button>
+        <Button theme="success" size="normal" outlined>
           BUTTON
-        </FlatButton>
-        <FlatButton
-          variant="success"
-          icon={<IconSend />}
-          size="normal"
-          outlined
-        >
-          BUTTON
-        </FlatButton>
+        </Button>
         <div className="v-spacer"></div>
-        <SolidButton variant="success" icon={<IconLoad />} size="large">
+        <Button solid theme="success" size="large">
           BUTTON
-        </SolidButton>
-        <FlatButton variant="success" size="large">
+        </Button>
+        <Button theme="success" size="large">
           BUTTON
-        </FlatButton>
-        <FlatButton variant="success" icon={<IconSend />} size="large" outlined>
+        </Button>
+        <Button theme="success" size="large" outlined>
+          <IconMoon size={20} />
           BUTTON
-        </FlatButton>
+        </Button>
       </div>
 
-      {/* FAB VARIANT */}
+      {/* ROUNDED */}
       <div>
-        <Text size="title">FAB</Text>
-        <FloatingActionButton
-          size="large"
-          variant="accent"
-          icon={<IconSend />}
-          onClick={() => null}
-          disabled
-        />
-        <FloatingActionButton
-          size="large"
-          variant="plain"
-          icon={<IconSend />}
-          onClick={() => null}
-        />
-        <FloatingActionButton
-          size="large"
-          variant="accent"
-          icon={<IconSend />}
-          onClick={() => null}
-        />
-        <FloatingActionButton
-          size="large"
-          variant="danger"
-          icon={<IconSend />}
-          onClick={() => null}
-        >
-          ACTION
-        </FloatingActionButton>{" "}
-        <FloatingActionButton
-          size="large"
-          variant="warning"
-          icon={<IconSend />}
-          onClick={() => null}
-        >
-          ACTION
-        </FloatingActionButton>
-        <FloatingActionButton
-          size="large"
-          variant="success"
-          icon={<IconSend />}
-          onClick={() => null}
-        >
-          ACTION
-        </FloatingActionButton>
+        <Text>ROUNDED</Text>
+        <Button solid rounded theme="plain" size="compact">
+          <IconMoon size={18} />
+          <span className="mr-6">BUTTON</span>
+        </Button>
+        <Button rounded theme="plain" size="compact">
+          <IconMoon size={18} />
+          <span className="mr-6">BUTTON</span>
+        </Button>
+        <Button rounded theme="plain" size="compact" outlined>
+          <IconMoon size={18} />
+          <span className="mr-6">BUTTON</span>
+        </Button>
+        <div className="v-spacer" />
+        <Button solid rounded theme="accent" size="normal">
+          <span className="ml-8">BUTTON</span>
+          <IconMoon size={18} />
+        </Button>
+        <Button rounded theme="accent">
+          <span className="ml-8">BUTTON</span>
+          <IconMoon size={18} />
+        </Button>
+        <Button rounded theme="accent" size="normal" outlined>
+          <span className="ml-8">BUTTON</span>
+          <IconMoon size={18} />
+        </Button>
+        <div className="v-spacer" />
+        <Button solid rounded theme="danger" size="large">
+          <IconMoon size={20} />
+          <span className="mr-8">BUTTON</span>
+        </Button>
+        <Button rounded theme="danger" size="large">
+          <IconMoon size={20} />
+          <span className="mr-8">BUTTON</span>
+        </Button>
+        <Button rounded theme="danger" size="large" outlined>
+          <IconMoon size={20} />
+          <span className="mr-8">BUTTON</span>
+        </Button>
       </div>
 
-      {/* SOFT VARIANT */}
-      <Card backgroundColor="hsl(263, 88%, 53%)">
-        <Text color="white">SOFT</Text>
-        <SolidButton variant="soft" icon={<IconLoad />} size="compact">
-          BUTTON
-        </SolidButton>
-        <FlatButton variant="soft" size="compact">
-          BUTTON
-        </FlatButton>
-        <FlatButton
-          variant="soft"
-          icon={<IconSend />}
-          size="compact"
-          outlined
+      {/* ROUNDED ICON ONLY */}
+      <div>
+        <Text>ROUNDED (ICON ONLY)</Text>
+        <Button solid rounded theme="plain" size="compact">
+          <IconMoon size={18} />
+        </Button>
+        <Button rounded theme="plain" size="compact">
+          <IconMoon size={18} />
+        </Button>
+        <Button rounded theme="plain" size="compact" outlined>
+          <IconMoon size={18} />
+        </Button>
+        <div className="v-spacer" />
+        <Button solid rounded theme="accent" size="normal">
+          <IconMoon size={24} />
+        </Button>
+        <Button rounded theme="accent">
+          <IconMoon size={24} />
+        </Button>
+        <Button rounded theme="accent" size="normal" outlined>
+          <IconMoon size={24} />
+        </Button>
+        <div className="v-spacer" />
+        <Button solid rounded theme="danger" size="large">
+          <IconMoon size={30} />
+        </Button>
+        <Button rounded theme="danger" size="large">
+          <IconMoon size={30} />
+        </Button>
+        <Button rounded theme="danger" size="large" outlined>
+          <IconMoon size={30} />
+        </Button>
+      </div>
+
+      {/* SOFT theme */}
+      <Card>
+        <div
+          className="soft-container"
+          style={{ backgroundColor: colors[colorIndex] }}
         >
-          BUTTON
-        </FlatButton>
-        <div className="v-spacer"></div>
-        <SolidButton variant="soft" icon={<IconLoad />} size="normal">
-          BUTTON
-        </SolidButton>
-        <FlatButton variant="soft" icon={<IconLoad />}>
-          BUTTON
-        </FlatButton>
-        <FlatButton
-          variant="soft"
-          icon={<IconSend />}
-          size="normal"
-          outlined
-        >
-          BUTTON
-        </FlatButton>
-        <div className="v-spacer"></div>
-        <SolidButton variant="soft" icon={<IconLoad />} size="large">
-          BUTTON
-        </SolidButton>
-        <FlatButton variant="soft" size="large">
-          BUTTON
-        </FlatButton>
-        <FlatButton variant="soft" icon={<IconSend />} size="large" outlined>
-          BUTTON
-        </FlatButton>
+          <Text style={{ color: "white" }}>SOFT</Text>
+          <Button solid theme="soft" size="compact">
+            BUTTON
+          </Button>
+          <Button theme="soft" size="compact">
+            BUTTON
+          </Button>
+          <Button theme="soft" size="compact" outlined>
+            BUTTON
+          </Button>
+          <div className="v-spacer" />
+          <Button solid theme="soft" size="normal">
+            BUTTON
+          </Button>
+          <Button theme="soft">BUTTON</Button>
+          <Button theme="soft" size="normal" outlined>
+            BUTTON
+          </Button>
+          <div className="v-spacer" />
+          <Button solid theme="soft" size="large">
+            BUTTON
+          </Button>
+          <Button theme="soft" size="large">
+            BUTTON
+          </Button>
+          <Button theme="soft" size="large" outlined>
+            <IconMoon size={20} />
+            BUTTON
+          </Button>
+          <div style={{ marginTop: "auto" }}>
+            {colors.map((color, index) => (
+              <span
+                key={index}
+                className="color-selector"
+                style={{ backgroundColor: color }}
+                onClick={() => setColorIndex(index)}
+              />
+            ))}
+          </div>
+        </div>
       </Card>
     </div>
   );

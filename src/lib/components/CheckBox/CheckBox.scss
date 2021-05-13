@@ -52,8 +52,6 @@
   width: 16px;
   border: 1px solid var(--luna-border-color);
   border-radius: var(--luna-border-radius-m);
-  transition: border-color ease-in-out var(--luna-duration-fast);
-  will-change: border-color;
   &::after {
     position: absolute;
     top: 4px;

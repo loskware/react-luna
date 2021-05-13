@@ -10,7 +10,8 @@
     z-index: 100;
     box-shadow: var(--luna-elevation-6);
     padding: 8px 16px;
-    background-color: hsl(263, 88%, 53%);
+    background: rgb(111,30,241);
+background: linear-gradient(90deg, rgba(111,30,241,1) 0%, rgba(190,0,255,1) 100%);
     color: white;
     font-size: 18px;
     font-weight: 500;
@@ -40,15 +41,20 @@
       background-color: var(--side-bar-bkg-color);
     }
     .Header {
-      font-size: 1.5rem;
-      font-weight: 500;
       align-self: center;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      span {
+        font-size: 3rem;
+        font-weight: 300;
+      }
     }
     .Image {
       height: 128px;
       width: 128px;
       align-self: center;
-      margin: 16px 16px 24px;
+      margin: 32px 16px 32px;
     }
   }
   &-backdrop {

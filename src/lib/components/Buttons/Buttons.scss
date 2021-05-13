@@ -27,51 +27,18 @@
     padding: 6px 10px;
     gap: 4px;
     font-size: 12px;
-    line-height: 14px;
-    > svg,
-    > img {
-      height: 14px;
-      width: 14px;
-    }
-    > svg:only-child,
-    > img:only-child {
-      height: auto;
-      width: auto;
-    }
   }
 
   &-normal {
     padding: 8px 14px;
     gap: 6px;
     font-size: 14px;
-    line-height: 16px;
-    > svg,
-    > img {
-      height: 16px;
-      width: 16px;
-    }
-    > svg:only-child,
-    > img:only-child {
-      height: auto;
-      width: auto;
-    }
   }
 
   &-large {
     padding: 10px 18px;
     gap: 8px;
     font-size: 16px;
-    line-height: 18px;
-    > svg,
-    > img {
-      height: 18px;
-      width: 18px;
-    }
-    > svg:only-child,
-    > img:only-child {
-      height: auto;
-      width: auto;
-    }
   }
 
   // OUTLINED
@@ -81,7 +48,7 @@
 
   // ROUNDED
   &-rounded {
-    border-radius: 50%;
+    border-radius: 50vh;
     &.Button-compact {
       padding: 6px;
     }
@@ -95,14 +62,14 @@
 
   // VARIANTS
   &-plain {
-    &.SolidButton {
+    &.Button-solid {
       color: var(--luna-plain-text-color-inverse);
       background-color: var(--luna-plain-bkg-color);
       &:hover {
         background-color: var(--luna-plain-bkg-color-sec);
       }
     }
-    &.FlatButton {
+    &.Button-flat {
       color: var(--luna-plain-text-color);
       &:hover {
         background-color: var(--luna-plain-bkg-color-alpha1);
@@ -116,14 +83,14 @@
     &.Button-outlined {
       border-color: var(--luna-soft-border-color);
     }
-    &.SolidButton {
+    &.Button-solid {
       color: var(--luna-soft-text-color-inverse);
       background-color: var(--luna-soft-bkg-color);
       &:hover {
         background-color: var(--luna-soft-bkg-color-sec);
       }
     }
-    &.FlatButton {
+    &.Button-flat {
       color: var(--luna-soft-text-color);
       &:hover {
         background-color: var(--luna-soft-bkg-color-alpha1);
@@ -131,14 +98,14 @@
     }
   }
   &-accent {
-    &.SolidButton {
+    &.Button-solid {
       color: var(--luna-accent-text-color-inverse);
       background-color: var(--luna-accent-bkg-color);
       &:hover {
         background-color: var(--luna-accent-bkg-color-sec);
       }
     }
-    &.FlatButton {
+    &.Button-flat {
       color: var(--luna-accent-text-color);
       &:hover {
         background-color: var(--luna-accent-bkg-color-alpha1);
@@ -149,14 +116,14 @@
     }
   }
   &-danger {
-    &.SolidButton {
+    &.Button-solid {
       color: var(--luna-danger-text-color-inverse);
       background-color: var(--luna-danger-bkg-color);
       &:hover {
         background-color: var(--luna-danger-bkg-color-sec);
       }
     }
-    &.FlatButton {
+    &.Button-flat {
       color: var(--luna-danger-text-color);
       &:hover {
         background-color: var(--luna-danger-bkg-color-alpha1);
@@ -167,14 +134,14 @@
     }
   }
   &-warning {
-    &.SolidButton {
+    &.Button-solid {
       color: var(--luna-warning-text-color-inverse);
       background-color: var(--luna-warning-bkg-color);
       &:hover {
         background-color: var(--luna-warning-bkg-color-sec);
       }
     }
-    &.FlatButton {
+    &.Button-flat {
       color: var(--luna-warning-text-color);
       &:hover {
         background-color: var(--luna-warning-bkg-color-alpha1);
@@ -185,14 +152,14 @@
     }
   }
   &-success {
-    &.SolidButton {
+    &.Button-solid {
       color: var(--luna-success-text-color-inverse);
       background-color: var(--luna-success-bkg-color);
       &:hover {
         background-color: var(--luna-success-bkg-color-sec);
       }
     }
-    &.FlatButton {
+    &.Button-flat {
       color: var(--luna-success-text-color);
       &:hover {
         background-color: var(--luna-success-bkg-color-alpha1);
@@ -206,15 +173,15 @@
   // DISABLED
   &:disabled {
     cursor: default;
-    &.SolidButton {
+    &.Button-solid {
       background-color: var(--luna-disabled-bkg-color);
       color: var(--luna-disabled-text-color-inverse);
     }
-    &.FlatButton {
+    &.Button-flat {
       color: var(--luna-disabled-text-color);
       background-color: transparent;
     }
-    &.FlatButton.Button-outlined {
+    &.Button-flat.Button-outlined {
       border-color: var(--luna-disabled-border-color);
     }
   }

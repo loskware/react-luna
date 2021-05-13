@@ -1,9 +1,19 @@
 .CheckboxPage {
-  section {
-    box-sizing: border-box;
-    height: 100vh;
-    > div:not(:first-child) {
-      margin-top: 8px;
-    }
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+  }
+
+  .Card {
+    margin: 64px;
+  }
+
+  .Text {
+    font-size: 1.25rem;
   }
 }
