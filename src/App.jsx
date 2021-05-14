@@ -81,7 +81,18 @@ export const App = () => {
       />
       {/* SIDE BAR */}
       <div className={sideCn}>
-        <Card padding={24} hasShadow>
+        <Card
+          padding={24}
+          hasShadow
+          style={{
+            backgroundImage: `url(${
+              process.env.PUBLIC_URL +
+              "/images/side-bar-bkg-" +
+              (theme === DarkTheme ? "dark" : "light") +
+              ".svg"
+            })`,
+          }}
+        >
           <Header>
             REACT
             <br />

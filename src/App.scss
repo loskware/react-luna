@@ -38,6 +38,7 @@ background: linear-gradient(90deg, rgba(111,30,241,1) 0%, rgba(190,0,255,1) 100%
       flex-direction: column;
       padding-bottom: 40px;
       overflow-y: auto;
+      background-repeat: no-repeat;
       background-color: var(--side-bar-bkg-color);
     }
     .Header {
