@@ -15,7 +15,7 @@ import { Card, Button, LinkButton, Header, Icon, Image, TitleBar } from "./lib";
 import { classNames } from "./lib/utils";
 
 const pages = [
-  { title: "BUTTON", tag: "<{Type}Button />", page: ButtonPage },
+  { title: "BUTTON", tag: "<Button />", page: ButtonPage },
   { title: "CHECKBOX", tag: "<CheckBox />", page: CheckboxPage },
   { title: "RADIO", tag: "<Radio />", page: RadioPage },
   { title: "SWITCH", tag: "<Switch />", page: SwitchExample },
@@ -31,13 +31,13 @@ const pages = [
 ];
 
 export const App = () => {
-  const [theme, setTheme] = useState(DarkTheme);
+  const [theme, setTheme] = useState("dark");
   const [pageIndex, setPageIndex] = useState(0);
   const [showSidebar, setShowsidebar] = useState(false);
 
   function changeTheme() {
-    if (theme === DarkTheme) setTheme(LightTheme);
-    else setTheme(DarkTheme);
+    if (theme === "dark") setTheme("light");
+    else setTheme("dark");
   }
 
   const sideCn = classNames("App-side-bar", showSidebar && "App-side-bar-show");
@@ -46,7 +46,7 @@ export const App = () => {
 
   return (
     <div
-      className={`App ${theme.label}`}
+      className={`App ${Themes[theme].label}`}
       style={{ overflow: showSidebar ? "hidden" : "auto" }}
     >
       {/* TITLE BAR */}
@@ -66,7 +66,7 @@ export const App = () => {
         trailingContent={
           <>
             <Button theme="soft" rounded onClick={changeTheme}>
-              {theme.changeThemeIcon}
+              {Themes[theme].changeThemeIcon}
             </Button>
             <LinkButton
               theme="soft"
@@ -85,12 +85,7 @@ export const App = () => {
           padding={24}
           hasShadow
           style={{
-            backgroundImage: `url(${
-              process.env.PUBLIC_URL +
-              "/images/side-bar-bkg-" +
-              (theme === DarkTheme ? "dark" : "light") +
-              ".svg"
-            })`,
+            backgroundImage: `url(${process.env.PUBLIC_URL}/images/side-bar-bkg-${theme}.svg`,
           }}
         >
           <Header>
@@ -135,30 +130,31 @@ export const App = () => {
   );
 };
 
-const LightTheme = {
-  label: "theme-light",
-  changeThemeIcon: (
-    <Icon>
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-    </Icon>
-  ),
-};
-
-const DarkTheme = {
-  label: "theme-dark",
-  changeThemeIcon: (
-    <Icon>
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </Icon>
-  ),
+const Themes = {
+  light: {
+    label: "theme-light",
+    changeThemeIcon: (
+      <Icon>
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </Icon>
+    ),
+  },
+  dark: {
+    label: "theme-dark",
+    changeThemeIcon: (
+      <Icon>
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </Icon>
+    ),
+  },
 };
 
 const IconMenu = (
