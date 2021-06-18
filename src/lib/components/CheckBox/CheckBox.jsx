@@ -1,22 +1,75 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { classNames } from "../../utils/classNames";
 
 /**
  * @typedef CheckBoxProps
- * @property {"plain"|"accent"|"danger"|"warning"|"success"} [variant] color variant
+ * @property {string} [className]
+ * @property {"accent"|"danger"|"warning"|"success"} [theme] color theme
+ * @property {string} [value] checkbox value
+ * @property {string[]} [group] checkbox group selected values
+ * @property {boolean} [checked] toggle checkbox state
+ * @property {boolean} [indeterminate] set indeterminate checkbox state
+ * @property {boolean} [disabled] set indeterminate checkbox state
+ * @property {string} [label] label text
+ * @property {"left"|"right"} [labelPosition] label position
+ * @property {React.CSSProperties} [labelStyle] label inline style
+ * @property {(value: string) => void} [onToggle] 
  */
 
 /**
  * A luna-styled checkbox,
- * @param {CheckBoxProps & React.ComponentPropsWithoutRef<"input">} props
+ * @param {CheckBoxProps} props
  */
-export const CheckBox = (props) => {
-  const { className, variant = "accent", ...other } = props;
-  const cn = classNames("CheckBox", `CheckBox-${variant}`, className);
+export const CheckBox = ({
+  className,
+  theme = "accent",
+  value,
+  group,
+  checked,
+  indeterminate,
+  disabled,
+  label,
+  labelPosition = "right",
+  labelStyle,
+  onToggle,
+  ...other
+}) => {
+  const input = useRef(null)
+
+  useLayoutEffect(() => {
+    input.current.indeterminate = indeterminate;
+  }, [indeterminate]);
+
+  const cn = classNames(
+    "CheckBox",
+    `CheckBox-${theme}`,
+    `CheckBox-${labelPosition}Label`,
+    indeterminate && "CheckBox-indeterminate",
+    disabled && "CheckBox-disabled",
+    className
+  );
+  const state = checked ?? !!group?.includes(value);
+
+  function handleClick() {
+    !disabled && onToggle?.(value);
+  }
+
   return (
-    <label className={cn}>
-      <input className="CheckBox-input" type="checkbox" {...other} />
-      <span className="CheckBox-mark"></span>
-    </label>
+    <div className={cn} onClick={handleClick}>
+      <input
+        ref={input}
+        type="checkbox"
+        readOnly
+        checked={state}
+        disabled={disabled}
+        {...other}
+      />
+      <span className="CheckBox-mark" />
+      {label && (
+        <span className="CheckBox-label" style={labelStyle}>
+          {label}
+        </span>
+      )}
+    </div>
   );
 };

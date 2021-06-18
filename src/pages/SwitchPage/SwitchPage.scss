@@ -1,0 +1,27 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  height: 100%;
+}
+h1 {
+  align-self: center;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  white-space: nowrap;
+}
+h2 {
+  align-self: center;
+  font-size: 0.75rem;
+  color: var(--luna-accent-text-color);
+  margin-bottom: 16px;
+  margin-top: -8px;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+}
